@@ -1,6 +1,6 @@
-# Welcome to the florary!
+<img width="960" height="1280" alt="image" src="https://github.com/user-attachments/assets/ceba9da0-19f8-4bd3-ad41-b3b716a1d23f" /># Welcome to the florary!
 
-<body style='background-color:powderblue;'>
+<body>
 
 1. False Eranthemum
 ![photo_81_2026-03-06_02-08-46](https://github.com/user-attachments/assets/53006bb9-c01b-48f5-9f91-8cd7c7b4f2ed)
@@ -24,33 +24,47 @@
 ![photo_71_2026-03-06_02-08-46](https://github.com/user-attachments/assets/65b5c3d1-6e9e-427f-8b3d-9829ec799a2e)
 10. Jungle Geranium
 ![photo_70_2026-03-06_02-08-46](https://github.com/user-attachments/assets/163eb382-83ce-4d6a-9ec6-29c598597f70)
-11. Hawaiian Ti
-![photo_69_2026-03-06_02-08-46](https://github.com/user-attachments/assets/9cea885d-b21c-41b5-894c-e04a9a95991e)
-12. Coconut Palm
-![photo_68_2026-03-06_02-08-46](https://github.com/user-attachments/assets/2efbaa55-f1e5-4100-8018-864aeb8f5d42)
-13. Boston Fern
-![photo_67_2026-03-06_02-08-46](https://github.com/user-attachments/assets/f5e6c28c-9142-49b8-ad6a-a9861a1e7633)
-14. Heart of Jesus
-![photo_66_2026-03-06_02-08-46](https://github.com/user-attachments/assets/2c163a81-d653-45f4-a515-1d3649ecb447)
-15. Spider Plant
-![photo_65_2026-03-06_02-08-46](https://github.com/user-attachments/assets/3fcb6a1f-3f54-44bf-9a85-3b3abee79981)
-16. Croton
-![photo_64_2026-03-06_02-08-46](https://github.com/user-attachments/assets/f17ae917-6263-41ab-b861-cc586879e866)
-![photo_63_2026-03-06_02-08-46](https://github.com/user-attachments/assets/54d830eb-6dfd-4a6a-b04a-0c9617294dcb)
-![photo_62_2026-03-06_02-08-46](https://github.com/user-attachments/assets/9ac63f59-10ba-4eb9-b71d-8d1ada8f132a)
-![photo_61_2026-03-06_02-08-46](https://github.com/user-attachments/assets/77a9b818-fb5e-4174-b4a6-c83fe83bc848)
-![photo_60_2026-03-06_02-08-46](https://github.com/user-attachments/assets/c9f4496a-634a-4abf-a8d2-c3f21cd22285)
-![photo_59_2026-03-06_02-08-46](https://github.com/user-attachments/assets/998872ae-5434-4611-a5bb-c5a8ca27e125)
 ![photo_58_2026-03-06_02-08-46](https://github.com/user-attachments/assets/1db3ca09-93da-4981-9360-bf69b5c9ed00)
+
+12. Hawaiian Ti
+![photo_69_2026-03-06_02-08-46](https://github.com/user-attachments/assets/9cea885d-b21c-41b5-894c-e04a9a95991e)
+13. Coconut Palm
+![photo_68_2026-03-06_02-08-46](https://github.com/user-attachments/assets/2efbaa55-f1e5-4100-8018-864aeb8f5d42)
+14. Boston Fern
+![photo_67_2026-03-06_02-08-46](https://github.com/user-attachments/assets/f5e6c28c-9142-49b8-ad6a-a9861a1e7633)
+15. Heart of Jesus
+![photo_66_2026-03-06_02-08-46](https://github.com/user-attachments/assets/2c163a81-d653-45f4-a515-1d3649ecb447)
+16. Spider Plant
+![photo_65_2026-03-06_02-08-46](https://github.com/user-attachments/assets/3fcb6a1f-3f54-44bf-9a85-3b3abee79981)
+17. Croton
+![photo_64_2026-03-06_02-08-46](https://github.com/user-attachments/assets/f17ae917-6263-41ab-b861-cc586879e866)
+18. Variegated Weeping Fig
+![photo_62_2026-03-06_02-08-46](https://github.com/user-attachments/assets/9ac63f59-10ba-4eb9-b71d-8d1ada8f132a)
+19. Bougainvillea
+![photo_61_2026-03-06_02-08-46](https://github.com/user-attachments/assets/77a9b818-fb5e-4174-b4a6-c83fe83bc848)
+20. Firebush
+![photo_60_2026-03-06_02-08-46](https://github.com/user-attachments/assets/c9f4496a-634a-4abf-a8d2-c3f21cd22285)
+21. Dragon Tree
+![photo_59_2026-03-06_02-08-46](https://github.com/user-attachments/assets/998872ae-5434-4611-a5bb-c5a8ca27e125)
+22. 
 ![photo_57_2026-03-06_02-08-46](https://github.com/user-attachments/assets/fad403db-3c55-46c3-8f9f-d3c0a7232865)
+23. Mother-in-law's tongue
 ![photo_56_2026-03-06_02-08-46](https://github.com/user-attachments/assets/5abad923-7ed7-4797-907e-f8482678d697)
+24. Periwinkle
 ![photo_55_2026-03-06_02-08-46](https://github.com/user-attachments/assets/b3a3c009-b497-4032-ba37-6bb397ed6831)
+25. Dwarf White Orchid
 ![photo_54_2026-03-06_02-08-46](https://github.com/user-attachments/assets/b7c38b8e-fcc5-4366-abd7-f7ce0535e88b)
+26. Flame Tree
 ![photo_53_2026-03-06_02-08-46](https://github.com/user-attachments/assets/8417e977-7383-41d4-8091-f413735c4c9a)
-![photo_52_2026-03-06_02-08-46](https://github.com/user-attachments/assets/da7cac20-bfb8-4fef-b69e-d68b012c1045)
 ![photo_51_2026-03-06_02-08-46](https://github.com/user-attachments/assets/b39ec5f4-3810-4b5b-87bb-477ea19d24fb)
+
+27. Crossandra
+![photo_52_2026-03-06_02-08-46](https://github.com/user-attachments/assets/da7cac20-bfb8-4fef-b69e-d68b012c1045)
+28. Rattleweed
 ![photo_50_2026-03-06_02-08-46](https://github.com/user-attachments/assets/e74fe09a-f343-4403-b745-0b6d3ca81aa1)
+29. Neem
 ![photo_49_2026-03-06_02-08-46](https://github.com/user-attachments/assets/f0a5f7cf-036c-496d-a9a4-e4a432696549)
+30. 
 ![photo_48_2026-03-06_02-08-46](https://github.com/user-attachments/assets/c8ae9448-3889-4a3c-a89e-9a2453c7eaef)
 ![photo_47_2026-03-06_02-08-46](https://github.com/user-attachments/assets/fe0b5450-d5ba-4df8-b79f-5238b5c9ecf1)
 ![photo_46_2026-03-06_02-08-46](https://github.com/user-attachments/assets/3bf0c5b2-a7f2-4297-8105-bff90a5a8ff5)
