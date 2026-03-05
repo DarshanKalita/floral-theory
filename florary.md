@@ -2,24 +2,39 @@
 
 <body style='background-color:powderblue;'>
 
-
+1. False Eranthemum
 ![photo_81_2026-03-06_02-08-46](https://github.com/user-attachments/assets/53006bb9-c01b-48f5-9f91-8cd7c7b4f2ed)
+2. Copperleaf
 ![photo_80_2026-03-06_02-08-46](https://github.com/user-attachments/assets/0788d78c-eb37-4cf0-bfbf-5186e2af81eb)
+3. Star Jasmine
 ![photo_79_2026-03-06_02-08-46](https://github.com/user-attachments/assets/21754463-29ef-4274-bc2c-47d5f49e5252)
+4. Bleeding Heart
 ![photo_78_2026-03-06_02-08-46](https://github.com/user-attachments/assets/a352925e-04b5-40fc-aa00-4ab7d340da5c)
+5. Privet
 ![photo_77_2026-03-06_02-08-46](https://github.com/user-attachments/assets/261e5a7d-723e-4719-89b4-53c7ad6fe7b2)
+6. Crape Jasmine
 ![photo_76_2026-03-06_02-08-46](https://github.com/user-attachments/assets/e027d5d8-8a07-49ac-ac37-4765af171468)
 ![photo_75_2026-03-06_02-08-46](https://github.com/user-attachments/assets/55ef5f62-d216-497f-a836-77f99b9fbd1b)
+7. Traveler's Palm
 ![photo_74_2026-03-06_02-08-46](https://github.com/user-attachments/assets/bd895b0d-0dee-436e-a57f-32082abc4366)
 ![photo_73_2026-03-06_02-08-46](https://github.com/user-attachments/assets/7402ddf7-9020-4a9d-9124-43500d175305)
+8. Karan with a "Baobab" leaf
 ![photo_72_2026-03-06_02-08-46](https://github.com/user-attachments/assets/468498af-cdee-41ea-a7bc-374f596fdd88)
+9. Devil's Ivy
 ![photo_71_2026-03-06_02-08-46](https://github.com/user-attachments/assets/65b5c3d1-6e9e-427f-8b3d-9829ec799a2e)
+10. Jungle Geranium
 ![photo_70_2026-03-06_02-08-46](https://github.com/user-attachments/assets/163eb382-83ce-4d6a-9ec6-29c598597f70)
+11. Hawaiian Ti
 ![photo_69_2026-03-06_02-08-46](https://github.com/user-attachments/assets/9cea885d-b21c-41b5-894c-e04a9a95991e)
+12. Coconut Palm
 ![photo_68_2026-03-06_02-08-46](https://github.com/user-attachments/assets/2efbaa55-f1e5-4100-8018-864aeb8f5d42)
+13. Boston Fern
 ![photo_67_2026-03-06_02-08-46](https://github.com/user-attachments/assets/f5e6c28c-9142-49b8-ad6a-a9861a1e7633)
+14. Heart of Jesus
 ![photo_66_2026-03-06_02-08-46](https://github.com/user-attachments/assets/2c163a81-d653-45f4-a515-1d3649ecb447)
+15. Spider Plant
 ![photo_65_2026-03-06_02-08-46](https://github.com/user-attachments/assets/3fcb6a1f-3f54-44bf-9a85-3b3abee79981)
+16. Croton
 ![photo_64_2026-03-06_02-08-46](https://github.com/user-attachments/assets/f17ae917-6263-41ab-b861-cc586879e866)
 ![photo_63_2026-03-06_02-08-46](https://github.com/user-attachments/assets/54d830eb-6dfd-4a6a-b04a-0c9617294dcb)
 ![photo_62_2026-03-06_02-08-46](https://github.com/user-attachments/assets/9ac63f59-10ba-4eb9-b71d-8d1ada8f132a)
