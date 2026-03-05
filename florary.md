@@ -1,4 +1,4 @@
-<img width="960" height="1280" alt="image" src="https://github.com/user-attachments/assets/ceba9da0-19f8-4bd3-ad41-b3b716a1d23f" /># Welcome to the florary!
+# Welcome to the florary!
 
 <body>
 
@@ -63,26 +63,37 @@
 28. Rattleweed
 ![photo_50_2026-03-06_02-08-46](https://github.com/user-attachments/assets/e74fe09a-f343-4403-b745-0b6d3ca81aa1)
 29. Neem
-![photo_49_2026-03-06_02-08-46](https://github.com/user-attachments/assets/f0a5f7cf-036c-496d-a9a4-e4a432696549)
-30. 
-![photo_48_2026-03-06_02-08-46](https://github.com/user-attachments/assets/c8ae9448-3889-4a3c-a89e-9a2453c7eaef)
-![photo_47_2026-03-06_02-08-46](https://github.com/user-attachments/assets/fe0b5450-d5ba-4df8-b79f-5238b5c9ecf1)
-![photo_46_2026-03-06_02-08-46](https://github.com/user-attachments/assets/3bf0c5b2-a7f2-4297-8105-bff90a5a8ff5)
-![photo_45_2026-03-06_02-08-46](https://github.com/user-attachments/assets/5cea0fef-d608-462d-a493-3df63869c37d)
-![photo_44_2026-03-06_02-08-46](https://github.com/user-attachments/assets/77e9e771-0712-41c4-bbb4-b9dace47af20)
-![photo_43_2026-03-06_02-08-46](https://github.com/user-attachments/assets/85839627-abb3-4eac-81cd-c6c1de88e239)
-![photo_42_2026-03-06_02-08-46](https://github.com/user-attachments/assets/627f83bc-1876-4c6a-bc9b-a8ca3e5e3563)
 ![photo_41_2026-03-06_02-08-46](https://github.com/user-attachments/assets/e13edcb0-b178-4af1-84d0-c6b31eb9b588)
+
+![photo_42_2026-03-06_02-08-46](https://github.com/user-attachments/assets/627f83bc-1876-4c6a-bc9b-a8ca3e5e3563)
+
+![photo_49_2026-03-06_02-08-46](https://github.com/user-attachments/assets/f0a5f7cf-036c-496d-a9a4-e4a432696549)
+31. Giloy
+![photo_48_2026-03-06_02-08-46](https://github.com/user-attachments/assets/c8ae9448-3889-4a3c-a89e-9a2453c7eaef)
+32. Copperpod
+![photo_45_2026-03-06_02-08-46](https://github.com/user-attachments/assets/5cea0fef-d608-462d-a493-3df63869c37d)
+33. Plumeria
+![photo_44_2026-03-06_02-08-46](https://github.com/user-attachments/assets/77e9e771-0712-41c4-bbb4-b9dace47af20)
+34. Round Lemon
+![photo_43_2026-03-06_02-08-46](https://github.com/user-attachments/assets/85839627-abb3-4eac-81cd-c6c1de88e239)
+35.
 ![photo_40_2026-03-06_02-08-46](https://github.com/user-attachments/assets/3eea0e8c-392c-4ac0-9047-97486079a4e4)
+36. Norfolk Island Pine
 ![photo_39_2026-03-06_02-08-46](https://github.com/user-attachments/assets/ef927c03-6485-42e9-b2d7-d5c5b1975864)
+37. Karanj
 ![photo_38_2026-03-06_02-08-46](https://github.com/user-attachments/assets/4541723b-8646-4801-a0e0-fda90cedee05)
+38. Shil Koroi
 ![photo_37_2026-03-06_02-08-46](https://github.com/user-attachments/assets/8247c4e4-5397-4ada-aadf-ba2f4d545c50)
 ![photo_36_2026-03-06_02-08-46](https://github.com/user-attachments/assets/bcd8b1ac-0afc-412d-9481-80e58616ae4b)
+39. Bokul
 ![photo_35_2026-03-06_02-08-46](https://github.com/user-attachments/assets/289ff9df-82af-4ce6-abec-9b22c630cc30)
-![photo_34_2026-03-06_02-08-46](https://github.com/user-attachments/assets/fe04e5fb-c778-43af-8c1e-aa36ec17aba4)
+40. Kesavardhini
 ![photo_33_2026-03-06_02-08-46](https://github.com/user-attachments/assets/aa03434f-83b3-4f37-bfdc-031582bee8ad)
+41. 
 ![photo_32_2026-03-06_02-08-46](https://github.com/user-attachments/assets/1c185a0d-db2c-4c2e-9595-539bd8711ff0)
+42. 
 ![photo_31_2026-03-06_02-08-46](https://github.com/user-attachments/assets/a023e6d8-6e77-4eeb-ac92-30e298cace40)
+43. Indian Almond
 ![photo_30_2026-03-06_02-08-46](https://github.com/user-attachments/assets/fdd7a5f9-9255-42cd-abf7-1249bdc9d2d0)
 ![photo_29_2026-03-06_02-08-46](https://github.com/user-attachments/assets/400e7dc0-9ac7-4952-855b-9d37c8642a2d)
 ![photo_28_2026-03-06_02-08-46](https://github.com/user-attachments/assets/bda75808-456d-415d-b370-3662cf6a8240)
