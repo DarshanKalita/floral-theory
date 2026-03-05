@@ -6,7 +6,6 @@
 ![photo_81_2026-03-06_02-08-46](https://github.com/user-attachments/assets/53006bb9-c01b-48f5-9f91-8cd7c7b4f2ed)
 2. Copperleaf
 
-![photo_22_2026-03-06_02-08-46](https://github.com/user-attachments/assets/bd47f7e9-b732-4fc3-8e92-0add7189cf69)
 
 ![photo_80_2026-03-06_02-08-46](https://github.com/user-attachments/assets/0788d78c-eb37-4cf0-bfbf-5186e2af81eb)
 
@@ -14,14 +13,12 @@
 ![photo_79_2026-03-06_02-08-46](https://github.com/user-attachments/assets/21754463-29ef-4274-bc2c-47d5f49e5252)
 4. Bleeding Heart
 
-
 16. Spider Plant
 ![photo_65_2026-03-06_02-08-46](https://github.com/user-attachments/assets/3fcb6a1f-3f54-44bf-9a85-3b3abee79981)
 17. Croton
-![photo_24_2026-03-06_02-08-46](https://github.com/user-attachments/assets/f8385199-16e8-44f5-b0a1-c9e0b71800c3)
+
 
 ![photo_64_2026-03-06_02-08-46](https://github.com/user-attachments/assets/f17ae917-6263-41ab-b861-cc586879e866)
-
 18. Variegated Weeping Fig
 ![photo_62_2026-03-06_02-08-46](https://github.com/user-attachments/assets/9ac63f59-10ba-4eb9-b71d-8d1ada8f132a)
 19. Bougainvillea
