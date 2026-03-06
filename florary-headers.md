@@ -355,6 +355,7 @@
 ### 70. Chilli
 ### 71. Custard Apple
 ### 72. Marigold
+### 73. Water Lily
 ---
 
 Please mail darshank.ug2025@cmi.ac.in for any updates or corrections!
