@@ -354,7 +354,7 @@
 ### 69. Red Banana
 ### 70. Chilli
 ### 71. Custard Apple
-
+### 72. Marigold
 ---
 
 Please mail darshank.ug2025@cmi.ac.in for any updates or corrections!
