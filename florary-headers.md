@@ -2,6 +2,10 @@
 
 # Welcome to Floral Theory!
 
+**Select Layout:** [List View](florary-headers.md) | [Compact View](florary-accordion.md) | [Grid View](florary-grid.md)
+
+---
+
 ### 1. False Eranthemum
 ![photo_81](https://github.com/user-attachments/assets/2531268b-0495-4927-b6d1-965b17a26880)
 
