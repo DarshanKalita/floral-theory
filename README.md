@@ -1,7 +1,7 @@
 ![WhatsApp Image 2026-03-06 at 02 25 34](https://github.com/user-attachments/assets/6a19a08a-bd36-437b-aa56-48c7641324cf)
 
 
-# [Floral Theory](https://github.com/DarshanKalita/floral-theory/blob/main/florary-headers.md)
+### [Floral Theory](https://github.com/DarshanKalita/floral-theory/blob/main/florary-headers.md)
 
 is an archive of plants I have spotted in CMI that I deem archive worthy of. 
 
