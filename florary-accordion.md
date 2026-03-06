@@ -208,7 +208,8 @@
 </details>
 
 <details><summary><b>49. Bamboo</b></summary>
-<br><img src="https://github.com/user-attachments/assets/523447f8-4779-4b5f-9bca-74aa1a319d2c">
+<br><img src="https://github.com/user-attachments/assets/523447f8-4779-4b5f-9bca-74aa1a319d2c"><br>
+<img src="https://github.com/user-attachments/assets/3e5249c7-f233-4c87-8823-d1409e485ef0">
 </details>
 
 <details><summary><b>50. Foxtail Palm</b></summary>
@@ -290,31 +291,43 @@
 <br><img src="https://github.com/user-attachments/assets/5231944b-663e-4f56-99cc-35d37126e7b3">
 </details>
 
-<details><summary><b>70. Red Banana</b></summary>
+<details><summary><b>70. White Hibiscus</b></summary>
+<br><img src="https://github.com/user-attachments/assets/a17adbb6-bf51-4315-8d38-b9187d55611b">
+</details>
+
+<details><summary><b>71. Canna Lily</b></summary>
+<br><img src="https://github.com/user-attachments/assets/fc506c9e-42e9-4f1c-ac3b-4f1e13d6760f">
+</details>
+
+<details><summary><b>72. Screwpine</b></summary>
+<br><img src="https://github.com/user-attachments/assets/b967f1a0-6f8c-43d0-86de-ad9bcd4e494c">
+</details>
+
+<details><summary><b>73. Red Banana</b></summary>
 <p>No image provided.</p>
 </details>
 
-<details><summary><b>71. Chilli</b></summary>
+<details><summary><b>74. Chilli</b></summary>
 <p>No image provided.</p>
 </details>
 
-<details><summary><b>72. Custard Apple</b></summary>
+<details><summary><b>75. Custard Apple</b></summary>
 <p>No image provided.</p>
 </details>
 
-<details><summary><b>73. Marigold</b></summary>
+<details><summary><b>76. Marigold</b></summary>
 <p>No image provided.</p>
 </details>
 
-<details><summary><b>74. Water Lily</b></summary>
+<details><summary><b>77. Water Lily</b></summary>
 <p>No image provided.</p>
 </details>
 
-<details><summary><b>75. Jamun</b></summary>
+<details><summary><b>78. Jamun</b></summary>
 <p>No image provided.</p>
 </details>
 
-<details><summary><b>76. Guava</b></summary>
+<details><summary><b>79. Guava</b></summary>
 <p>No image provided.</p>
 </details>
 
