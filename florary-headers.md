@@ -256,6 +256,8 @@
 ### 49. Bamboo
 ![photo_16](https://github.com/user-attachments/assets/523447f8-4779-4b5f-9bca-74aa1a319d2c)
 
+![WhatsApp Image 2026-03-06 at 19 18 50](https://github.com/user-attachments/assets/3e5249c7-f233-4c87-8823-d1409e485ef0)
+
 ---
 
 ### 50. Foxtail Palm
@@ -357,11 +359,18 @@
 
 ---
 
-### 70. Screwpine
+### 70. White Hibiscus
 
 ![WhatsApp Image 2026-03-06 at 19 18 51 (2)](https://github.com/user-attachments/assets/a17adbb6-bf51-4315-8d38-b9187d55611b)
+
+---
+
+### 71. Canna Lily
 ![WhatsApp Image 2026-03-06 at 19 18 51 (1)](https://github.com/user-attachments/assets/fc506c9e-42e9-4f1c-ac3b-4f1e13d6760f)
-![WhatsApp Image 2026-03-06 at 19 18 50](https://github.com/user-attachments/assets/3e5249c7-f233-4c87-8823-d1409e485ef0)
+
+---
+
+### 72. Screwpine
 ![WhatsApp Image 2026-03-06 at 19 18 51](https://github.com/user-attachments/assets/b967f1a0-6f8c-43d0-86de-ad9bcd4e494c)
 
 
