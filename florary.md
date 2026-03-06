@@ -1,3 +1,7 @@
+
+![WhatsApp Image 2026-03-06 at 02 25 34](https://github.com/user-attachments/assets/2cdd7ea7-40b2-412c-a7a4-9c883c2c5f7a)
+
+
 # Welcome to Floral Theory!
 
 1. False Eranthemum
@@ -157,28 +161,26 @@
 
 
 61. Crown of Thorns
+![WhatsApp Image 2026-03-06 at 02 29 17](https://github.com/user-attachments/assets/f7b53c52-d464-4fee-9dfd-660e4ef00279)
 
-![WhatsApp Image 2026-03-06 at 02 30 30](https://github.com/user-attachments/assets/e13e415d-3a1e-46f4-a4d2-b8184c8e4fa2)
 
 
 62. Bajra
 
 
+![WhatsApp Image 2026-03-06 at 02 31 15](https://github.com/user-attachments/assets/678eb91e-6563-4876-9c3d-b6650a2de4cb)
 
 
-![WhatsApp Image 2026-03-06 at 02 25 18](https://github.com/user-attachments/assets/d21e47a3-4e9b-47ab-aa44-8855cce85c1e)
 
 63. Sea Almond 
-![WhatsApp Image 2026-03-06 at 02 31 15](https://github.com/user-attachments/assets/678eb91e-6563-4876-9c3d-b6650a2de4cb)
+
+![WhatsApp Image 2026-03-06 at 02 30 30](https://github.com/user-attachments/assets/e13e415d-3a1e-46f4-a4d2-b8184c8e4fa2)
 64. Banyan
-![WhatsApp Image 2026-03-06 at 02 29 17](https://github.com/user-attachments/assets/f7b53c52-d464-4fee-9dfd-660e4ef00279)
-65. Burflower
 ![WhatsApp Image 2026-03-06 at 02 27 21](https://github.com/user-attachments/assets/5495d7d4-198a-4aca-8f7f-080dc365d7c3)
-66. Lotus & 67. Cactus
+65. Burflower
 ![WhatsApp Image 2026-03-06 at 02 26 06](https://github.com/user-attachments/assets/a0f8e585-575a-473e-87fa-c3fbeca4ecc9)
-68. 
+66. Lotus & 67. Cactus
 ![WhatsApp Image 2026-03-06 at 02 25 46](https://github.com/user-attachments/assets/fb3a1e9d-aaf1-4768-a226-07cc7e53af35)
-![WhatsApp Image 2026-03-06 at 02 25 34](https://github.com/user-attachments/assets/2cdd7ea7-40b2-412c-a7a4-9c883c2c5f7a)
 
-
-
+68. Fiji Fan Palm
+![WhatsApp Image 2026-03-06 at 02 25 18](https://github.com/user-attachments/assets/d21e47a3-4e9b-47ab-aa44-8855cce85c1e)
