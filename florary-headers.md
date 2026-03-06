@@ -135,7 +135,7 @@
 
 ### 25. Crossandra
 ![photo_52](https://github.com/user-attachments/assets/a0bcb8cb-d3ce-41e4-9a31-2d20f954ceb1)
-![photo_22](https://github.com/user-attachments/assets/5231944b-663e-4f56-99cc-35d37126e7b3)
+
 
 ---
 
@@ -350,6 +350,13 @@
 ![WhatsApp Image](https://github.com/user-attachments/assets/d21e47a3-4e9b-47ab-aa44-8855cce85c1e)
 
 ---
+
+### 69. Cape Honey-suckle 
+
+![photo_22](https://github.com/user-attachments/assets/5231944b-663e-4f56-99cc-35d37126e7b3)
+
+---
+
 
 ### 69. Red Banana
 ### 70. Chilli
