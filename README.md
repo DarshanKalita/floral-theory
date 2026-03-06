@@ -2,7 +2,8 @@
 
 ---
 
-# Floral Theory #### is an archive of plants I have spotted in CMI that I deem archive worthy of. 
+# Floral Theory 
+is an archive of plants I have spotted in CMI that I deem archive worthy of. 
 A lot more trees are available on campus than the cardinality of this archive. You are encouraged to mail me with pictures of the specific plant if you want it updated. 
 
 PS. I made this in a hurry as part of a Group Theory coursework assignment, and hence most photos are really bad. I do, however, request future submissions to have a higher standard of aesthetics.
