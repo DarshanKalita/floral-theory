@@ -136,13 +136,24 @@
 ![photo_13_2026-03-06_02-08-46](https://github.com/user-attachments/assets/ad1c85a3-dfb3-4d50-8e75-df920156f1da)
 52. Betel Nut
 ![photo_11_2026-03-06_02-08-46](https://github.com/user-attachments/assets/2990b0ed-d44c-4f52-920e-d5f56de69ed7)
-![photo_10_2026-03-06_02-08-46](https://github.com/user-attachments/assets/43121217-0af8-4212-a870-6d3779a659b9)
-![photo_9_2026-03-06_02-08-46](https://github.com/user-attachments/assets/12a1797f-cb72-4fa3-ab89-e5ac98e2c4c8)
-![photo_8_2026-03-06_02-08-46](https://github.com/user-attachments/assets/c3d960f6-b5b0-4cb8-8ffb-b66f4ede2eb2)
-![photo_7_2026-03-06_02-08-46](https://github.com/user-attachments/assets/98c42f36-dfce-45da-992b-9ac3272b1831)
-![photo_6_2026-03-06_02-08-46](https://github.com/user-attachments/assets/b6c2fe76-28be-4713-aeb5-0394ac6753bf)
-![photo_5_2026-03-06_02-08-46](https://github.com/user-attachments/assets/8e119a06-3db0-4249-82e1-7ec34d64c332)
-![photo_4_2026-03-06_02-08-46](https://github.com/user-attachments/assets/c923e386-7263-4664-97b0-3995268ec5b8)
-![photo_3_2026-03-06_02-08-46](https://github.com/user-attachments/assets/06e456e7-b4cf-489f-b45a-6d687c3bfa96)
+53. Indian Rosewood????
 ![photo_2_2026-03-06_02-08-46](https://github.com/user-attachments/assets/90c18e17-05b4-4d04-8d85-a53a4c8a9d9d)
+![photo_10_2026-03-06_02-08-46](https://github.com/user-attachments/assets/43121217-0af8-4212-a870-6d3779a659b9)
+54. Weeping Bottlebrush
+![photo_9_2026-03-06_02-08-46](https://github.com/user-attachments/assets/12a1797f-cb72-4fa3-ab89-e5ac98e2c4c8)
+55. Mango
+![photo_8_2026-03-06_02-08-46](https://github.com/user-attachments/assets/c3d960f6-b5b0-4cb8-8ffb-b66f4ede2eb2)
+56. Palm
+![photo_7_2026-03-06_02-08-46](https://github.com/user-attachments/assets/98c42f36-dfce-45da-992b-9ac3272b1831)
+57. Hong Kong Orchid
+![photo_5_2026-03-06_02-08-46](https://github.com/user-attachments/assets/8e119a06-3db0-4249-82e1-7ec34d64c332)
+![photo_6_2026-03-06_02-08-46](https://github.com/user-attachments/assets/b6c2fe76-28be-4713-aeb5-0394ac6753bf)
+58. 
+![photo_4_2026-03-06_02-08-46](https://github.com/user-attachments/assets/c923e386-7263-4664-97b0-3995268ec5b8)
+59. Banana
+![photo_3_2026-03-06_02-08-46](https://github.com/user-attachments/assets/06e456e7-b4cf-489f-b45a-6d687c3bfa96)
+60. Jerusalem Artichoke
 ![photo_1_2026-03-06_02-08-46](https://github.com/user-attachments/assets/4a6fd0d2-8613-4468-9f3d-0440814bc18b)
+
+
+61. Crown of Thorns
