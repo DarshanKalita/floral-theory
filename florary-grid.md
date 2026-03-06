@@ -22,7 +22,7 @@
 | **19. Firebush**<br><img src="https://github.com/user-attachments/assets/dee7867d-3121-4f89-a7a9-4032540b293e" width="400"> | **20. Dragon Tree**<br><img src="https://github.com/user-attachments/assets/2a64344b-193a-4f2e-af5b-bec209a0e6ea" width="400"> |
 | **21. Dwarf White Orchid**<br><img src="https://github.com/user-attachments/assets/1362ba9d-35a6-4558-96e1-bd53aa555a97" width="400"><br><br><img src="https://github.com/user-attachments/assets/fdd66384-f327-465e-a00e-b4382afb8b03" width="400"> | **22. Flame Tree**<br><img src="https://github.com/user-attachments/assets/f7f9a90e-9617-4b3d-b4b0-41f064cfa088" width="400"><br><br><img src="https://github.com/user-attachments/assets/16c331ec-bed0-4fb6-b8a5-a86befa07340" width="400"> |
 | **23. Mother-in-law's tongue**<br><img src="https://github.com/user-attachments/assets/4e9db1e6-27c1-4c74-a9dc-6bfe4b23dfe6" width="400"> | **24. Periwinkle**<br><img src="https://github.com/user-attachments/assets/2bf81e4a-07dd-4639-90a6-ab19a268d98b" width="400"> |
-| **25. Crossandra**<br><img src="https://github.com/user-attachments/assets/a0bcb8cb-d3ce-41e4-9a31-2d20f954ceb1" width="400"><br><br><img src="https://github.com/user-attachments/assets/5231944b-663e-4f56-99cc-35d37126e7b3" width="400"> | **26. Rattleweed**<br><img src="https://github.com/user-attachments/assets/765af0a6-7950-41c1-89e1-e6b2a778d796" width="400"> |
+| **25. Crossandra**<br><img src="https://github.com/user-attachments/assets/a0bcb8cb-d3ce-41e4-9a31-2d20f954ceb1" width="400"> | **26. Rattleweed**<br><img src="https://github.com/user-attachments/assets/765af0a6-7950-41c1-89e1-e6b2a778d796" width="400"> |
 | **27. Neem**<br><img src="https://github.com/user-attachments/assets/e95d67cd-7b5e-4a95-b39c-f2fb7f561234" width="400"><br><br><img src="https://github.com/user-attachments/assets/7190d3d2-a51a-492e-bbc2-6106d624437a" width="400"><br><br><img src="https://github.com/user-attachments/assets/5ff0070a-12d9-425f-a138-107e2ba5bca9" width="400"> | **29. Giloy**<br><img src="https://github.com/user-attachments/assets/3eb83e27-6013-4514-a03d-8a88d7ee9f13" width="400"> |
 | **30. Copperpod**<br><img src="https://github.com/user-attachments/assets/ac8de929-bf90-4911-983d-18a47ddab879" width="400"> | **31. Plumeria**<br><img src="https://github.com/user-attachments/assets/805a7daf-f014-4d70-9f84-4835838cdaba" width="400"> |
 | **32. Round Lemon**<br><img src="https://github.com/user-attachments/assets/6ee5fd52-c439-429c-99ce-ec98ae18cf3c" width="400"> | **33. Unidentified**<br><img src="https://github.com/user-attachments/assets/0270d7b8-6666-4445-80f8-72c9855fbdab" width="400"> |
@@ -43,8 +43,10 @@
 | **62. Bajra**<br><img src="https://github.com/user-attachments/assets/678eb91e-6563-4876-9c3d-b6650a2de4cb" width="400"> | **63. Sea Almond**<br><img src="https://github.com/user-attachments/assets/e13e415d-3a1e-46f4-a4d2-b8184c8e4fa2" width="400"> |
 | **64. Banyan**<br><img src="https://github.com/user-attachments/assets/5495d7d4-198a-4aca-8f7f-080dc365d7c3" width="400"> | **65. Burflower**<br><img src="https://github.com/user-attachments/assets/a0f8e585-575a-473e-87fa-c3fbeca4ecc9" width="400"> |
 | **66. Lotus & 67. Cactus**<br><img src="https://github.com/user-attachments/assets/fb3a1e9d-aaf1-4768-a226-07cc7e53af35" width="400"> | **68. Fiji Fan Palm**<br><img src="https://github.com/user-attachments/assets/d21e47a3-4e9b-47ab-aa44-8855cce85c1e" width="400"> |
-| **69. Red Banana**<br> | **70. Chilli**<br> |
-| **71. Custard Apple**<br> | |
+| **69. Cape Honey-suckle**<br><img src="https://github.com/user-attachments/assets/5231944b-663e-4f56-99cc-35d37126e7b3" width="400"> | **70. Red Banana**<br> |
+| **71. Chilli**<br> | **72. Custard Apple**<br> |
+| **73. Marigold**<br> | **74. Water Lily**<br> |
+| **75. Jamun**<br> | **76. Guava**<br> |
 
 <br>
 
