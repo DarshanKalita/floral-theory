@@ -4,6 +4,10 @@
 
 # Welcome to Floral Theory!
 
+**Select Layout:** [List View](florary-headers.md) | [Compact View](florary-accordion.md) | [Grid View](florary-grid.md)
+
+---
+
 | Column 1 | Column 2 |
 | :--- | :--- |
 | **1. False Eranthemum**<br><img src="https://github.com/user-attachments/assets/2531268b-0495-4927-b6d1-965b17a26880" width="400"> | **2. Copperleaf**<br><img src="https://github.com/user-attachments/assets/07d1a479-cd97-4cc0-b3ea-69c607bc57f6" width="400"><br><br><img src="https://github.com/user-attachments/assets/bc337ae5-3aed-48ed-a470-de18c6b44f42" width="400"> |
