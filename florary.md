@@ -1,21 +1,41 @@
+# Welcome to Floral Theory!
+
+1. False Eranthemum
 ![photo_81_2026-03-06_02-08-46](https://github.com/user-attachments/assets/2531268b-0495-4927-b6d1-965b17a26880)
+2. Copperleaf
 ![photo_80_2026-03-06_02-08-46](https://github.com/user-attachments/assets/bc337ae5-3aed-48ed-a470-de18c6b44f42)
+3. Star Jasmine
 ![photo_79_2026-03-06_02-08-46](https://github.com/user-attachments/assets/e478cf8c-303c-4598-bcce-6fed659b21f1)
+4. Bleeding Heart
 ![photo_78_2026-03-06_02-08-46](https://github.com/user-attachments/assets/3a428939-9861-44c5-88c5-682511d564e1)
+5. Privet
 ![photo_77_2026-03-06_02-08-46](https://github.com/user-attachments/assets/eec0e2a0-e2bd-46e9-a9c6-18034b1bbadb)
+6. Crape Jasmine
 ![photo_76_2026-03-06_02-08-46](https://github.com/user-attachments/assets/8d8e6d80-3408-412d-baf7-2f061ad25abc)
 ![photo_75_2026-03-06_02-08-46](https://github.com/user-attachments/assets/e38c27bc-d60f-4387-99c0-b927f8a98aeb)
+7. Traveler's Palm
 ![photo_74_2026-03-06_02-08-46](https://github.com/user-attachments/assets/369834a5-fed4-4060-a862-34f8ff9b5362)
 ![photo_73_2026-03-06_02-08-46](https://github.com/user-attachments/assets/0bde1ee8-c62a-465e-9466-7f7b4bc17083)
+8. "Karan's Baobab" leaf
 ![photo_72_2026-03-06_02-08-46](https://github.com/user-attachments/assets/7c1b4fa9-0ddc-40b8-bd61-7a6da8176fe8)
+9. Devil's Ivy
 ![photo_71_2026-03-06_02-08-46](https://github.com/user-attachments/assets/deb736c8-eab8-4a8e-bd91-97f5cd4d7c41)
+10. Jungle Geranium
 ![photo_70_2026-03-06_02-08-46](https://github.com/user-attachments/assets/0338fab9-f014-4c50-b016-294574efd0f0)
+11. Hawaiian Ti Plant
+
 ![photo_69_2026-03-06_02-08-46](https://github.com/user-attachments/assets/4ec278cd-82be-4e55-9097-eacd1466874b)
+12. Coconut Palm
 ![photo_68_2026-03-06_02-08-46](https://github.com/user-attachments/assets/9b5683e2-accc-4ada-a6be-a43902e18306)
+13. Boston Fern
 ![photo_67_2026-03-06_02-08-46](https://github.com/user-attachments/assets/6559cc52-c40a-4b61-b33f-84c5b4f9e34c)
+14. Heart of Jesus 
 ![photo_66_2026-03-06_02-08-46](https://github.com/user-attachments/assets/ce4d1920-4d4b-4042-87ba-66d6ca330ae6)
+15. Spider Plant
 ![photo_65_2026-03-06_02-08-46](https://github.com/user-attachments/assets/930c41d5-a31b-4f5b-bb05-922fa9500305)
+16. Croton
 ![photo_64_2026-03-06_02-08-46](https://github.com/user-attachments/assets/97a55b04-187d-4a93-b287-82126e41ba96)
+17. Variegated Weeping Fig 
 ![photo_63_2026-03-06_02-08-46](https://github.com/user-attachments/assets/b2d53e14-0abc-430b-b513-e7ea168a2684)
 ![photo_62_2026-03-06_02-08-46](https://github.com/user-attachments/assets/59fffdb8-299d-4491-8abd-2199a8bb845e)
 ![photo_61_2026-03-06_02-08-46](https://github.com/user-attachments/assets/e0c0093e-1534-48c0-8b14-dfb126bb11c6)
