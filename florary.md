@@ -22,7 +22,9 @@
 ![photo_71_2026-03-06_02-08-46](https://github.com/user-attachments/assets/deb736c8-eab8-4a8e-bd91-97f5cd4d7c41)
 10. Jungle Geranium
 ![photo_70_2026-03-06_02-08-46](https://github.com/user-attachments/assets/0338fab9-f014-4c50-b016-294574efd0f0)
-11. Hawaiian Ti Plant
+![photo_58_2026-03-06_02-08-46](https://github.com/user-attachments/assets/59af56ba-f117-4f05-bdbb-cd941b5fcfe2)
+
+12. Hawaiian Ti Plant
 
 ![photo_69_2026-03-06_02-08-46](https://github.com/user-attachments/assets/4ec278cd-82be-4e55-9097-eacd1466874b)
 12. Coconut Palm
@@ -36,27 +38,48 @@
 16. Croton
 ![photo_64_2026-03-06_02-08-46](https://github.com/user-attachments/assets/97a55b04-187d-4a93-b287-82126e41ba96)
 17. Variegated Weeping Fig 
-![photo_63_2026-03-06_02-08-46](https://github.com/user-attachments/assets/b2d53e14-0abc-430b-b513-e7ea168a2684)
 ![photo_62_2026-03-06_02-08-46](https://github.com/user-attachments/assets/59fffdb8-299d-4491-8abd-2199a8bb845e)
+![photo_63_2026-03-06_02-08-46](https://github.com/user-attachments/assets/b2d53e14-0abc-430b-b513-e7ea168a2684)
+18. Bougainvillea
 ![photo_61_2026-03-06_02-08-46](https://github.com/user-attachments/assets/e0c0093e-1534-48c0-8b14-dfb126bb11c6)
+19. Firebush
 ![photo_60_2026-03-06_02-08-46](https://github.com/user-attachments/assets/dee7867d-3121-4f89-a7a9-4032540b293e)
+20. Dragon Tree
 ![photo_59_2026-03-06_02-08-46](https://github.com/user-attachments/assets/2a64344b-193a-4f2e-af5b-bec209a0e6ea)
-![photo_58_2026-03-06_02-08-46](https://github.com/user-attachments/assets/59af56ba-f117-4f05-bdbb-cd941b5fcfe2)
+21. 
 ![photo_57_2026-03-06_02-08-46](https://github.com/user-attachments/assets/fdd66384-f327-465e-a00e-b4382afb8b03)
-![photo_56_2026-03-06_02-08-46](https://github.com/user-attachments/assets/4e9db1e6-27c1-4c74-a9dc-6bfe4b23dfe6)
-![photo_55_2026-03-06_02-08-46](https://github.com/user-attachments/assets/2bf81e4a-07dd-4639-90a6-ab19a268d98b)
-![photo_54_2026-03-06_02-08-46](https://github.com/user-attachments/assets/1362ba9d-35a6-4558-96e1-bd53aa555a97)
+22. Dwarf White Orchid
 ![photo_53_2026-03-06_02-08-46](https://github.com/user-attachments/assets/f7f9a90e-9617-4b3d-b4b0-41f064cfa088)
+
+![photo_56_2026-03-06_02-08-46](https://github.com/user-attachments/assets/4e9db1e6-27c1-4c74-a9dc-6bfe4b23dfe6)
+
+23. Mother-in-law's tongue
+![photo_55_2026-03-06_02-08-46](https://github.com/user-attachments/assets/2bf81e4a-07dd-4639-90a6-ab19a268d98b)
+24. Periwinkle
+![photo_54_2026-03-06_02-08-46](https://github.com/user-attachments/assets/1362ba9d-35a6-4558-96e1-bd53aa555a97)
+
+25. Flame Tree
 ![photo_52_2026-03-06_02-08-46](https://github.com/user-attachments/assets/a0bcb8cb-d3ce-41e4-9a31-2d20f954ceb1)
-![photo_51_2026-03-06_02-08-46](https://github.com/user-attachments/assets/16c331ec-bed0-4fb6-b8a5-a86befa07340)
 ![photo_50_2026-03-06_02-08-46](https://github.com/user-attachments/assets/765af0a6-7950-41c1-89e1-e6b2a778d796)
+
+ 26. Crossandra
+
+![photo_51_2026-03-06_02-08-46](https://github.com/user-attachments/assets/16c331ec-bed0-4fb6-b8a5-a86befa07340)
+
+27. Rattleweed
 ![photo_49_2026-03-06_02-08-46](https://github.com/user-attachments/assets/5ff0070a-12d9-425f-a138-107e2ba5bca9)
+28. Neem
 ![photo_48_2026-03-06_02-08-46](https://github.com/user-attachments/assets/3eb83e27-6013-4514-a03d-8a88d7ee9f13)
+29. Giloy
 ![photo_47_2026-03-06_02-08-46](https://github.com/user-attachments/assets/6560b6a2-4cc5-4767-a2e6-38ff5cbbbd17)
-![photo_46_2026-03-06_02-08-46](https://github.com/user-attachments/assets/2ad7f8ec-0a80-4e56-9adf-429040e2cbb7)
-![photo_45_2026-03-06_02-08-46](https://github.com/user-attachments/assets/86e20f2a-323b-437f-a19a-900726f66550)
+
+30. Copperpod
+
 ![photo_44_2026-03-06_02-08-46](https://github.com/user-attachments/assets/805a7daf-f014-4d70-9f84-4835838cdaba)
+
+31. Plumeraia
 ![photo_43_2026-03-06_02-08-46](https://github.com/user-attachments/assets/6ee5fd52-c439-429c-99ce-ec98ae18cf3c)
+32. 
 ![photo_42_2026-03-06_02-08-46](https://github.com/user-attachments/assets/e95d67cd-7b5e-4a95-b39c-f2fb7f561234)
 ![photo_41_2026-03-06_02-08-46](https://github.com/user-attachments/assets/7190d3d2-a51a-492e-bbc2-6106d624437a)
 ![photo_40_2026-03-06_02-08-46](https://github.com/user-attachments/assets/0270d7b8-6666-4445-80f8-72c9855fbdab)
