@@ -3,6 +3,8 @@
 1. False Eranthemum
 ![photo_81_2026-03-06_02-08-46](https://github.com/user-attachments/assets/2531268b-0495-4927-b6d1-965b17a26880)
 2. Copperleaf
+![photo_21_2026-03-06_02-08-46](https://github.com/user-attachments/assets/07d1a479-cd97-4cc0-b3ea-69c607bc57f6)
+
 ![photo_80_2026-03-06_02-08-46](https://github.com/user-attachments/assets/bc337ae5-3aed-48ed-a470-de18c6b44f42)
 3. Star Jasmine
 ![photo_79_2026-03-06_02-08-46](https://github.com/user-attachments/assets/e478cf8c-303c-4598-bcce-6fed659b21f1)
@@ -24,7 +26,7 @@
 ![photo_70_2026-03-06_02-08-46](https://github.com/user-attachments/assets/0338fab9-f014-4c50-b016-294574efd0f0)
 ![photo_58_2026-03-06_02-08-46](https://github.com/user-attachments/assets/59af56ba-f117-4f05-bdbb-cd941b5fcfe2)
 
-12. Hawaiian Ti Plant
+11. Hawaiian Ti Plant
 
 ![photo_69_2026-03-06_02-08-46](https://github.com/user-attachments/assets/4ec278cd-82be-4e55-9097-eacd1466874b)
 12. Coconut Palm
@@ -65,6 +67,7 @@
 
 25. Crossandra
 ![photo_52_2026-03-06_02-08-46](https://github.com/user-attachments/assets/a0bcb8cb-d3ce-41e4-9a31-2d20f954ceb1)
+![photo_22_2026-03-06_02-08-46](https://github.com/user-attachments/assets/5231944b-663e-4f56-99cc-35d37126e7b3)
 
 
 26. Rattleweed
@@ -90,7 +93,9 @@
 34. Norfolk Island Pine
 
 ![photo_39_2026-03-06_02-08-46](https://github.com/user-attachments/assets/cb0d20a8-3b13-4635-acb2-f723be92fe08)
+
 35. Karanj
+
 ![photo_38_2026-03-06_02-08-46](https://github.com/user-attachments/assets/06ea06d3-9589-4488-9512-0c5b542d5999)
 36. Shil Koroi
 ![photo_37_2026-03-06_02-08-46](https://github.com/user-attachments/assets/dd67fe63-57d8-4b6e-9db8-32f6c1632714)
@@ -103,25 +108,33 @@
 ![photo_32_2026-03-06_02-08-46](https://github.com/user-attachments/assets/837533c1-a807-49ed-b9a8-7476a35c3566)
 40. 
 ![photo_31_2026-03-06_02-08-46](https://github.com/user-attachments/assets/9b4b2cff-1860-4462-83f8-ee166711b9a8)
-![photo_30_2026-03-06_02-08-46](https://github.com/user-attachments/assets/5def544f-4a8b-4d51-aab7-da734c12296c)
-![photo_29_2026-03-06_02-08-46](https://github.com/user-attachments/assets/fabd9e72-ac5c-40ce-8468-5630c0d182f4)
+41.
 ![photo_28_2026-03-06_02-08-46](https://github.com/user-attachments/assets/1f04c554-614d-483e-86d7-b3f24ffc9c0f)
+42. Yellow Oleander
 ![photo_27_2026-03-06_02-08-46](https://github.com/user-attachments/assets/4fbdbea4-c908-498c-af09-3857f6e41958)
 ![photo_26_2026-03-06_02-08-46](https://github.com/user-attachments/assets/8f205275-a44b-4284-a86f-98b81f77304e)
+43. Majesty Palm
 ![photo_25_2026-03-06_02-08-46](https://github.com/user-attachments/assets/2828de9a-d78f-4c83-bafd-f080f928618c)
+44. Elephant Ear
 ![photo_24_2026-03-06_02-08-46](https://github.com/user-attachments/assets/54b0fdad-474e-4ed4-85c9-0b78544304f1)
+45. Petra Croton
 ![photo_23_2026-03-06_02-08-46](https://github.com/user-attachments/assets/f4ee8bc8-ec06-424c-93ed-741a2df1eec3)
-![photo_22_2026-03-06_02-08-46](https://github.com/user-attachments/assets/5231944b-663e-4f56-99cc-35d37126e7b3)
-![photo_21_2026-03-06_02-08-46](https://github.com/user-attachments/assets/07d1a479-cd97-4cc0-b3ea-69c607bc57f6)
+46. Wild Date Palm 
 ![photo_20_2026-03-06_02-08-46](https://github.com/user-attachments/assets/05881fa7-00b6-4990-8e14-2f828ba1fd0a)
+47.
 ![photo_19_2026-03-06_02-08-46](https://github.com/user-attachments/assets/91d22cf4-e986-4d3e-86b5-a73aeca790a3)
-![photo_18_2026-03-06_02-08-46](https://github.com/user-attachments/assets/76bda4fd-586d-4f59-a2c8-a066739aca55)
+48.American Black Nightshade
 ![photo_17_2026-03-06_02-08-46](https://github.com/user-attachments/assets/90e53ced-6c37-4360-bdf9-ef6f2b3d347c)
+49. Bamboo
 ![photo_16_2026-03-06_02-08-46](https://github.com/user-attachments/assets/523447f8-4779-4b5f-9bca-74aa1a319d2c)
-![photo_15_2026-03-06_02-08-46](https://github.com/user-attachments/assets/3e699c51-ab16-41f3-a54f-5cab0cfa6882)
-![photo_14_2026-03-06_02-08-46](https://github.com/user-attachments/assets/3d1390cb-72b8-40cb-864e-b36fedc78659)
-![photo_13_2026-03-06_02-08-46](https://github.com/user-attachments/assets/ad1c85a3-dfb3-4d50-8e75-df920156f1da)
+50. Foxtail Palm
 ![photo_12_2026-03-06_02-08-46](https://github.com/user-attachments/assets/e52078bd-577e-462a-913b-c68db01b9b28)
+
+![photo_15_2026-03-06_02-08-46](https://github.com/user-attachments/assets/3e699c51-ab16-41f3-a54f-5cab0cfa6882)
+
+51. Horsetail She-Oak
+![photo_13_2026-03-06_02-08-46](https://github.com/user-attachments/assets/ad1c85a3-dfb3-4d50-8e75-df920156f1da)
+52. Betel Nut
 ![photo_11_2026-03-06_02-08-46](https://github.com/user-attachments/assets/2990b0ed-d44c-4f52-920e-d5f56de69ed7)
 ![photo_10_2026-03-06_02-08-46](https://github.com/user-attachments/assets/43121217-0af8-4212-a870-6d3779a659b9)
 ![photo_9_2026-03-06_02-08-46](https://github.com/user-attachments/assets/12a1797f-cb72-4fa3-ab89-e5ac98e2c4c8)
