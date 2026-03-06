@@ -2,7 +2,7 @@
 
 
 # Floral Theory
-is an archive of plants I have spotted in CMI that I deem archive worthy of.
+is an archive of plants I have spotted in CMI that I deem archive-worthy of.
 
 ---
 
