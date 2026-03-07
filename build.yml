@@ -1,0 +1,62 @@
+name: Build & Deploy Floral Theory
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "florary-headers.md"
+      - "convert_md_to_html.py"
+      - "style.css"
+      - ".github/workflows/build.yml"
+  workflow_dispatch:   # allow manual trigger from the Actions tab
+
+permissions:
+  contents: write      # needed to push the generated index.html back
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Check out the repository
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # 2. Set up Python (stdlib only — no extra packages needed)
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # 3. Run the converter
+      - name: Convert MD → HTML
+        run: python convert_md_to_html.py florary-headers.md index.html
+
+      # 4. Commit & push the updated index.html (only if it changed)
+      - name: Commit generated HTML
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          if git diff --cached --quiet; then
+            echo "No changes to index.html — skipping commit."
+          else
+            git commit -m "chore: regenerate index.html from florary-headers.md [skip ci]"
+            git push
+          fi
+
+      # 5. Deploy to GitHub Pages
+      #    Assumes you have Pages configured to serve from the root of `main`
+      #    (Settings → Pages → Source: Deploy from a branch → main / root)
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."   # serve everything in the repo root
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

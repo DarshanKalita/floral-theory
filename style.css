@@ -1,0 +1,629 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=IM+Fell+English:ital@0;1&family=Crimson+Pro:wght@300;400;500&display=swap');
+
+:root {
+  --ink: #1a1410;
+  --paper: #f5f0e8;
+  --aged: #e8dfc8;
+  --moss: #4a5e3a;
+  --rust: #8b4513;
+  --gold: #b8960c;
+  --faded: #9a8f7e;
+  --cream: #faf7f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 18px;
+  line-height: 1.7;
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c4b99a' fill-opacity='0.12'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ── HEADER ── */
+
+.site-header {
+  padding: 5rem 2rem 3rem;
+  text-align: center;
+  border-bottom: 1px solid var(--aged);
+  position: relative;
+  overflow: hidden;
+}
+
+.site-header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(74,94,58,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.site-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.site-title-text {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  line-height: 1.0;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.site-title-text .word-floral {
+  font-style: italic;
+  color: var(--moss);
+  position: relative;
+}
+
+/* decorative botanical underline on "Floral" */
+.site-title-text .word-floral::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  bottom: -4px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold) 20%, var(--gold) 80%, transparent);
+  border-radius: 2px;
+}
+
+/* small leaf glyphs flanking the title */
+.title-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.title-ornament svg {
+  opacity: 0.55;
+  flex-shrink: 0;
+}
+
+/* subtitle tagline beneath the title */
+.title-tagline {
+  font-family: 'IM Fell English', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--faded);
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.header-rule {
+  width: 80px;
+  height: 1px;
+  background: var(--gold);
+  margin: 1.5rem auto;
+}
+
+.site-description {
+  max-width: 540px;
+  margin: 0 auto 1.5rem;
+  color: var(--faded);
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+.archive-link {
+  display: inline-block;
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--moss);
+  text-decoration: none;
+  border-bottom: 1px solid var(--moss);
+  padding-bottom: 1px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.archive-link:hover {
+  color: var(--rust);
+  border-color: var(--rust);
+}
+
+/* ── SUBMISSION BANNER ── */
+
+.submission-banner {
+  margin: 2rem auto 0;
+  max-width: 560px;
+  border: 1.5px solid var(--moss);
+  padding: 1.1rem 1.6rem;
+  position: relative;
+  background: rgba(74,94,58,0.04);
+}
+
+.submission-banner::before,
+.submission-banner::after {
+  content: '✦';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gold);
+  font-size: 0.7rem;
+}
+
+.submission-banner::before { left: -0.6rem; background: var(--cream); padding: 0 3px; }
+.submission-banner::after  { right: -0.6rem; background: var(--cream); padding: 0 3px; }
+
+.submission-banner p {
+  font-family: 'Crimson Pro', serif;
+  font-size: 1rem;
+  color: var(--ink);
+  text-align: center;
+  line-height: 1.6;
+}
+
+.submission-banner strong {
+  font-weight: 600;
+  color: var(--moss);
+}
+
+.submission-banner a {
+  color: var(--moss);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold);
+  transition: color 0.2s;
+}
+
+.submission-banner a:hover {
+  color: var(--rust);
+}
+
+.header-ps {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--faded);
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: italic;
+}
+
+.header-ps strong {
+  color: var(--ink);
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* ── DECORATIVE DIVIDER ── */
+
+.divider {
+  text-align: center;
+  margin: 2.5rem 0;
+  color: var(--gold);
+  font-size: 1.1rem;
+  letter-spacing: 0.6em;
+  opacity: 0.6;
+}
+
+/* ── PLANT COUNT BADGE ── */
+
+.count-bar {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.count-badge {
+  display: inline-block;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--faded);
+  border: 1px solid var(--aged);
+  padding: 0.4rem 1.4rem;
+  border-radius: 0;
+}
+
+.count-badge span {
+  color: var(--moss);
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* ── PLANT GRID ── */
+
+.plant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2px;
+}
+
+/* ── PLANT CARD ── */
+
+.plant-card {
+  background: var(--paper);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.plant-card:hover .card-img {
+  transform: scale(1.04);
+}
+
+.plant-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.card-img-wrap {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--aged);
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: block;
+}
+
+.card-img-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--aged) 0%, var(--paper) 100%);
+}
+
+.card-img-placeholder svg {
+  opacity: 0.3;
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(26,20,16,0.7) 0%, transparent 55%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.card-footer {
+  padding: 1rem 1.2rem 1.1rem;
+  border-top: 1px solid rgba(196,185,154,0.3);
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.card-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.72rem;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  flex-shrink: 0;
+  font-style: italic;
+}
+
+.card-name {
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: 1.05rem;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.card-name.unidentified {
+  color: var(--faded);
+  font-style: italic;
+}
+
+/* ── MULTI-IMAGE HANDLING ── */
+
+.card-img-wrap.multi {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+
+.card-img-wrap.multi .card-img {
+  aspect-ratio: 1;
+}
+
+/* individual image click targets inside multi-photo cards */
+.img-click {
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+  position: relative;
+}
+
+.img-click .card-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.img-click:hover .card-img {
+  transform: scale(1.06);
+}
+
+.card-img-wrap.triple {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2px;
+}
+
+.card-img-wrap.triple .img-click:first-child {
+  grid-row: span 2;
+}
+
+/* ── "COMING SOON" SECTION ── */
+
+.coming-soon-section {
+  max-width: 700px;
+  margin: 4rem auto 2rem;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.coming-soon-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--faded);
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.pending-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  list-style: none;
+}
+
+.pending-list li {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.9rem;
+  color: var(--faded);
+  border: 1px solid var(--aged);
+  padding: 0.25rem 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+/* ── FOOTER ── */
+
+.site-footer {
+  text-align: center;
+  padding: 3rem 2rem 4rem;
+  border-top: 1px solid var(--aged);
+  margin-top: 4rem;
+}
+
+.footer-rule {
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  margin: 0 auto 1.5rem;
+}
+
+.footer-made-by {
+  font-family: 'IM Fell English', serif;
+  font-size: 1.1rem;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.footer-made-by .heart {
+  color: var(--rust);
+  font-style: normal;
+  animation: heartbeat 2s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  15% { transform: scale(1.25); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.15); }
+  60% { transform: scale(1); }
+}
+
+.footer-author {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-style: normal;
+  color: var(--moss);
+}
+
+.footer-text {
+  font-size: 0.88rem;
+  color: var(--faded);
+  font-style: italic;
+  margin-top: 0.4rem;
+}
+
+.footer-mail {
+  color: var(--moss);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--moss);
+  transition: color 0.2s;
+}
+
+.footer-mail:hover {
+  color: var(--rust);
+}
+
+/* ── LIGHTBOX ── */
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(26,20,16,0.92);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0.5rem;
+  gap: 0;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox-inner {
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  animation: lbFade 0.25s ease;
+}
+
+@keyframes lbFade {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.lightbox-img {
+  width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+}
+
+.lightbox-caption {
+  text-align: center;
+  padding: 1rem;
+  font-family: 'IM Fell English', serif;
+  font-size: 1.1rem;
+  color: var(--aged);
+  letter-spacing: 0.05em;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -2rem;
+  right: 0;
+  background: none;
+  border: none;
+  color: var(--aged);
+  font-size: 1.5rem;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  font-family: 'Crimson Pro', serif;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.lightbox-close:hover { opacity: 1; }
+
+.lb-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: 1px solid rgba(232,223,200,0.3);
+  color: var(--aged);
+  font-size: 1.8rem;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.55;
+  transition: opacity 0.2s, background 0.2s, transform 0.15s;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.lb-nav:hover {
+  opacity: 1;
+  background: rgba(232,223,200,0.1);
+}
+
+.lb-prev {
+  left: 0.5rem;
+}
+
+.lb-prev:hover { transform: translateY(-50%) translateX(-2px); }
+
+.lb-next {
+  right: 0.5rem;
+}
+
+.lb-next:hover { transform: translateY(-50%) translateX(2px); }
+
+.lb-counter {
+  text-align: center;
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  color: var(--faded);
+  margin-top: 0.4rem;
+}
+
+/* ── RESPONSIVE ── */
+
+@media (max-width: 640px) {
+  .plant-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+
+  .card-name {
+    font-size: 0.88rem;
+  }
+
+  .card-footer {
+    padding: 0.6rem 0.7rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .plant-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* stagger animation delays */
+.plant-card:nth-child(1)  { animation-delay: 0.05s; }
+.plant-card:nth-child(2)  { animation-delay: 0.10s; }
+.plant-card:nth-child(3)  { animation-delay: 0.15s; }
+.plant-card:nth-child(4)  { animation-delay: 0.20s; }
+.plant-card:nth-child(5)  { animation-delay: 0.25s; }
+.plant-card:nth-child(6)  { animation-delay: 0.30s; }
+.plant-card:nth-child(7)  { animation-delay: 0.35s; }
+.plant-card:nth-child(8)  { animation-delay: 0.40s; }
+.plant-card:nth-child(9)  { animation-delay: 0.45s; }
+.plant-card:nth-child(10) { animation-delay: 0.50s; }
+.plant-card:nth-child(n+11) { animation-delay: 0.55s; }
