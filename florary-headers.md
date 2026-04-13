@@ -378,17 +378,17 @@
 ### 73. Pride of Barbados
 ![20260408_134210 jpg](https://github.com/user-attachments/assets/a4712a03-7000-4d6c-9951-589be7c4dbae)
 
-![WhatsApp Image 2026-04-13 at 15 21 20](https://github.com/user-attachments/assets/dc0ba04b-6b85-46f1-9ef4-3f5fafd51ea7)
-![WhatsApp Image 2026-04-13 at 15 21 21](https://github.com/user-attachments/assets/f4f9f4a6-f065-493c-b19f-5d5952526349)
 
 ### 74. Plumeria
-![WhatsApp Image 2026-04-13 at 15 21 17](https://github.com/user-attachments/assets/3a274dd6-72cc-4afc-9021-46b8e742250e)
 
 
 
 
 ### 75. grass
-![WhatsApp Image 2026-04-13 at 15 21 21 (1)](https://github.com/user-attachments/assets/60c05bea-e646-42ca-879d-afda2945e401)
+![95242 jpg](https://github.com/user-attachments/assets/c952622e-c5d6-4af0-aa5e-1962a17cd350)
+![95222 jpg](https://github.com/user-attachments/assets/c589b3a0-34f2-4ab7-b529-c0dae48291a7)
+![95239 jpg](https://github.com/user-attachments/assets/a64603b8-6969-41ff-ab7c-65ecb800a66d)
+![95243 jpg](https://github.com/user-attachments/assets/139d15b1-0529-4cc8-8876-1ce3e218e9f5)
 
 
 
