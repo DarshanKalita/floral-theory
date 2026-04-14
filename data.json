@@ -1,0 +1,20 @@
+[
+  {
+    "id": "plant-1",
+    "name": "Bougainvillea glabra",
+    "common_name": "Lesser Bougainvillea",
+    "date": "October 2023",
+    "location": "Near the old hostel",
+    "description": "Vibrant magenta bracts surrounding tiny white true flowers.",
+    "image": "https://raw.githubusercontent.com/DarshanKalita/floral-theory/main/Images/bougainvillea.jpg"
+  },
+  {
+    "id": "plant-2",
+    "name": "Plumeria rubra",
+    "common_name": "Frangipani",
+    "date": "November 2023",
+    "location": "Academic block entrance",
+    "description": "Thick stems with highly fragrant, spiral-shaped white and yellow flowers.",
+    "image": "https://raw.githubusercontent.com/DarshanKalita/floral-theory/main/Images/plumeria.jpg"
+  }
+]
