@@ -1,8 +1,6 @@
 ![Header](https://github.com/user-attachments/assets/2cdd7ea7-40b2-412c-a7a4-9c883c2c5f7a)
 
-# Welcome to Floral Theory!
-
-**Select Layout:** [List View](florary-headers.md) | [Compact View](florary-accordion.md) | [Grid View](florary-grid.md)
+# Welcome to Floral Theory Minimalist!
 
 ---
 
