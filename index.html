@@ -76,7 +76,15 @@
         .image-gallery {
             display: flex;
             flex-direction: column;
-            gap: 5px; /* Slight gap between multiple images */
+            gap: 5px; 
+        }
+
+        /* Anchor tag styling fix */
+        .image-gallery a {
+            display: block;
+            text-decoration: none;
+            outline: none;
+            border: none;
         }
 
         .image-gallery img {
@@ -84,6 +92,7 @@
             height: auto;
             display: block;
             object-fit: cover;
+            border: none;
         }
 
         .card-content { padding: 20px; }
@@ -105,7 +114,7 @@
         }
         #gallery.view-grid .card { margin-bottom: 0; }
         #gallery.view-grid img.primary-img { height: 250px; }
-        #gallery.view-grid img.additional-img { display: none; } /* Hide extras to keep grid clean */
+        #gallery.view-grid a:not(:first-child) { display: none; } /* Hide extra image links in grid */
         #gallery.view-grid .card-content { font-size: 0.9rem; }
 
         /* Accordion View */
@@ -165,7 +174,11 @@
         
         <article class="card" id="plant-1">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/2531268b-0495-4927-b6d1-965b17a26880" alt="Pseuderanthemum" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/2531268b-0495-4927-b6d1-965b17a26880" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F2531268b-0495-4927-b6d1-965b17a26880&w=800&output=webp&we" alt="Pseuderanthemum" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Pseuderanthemum</h2>
@@ -176,7 +189,15 @@
         
         <article class="card" id="plant-2">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/07d1a479-cd97-4cc0-b3ea-69c607bc57f6" alt="Acalypha wilkesiana" class="primary-img" loading="lazy"><img src="https://github.com/user-attachments/assets/bc337ae5-3aed-48ed-a470-de18c6b44f42" alt="Acalypha wilkesiana - Image 2" class="additional-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/07d1a479-cd97-4cc0-b3ea-69c607bc57f6" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F07d1a479-cd97-4cc0-b3ea-69c607bc57f6&w=800&output=webp&we" alt="Acalypha wilkesiana" class="primary-img" loading="lazy">
+        </a>
+        
+                <a href="https://github.com/user-attachments/assets/bc337ae5-3aed-48ed-a470-de18c6b44f42" target="_blank" title="Click to view full resolution">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fbc337ae5-3aed-48ed-a470-de18c6b44f42&w=800&output=webp&we" alt="Acalypha wilkesiana - Image 2" class="additional-img" loading="lazy">
+                </a>
+                
             </div>
             <div class="card-content">
                 <h2>Acalypha wilkesiana</h2>
@@ -187,7 +208,11 @@
         
         <article class="card" id="plant-3">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/e478cf8c-303c-4598-bcce-6fed659b21f1" alt="Trachelospermum jasminoides" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/e478cf8c-303c-4598-bcce-6fed659b21f1" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fe478cf8c-303c-4598-bcce-6fed659b21f1&w=800&output=webp&we" alt="Trachelospermum jasminoides" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Trachelospermum jasminoides</h2>
@@ -198,7 +223,11 @@
         
         <article class="card" id="plant-4">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/3a428939-9861-44c5-88c5-682511d564e1" alt="Clerodendrum thomsoniae" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/3a428939-9861-44c5-88c5-682511d564e1" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F3a428939-9861-44c5-88c5-682511d564e1&w=800&output=webp&we" alt="Clerodendrum thomsoniae" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Clerodendrum thomsoniae</h2>
@@ -209,7 +238,11 @@
         
         <article class="card" id="plant-5">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/eec0e2a0-e2bd-46e9-a9c6-18034b1bbadb" alt="Ligustrum" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/eec0e2a0-e2bd-46e9-a9c6-18034b1bbadb" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Feec0e2a0-e2bd-46e9-a9c6-18034b1bbadb&w=800&output=webp&we" alt="Ligustrum" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Ligustrum</h2>
@@ -220,7 +253,15 @@
         
         <article class="card" id="plant-6">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/8d8e6d80-3408-412d-baf7-2f061ad25abc" alt="Tabernaemontana divaricata" class="primary-img" loading="lazy"><img src="https://github.com/user-attachments/assets/e38c27bc-d60f-4387-99c0-b927f8a98aeb" alt="Tabernaemontana divaricata - Image 2" class="additional-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/8d8e6d80-3408-412d-baf7-2f061ad25abc" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F8d8e6d80-3408-412d-baf7-2f061ad25abc&w=800&output=webp&we" alt="Tabernaemontana divaricata" class="primary-img" loading="lazy">
+        </a>
+        
+                <a href="https://github.com/user-attachments/assets/e38c27bc-d60f-4387-99c0-b927f8a98aeb" target="_blank" title="Click to view full resolution">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fe38c27bc-d60f-4387-99c0-b927f8a98aeb&w=800&output=webp&we" alt="Tabernaemontana divaricata - Image 2" class="additional-img" loading="lazy">
+                </a>
+                
             </div>
             <div class="card-content">
                 <h2>Tabernaemontana divaricata</h2>
@@ -231,7 +272,15 @@
         
         <article class="card" id="plant-7">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/369834a5-fed4-4060-a862-34f8ff9b5362" alt="Ravenala madagascariensis" class="primary-img" loading="lazy"><img src="https://github.com/user-attachments/assets/0bde1ee8-c62a-465e-9466-7f7b4bc17083" alt="Ravenala madagascariensis - Image 2" class="additional-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/369834a5-fed4-4060-a862-34f8ff9b5362" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F369834a5-fed4-4060-a862-34f8ff9b5362&w=800&output=webp&we" alt="Ravenala madagascariensis" class="primary-img" loading="lazy">
+        </a>
+        
+                <a href="https://github.com/user-attachments/assets/0bde1ee8-c62a-465e-9466-7f7b4bc17083" target="_blank" title="Click to view full resolution">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F0bde1ee8-c62a-465e-9466-7f7b4bc17083&w=800&output=webp&we" alt="Ravenala madagascariensis - Image 2" class="additional-img" loading="lazy">
+                </a>
+                
             </div>
             <div class="card-content">
                 <h2>Ravenala madagascariensis</h2>
@@ -242,7 +291,11 @@
         
         <article class="card" id="plant-8">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/7c1b4fa9-0ddc-40b8-bd61-7a6da8176fe8" alt="Adansonia" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/7c1b4fa9-0ddc-40b8-bd61-7a6da8176fe8" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F7c1b4fa9-0ddc-40b8-bd61-7a6da8176fe8&w=800&output=webp&we" alt="Adansonia" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Adansonia</h2>
@@ -253,7 +306,11 @@
         
         <article class="card" id="plant-9">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/deb736c8-eab8-4a8e-bd91-97f5cd4d7c41" alt="Epipremnum aureum" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/deb736c8-eab8-4a8e-bd91-97f5cd4d7c41" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fdeb736c8-eab8-4a8e-bd91-97f5cd4d7c41&w=800&output=webp&we" alt="Epipremnum aureum" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Epipremnum aureum</h2>
@@ -264,7 +321,15 @@
         
         <article class="card" id="plant-10">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/0338fab9-f014-4c50-b016-294574efd0f0" alt="Ixora coccinea" class="primary-img" loading="lazy"><img src="https://github.com/user-attachments/assets/59af56ba-f117-4f05-bdbb-cd941b5fcfe2" alt="Ixora coccinea - Image 2" class="additional-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/0338fab9-f014-4c50-b016-294574efd0f0" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F0338fab9-f014-4c50-b016-294574efd0f0&w=800&output=webp&we" alt="Ixora coccinea" class="primary-img" loading="lazy">
+        </a>
+        
+                <a href="https://github.com/user-attachments/assets/59af56ba-f117-4f05-bdbb-cd941b5fcfe2" target="_blank" title="Click to view full resolution">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F59af56ba-f117-4f05-bdbb-cd941b5fcfe2&w=800&output=webp&we" alt="Ixora coccinea - Image 2" class="additional-img" loading="lazy">
+                </a>
+                
             </div>
             <div class="card-content">
                 <h2>Ixora coccinea</h2>
@@ -275,7 +340,11 @@
         
         <article class="card" id="plant-11">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/4ec278cd-82be-4e55-9097-eacd1466874b" alt="Cordyline fruticosa" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/4ec278cd-82be-4e55-9097-eacd1466874b" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F4ec278cd-82be-4e55-9097-eacd1466874b&w=800&output=webp&we" alt="Cordyline fruticosa" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Cordyline fruticosa</h2>
@@ -286,7 +355,11 @@
         
         <article class="card" id="plant-12">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/9b5683e2-accc-4ada-a6be-a43902e18306" alt="Cocos nucifera" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/9b5683e2-accc-4ada-a6be-a43902e18306" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F9b5683e2-accc-4ada-a6be-a43902e18306&w=800&output=webp&we" alt="Cocos nucifera" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Cocos nucifera</h2>
@@ -297,7 +370,11 @@
         
         <article class="card" id="plant-13">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/6559cc52-c40a-4b61-b33f-84c5b4f9e34c" alt="Nephrolepis exaltata" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/6559cc52-c40a-4b61-b33f-84c5b4f9e34c" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F6559cc52-c40a-4b61-b33f-84c5b4f9e34c&w=800&output=webp&we" alt="Nephrolepis exaltata" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Nephrolepis exaltata</h2>
@@ -308,7 +385,11 @@
         
         <article class="card" id="plant-14">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/ce4d1920-4d4b-4042-87ba-66d6ca330ae6" alt="Caladium bicolor" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/ce4d1920-4d4b-4042-87ba-66d6ca330ae6" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fce4d1920-4d4b-4042-87ba-66d6ca330ae6&w=800&output=webp&we" alt="Caladium bicolor" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Caladium bicolor</h2>
@@ -319,7 +400,11 @@
         
         <article class="card" id="plant-15">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/930c41d5-a31b-4f5b-bb05-922fa9500305" alt="Chlorophytum comosum" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/930c41d5-a31b-4f5b-bb05-922fa9500305" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F930c41d5-a31b-4f5b-bb05-922fa9500305&w=800&output=webp&we" alt="Chlorophytum comosum" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Chlorophytum comosum</h2>
@@ -330,7 +415,11 @@
         
         <article class="card" id="plant-16">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/97a55b04-187d-4a93-b287-82126e41ba96" alt="Codiaeum variegatum" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/97a55b04-187d-4a93-b287-82126e41ba96" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F97a55b04-187d-4a93-b287-82126e41ba96&w=800&output=webp&we" alt="Codiaeum variegatum" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Codiaeum variegatum</h2>
@@ -341,7 +430,15 @@
         
         <article class="card" id="plant-17">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/59fffdb8-299d-4491-8abd-2199a8bb845e" alt="Ficus benjamina 'Variegata'" class="primary-img" loading="lazy"><img src="https://github.com/user-attachments/assets/b2d53e14-0abc-430b-b513-e7ea168a2684" alt="Ficus benjamina 'Variegata' - Image 2" class="additional-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/59fffdb8-299d-4491-8abd-2199a8bb845e" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F59fffdb8-299d-4491-8abd-2199a8bb845e&w=800&output=webp&we" alt="Ficus benjamina 'Variegata'" class="primary-img" loading="lazy">
+        </a>
+        
+                <a href="https://github.com/user-attachments/assets/b2d53e14-0abc-430b-b513-e7ea168a2684" target="_blank" title="Click to view full resolution">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fb2d53e14-0abc-430b-b513-e7ea168a2684&w=800&output=webp&we" alt="Ficus benjamina 'Variegata' - Image 2" class="additional-img" loading="lazy">
+                </a>
+                
             </div>
             <div class="card-content">
                 <h2>Ficus benjamina 'Variegata'</h2>
@@ -352,7 +449,11 @@
         
         <article class="card" id="plant-18">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/e0c0093e-1534-48c0-8b14-dfb126bb11c6" alt="Bougainvillea" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/e0c0093e-1534-48c0-8b14-dfb126bb11c6" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fe0c0093e-1534-48c0-8b14-dfb126bb11c6&w=800&output=webp&we" alt="Bougainvillea" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Bougainvillea</h2>
@@ -363,7 +464,11 @@
         
         <article class="card" id="plant-19">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/dee7867d-3121-4f89-a7a9-4032540b293e" alt="Hamelia patens" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/dee7867d-3121-4f89-a7a9-4032540b293e" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fdee7867d-3121-4f89-a7a9-4032540b293e&w=800&output=webp&we" alt="Hamelia patens" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Hamelia patens</h2>
@@ -374,7 +479,11 @@
         
         <article class="card" id="plant-20">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/2a64344b-193a-4f2e-af5b-bec209a0e6ea" alt="Dracaena marginata" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/2a64344b-193a-4f2e-af5b-bec209a0e6ea" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F2a64344b-193a-4f2e-af5b-bec209a0e6ea&w=800&output=webp&we" alt="Dracaena marginata" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Dracaena marginata</h2>
@@ -385,7 +494,15 @@
         
         <article class="card" id="plant-21">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/1362ba9d-35a6-4558-96e1-bd53aa555a97" alt="Phalaenopsis" class="primary-img" loading="lazy"><img src="https://github.com/user-attachments/assets/fdd66384-f327-465e-a00e-b4382afb8b03" alt="Phalaenopsis - Image 2" class="additional-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/1362ba9d-35a6-4558-96e1-bd53aa555a97" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F1362ba9d-35a6-4558-96e1-bd53aa555a97&w=800&output=webp&we" alt="Phalaenopsis" class="primary-img" loading="lazy">
+        </a>
+        
+                <a href="https://github.com/user-attachments/assets/fdd66384-f327-465e-a00e-b4382afb8b03" target="_blank" title="Click to view full resolution">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Ffdd66384-f327-465e-a00e-b4382afb8b03&w=800&output=webp&we" alt="Phalaenopsis - Image 2" class="additional-img" loading="lazy">
+                </a>
+                
             </div>
             <div class="card-content">
                 <h2>Phalaenopsis</h2>
@@ -396,7 +513,15 @@
         
         <article class="card" id="plant-22">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/f7f9a90e-9617-4b3d-b4b0-41f064cfa088" alt="Delonix regia" class="primary-img" loading="lazy"><img src="https://github.com/user-attachments/assets/16c331ec-bed0-4fb6-b8a5-a86befa07340" alt="Delonix regia - Image 2" class="additional-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/f7f9a90e-9617-4b3d-b4b0-41f064cfa088" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Ff7f9a90e-9617-4b3d-b4b0-41f064cfa088&w=800&output=webp&we" alt="Delonix regia" class="primary-img" loading="lazy">
+        </a>
+        
+                <a href="https://github.com/user-attachments/assets/16c331ec-bed0-4fb6-b8a5-a86befa07340" target="_blank" title="Click to view full resolution">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F16c331ec-bed0-4fb6-b8a5-a86befa07340&w=800&output=webp&we" alt="Delonix regia - Image 2" class="additional-img" loading="lazy">
+                </a>
+                
             </div>
             <div class="card-content">
                 <h2>Delonix regia</h2>
@@ -407,7 +532,11 @@
         
         <article class="card" id="plant-23">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/4e9db1e6-27c1-4c74-a9dc-6bfe4b23dfe6" alt="Dracaena trifasciata" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/4e9db1e6-27c1-4c74-a9dc-6bfe4b23dfe6" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F4e9db1e6-27c1-4c74-a9dc-6bfe4b23dfe6&w=800&output=webp&we" alt="Dracaena trifasciata" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Dracaena trifasciata</h2>
@@ -418,7 +547,11 @@
         
         <article class="card" id="plant-24">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/2bf81e4a-07dd-4639-90a6-ab19a268d98b" alt="Catharanthus roseus" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/2bf81e4a-07dd-4639-90a6-ab19a268d98b" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F2bf81e4a-07dd-4639-90a6-ab19a268d98b&w=800&output=webp&we" alt="Catharanthus roseus" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Catharanthus roseus</h2>
@@ -429,7 +562,11 @@
         
         <article class="card" id="plant-25">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/a0bcb8cb-d3ce-41e4-9a31-2d20f954ceb1" alt="Crossandra infundibuliformis" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/a0bcb8cb-d3ce-41e4-9a31-2d20f954ceb1" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fa0bcb8cb-d3ce-41e4-9a31-2d20f954ceb1&w=800&output=webp&we" alt="Crossandra infundibuliformis" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Crossandra infundibuliformis</h2>
@@ -440,7 +577,11 @@
         
         <article class="card" id="plant-26">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/765af0a6-7950-41c1-89e1-e6b2a778d796" alt="Crotalaria retusa" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/765af0a6-7950-41c1-89e1-e6b2a778d796" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F765af0a6-7950-41c1-89e1-e6b2a778d796&w=800&output=webp&we" alt="Crotalaria retusa" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Crotalaria retusa</h2>
@@ -451,7 +592,19 @@
         
         <article class="card" id="plant-27">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/e95d67cd-7b5e-4a95-b39c-f2fb7f561234" alt="Azadirachta indica" class="primary-img" loading="lazy"><img src="https://github.com/user-attachments/assets/7190d3d2-a51a-492e-bbc2-6106d624437a" alt="Azadirachta indica - Image 2" class="additional-img" loading="lazy"><img src="https://github.com/user-attachments/assets/5ff0070a-12d9-425f-a138-107e2ba5bca9" alt="Azadirachta indica - Image 3" class="additional-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/e95d67cd-7b5e-4a95-b39c-f2fb7f561234" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fe95d67cd-7b5e-4a95-b39c-f2fb7f561234&w=800&output=webp&we" alt="Azadirachta indica" class="primary-img" loading="lazy">
+        </a>
+        
+                <a href="https://github.com/user-attachments/assets/7190d3d2-a51a-492e-bbc2-6106d624437a" target="_blank" title="Click to view full resolution">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F7190d3d2-a51a-492e-bbc2-6106d624437a&w=800&output=webp&we" alt="Azadirachta indica - Image 2" class="additional-img" loading="lazy">
+                </a>
+                
+                <a href="https://github.com/user-attachments/assets/5ff0070a-12d9-425f-a138-107e2ba5bca9" target="_blank" title="Click to view full resolution">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F5ff0070a-12d9-425f-a138-107e2ba5bca9&w=800&output=webp&we" alt="Azadirachta indica - Image 3" class="additional-img" loading="lazy">
+                </a>
+                
             </div>
             <div class="card-content">
                 <h2>Azadirachta indica</h2>
@@ -462,7 +615,11 @@
         
         <article class="card" id="plant-29">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/3eb83e27-6013-4514-a03d-8a88d7ee9f13" alt="Tinospora cordifolia" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/3eb83e27-6013-4514-a03d-8a88d7ee9f13" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F3eb83e27-6013-4514-a03d-8a88d7ee9f13&w=800&output=webp&we" alt="Tinospora cordifolia" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Tinospora cordifolia</h2>
@@ -473,7 +630,11 @@
         
         <article class="card" id="plant-30">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/ac8de929-bf90-4911-983d-18a47ddab879" alt="Peltophorum pterocarpum" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/ac8de929-bf90-4911-983d-18a47ddab879" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fac8de929-bf90-4911-983d-18a47ddab879&w=800&output=webp&we" alt="Peltophorum pterocarpum" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Peltophorum pterocarpum</h2>
@@ -484,7 +645,11 @@
         
         <article class="card" id="plant-31">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/805a7daf-f014-4d70-9f84-4835838cdaba" alt="Plumeria rubra" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/805a7daf-f014-4d70-9f84-4835838cdaba" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F805a7daf-f014-4d70-9f84-4835838cdaba&w=800&output=webp&we" alt="Plumeria rubra" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Plumeria rubra</h2>
@@ -495,7 +660,11 @@
         
         <article class="card" id="plant-32">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/6ee5fd52-c439-429c-99ce-ec98ae18cf3c" alt="Citrus limon" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/6ee5fd52-c439-429c-99ce-ec98ae18cf3c" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F6ee5fd52-c439-429c-99ce-ec98ae18cf3c&w=800&output=webp&we" alt="Citrus limon" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Citrus limon</h2>
@@ -506,7 +675,11 @@
         
         <article class="card" id="plant-33">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/0270d7b8-6666-4445-80f8-72c9855fbdab" alt="Unknown" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/0270d7b8-6666-4445-80f8-72c9855fbdab" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F0270d7b8-6666-4445-80f8-72c9855fbdab&w=800&output=webp&we" alt="Unknown" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Unknown</h2>
@@ -517,7 +690,11 @@
         
         <article class="card" id="plant-34">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/cb0d20a8-3b13-4635-acb2-f723be92fe08" alt="Araucaria heterophylla" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/cb0d20a8-3b13-4635-acb2-f723be92fe08" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fcb0d20a8-3b13-4635-acb2-f723be92fe08&w=800&output=webp&we" alt="Araucaria heterophylla" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Araucaria heterophylla</h2>
@@ -528,7 +705,11 @@
         
         <article class="card" id="plant-35">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/06ea06d3-9589-4488-9512-0c5b542d5999" alt="Millettia pinnata" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/06ea06d3-9589-4488-9512-0c5b542d5999" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F06ea06d3-9589-4488-9512-0c5b542d5999&w=800&output=webp&we" alt="Millettia pinnata" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Millettia pinnata</h2>
@@ -539,7 +720,15 @@
         
         <article class="card" id="plant-36">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/dd67fe63-57d8-4b6e-9db8-32f6c1632714" alt="Albizia procera" class="primary-img" loading="lazy"><img src="https://github.com/user-attachments/assets/4b65793f-f9bd-4b2a-9ab4-9e5c85dc5d86" alt="Albizia procera - Image 2" class="additional-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/dd67fe63-57d8-4b6e-9db8-32f6c1632714" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fdd67fe63-57d8-4b6e-9db8-32f6c1632714&w=800&output=webp&we" alt="Albizia procera" class="primary-img" loading="lazy">
+        </a>
+        
+                <a href="https://github.com/user-attachments/assets/4b65793f-f9bd-4b2a-9ab4-9e5c85dc5d86" target="_blank" title="Click to view full resolution">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F4b65793f-f9bd-4b2a-9ab4-9e5c85dc5d86&w=800&output=webp&we" alt="Albizia procera - Image 2" class="additional-img" loading="lazy">
+                </a>
+                
             </div>
             <div class="card-content">
                 <h2>Albizia procera</h2>
@@ -550,7 +739,11 @@
         
         <article class="card" id="plant-37">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/4c8f9fb3-af6b-4870-a57f-0be1018cfc8e" alt="Mimusops elengi" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/4c8f9fb3-af6b-4870-a57f-0be1018cfc8e" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F4c8f9fb3-af6b-4870-a57f-0be1018cfc8e&w=800&output=webp&we" alt="Mimusops elengi" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Mimusops elengi</h2>
@@ -561,7 +754,11 @@
         
         <article class="card" id="plant-38">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/29223269-5df4-4ccb-abf8-b38ce6cd10eb" alt="Turnera ulmifolia" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/29223269-5df4-4ccb-abf8-b38ce6cd10eb" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F29223269-5df4-4ccb-abf8-b38ce6cd10eb&w=800&output=webp&we" alt="Turnera ulmifolia" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Turnera ulmifolia</h2>
@@ -572,7 +769,11 @@
         
         <article class="card" id="plant-39">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/837533c1-a807-49ed-b9a8-7476a35c3566" alt="Unknown" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/837533c1-a807-49ed-b9a8-7476a35c3566" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F837533c1-a807-49ed-b9a8-7476a35c3566&w=800&output=webp&we" alt="Unknown" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Unknown</h2>
@@ -583,7 +784,11 @@
         
         <article class="card" id="plant-40">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/9b4b2cff-1860-4462-83f8-ee166711b9a8" alt="Unknown" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/9b4b2cff-1860-4462-83f8-ee166711b9a8" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F9b4b2cff-1860-4462-83f8-ee166711b9a8&w=800&output=webp&we" alt="Unknown" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Unknown</h2>
@@ -594,7 +799,11 @@
         
         <article class="card" id="plant-41">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/1f04c554-614d-483e-86d7-b3f24ffc9c0f" alt="Unknown" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/1f04c554-614d-483e-86d7-b3f24ffc9c0f" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F1f04c554-614d-483e-86d7-b3f24ffc9c0f&w=800&output=webp&we" alt="Unknown" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Unknown</h2>
@@ -605,7 +814,15 @@
         
         <article class="card" id="plant-42">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/4fbdbea4-c908-498c-af09-3857f6e41958" alt="Cascabela thevetia" class="primary-img" loading="lazy"><img src="https://github.com/user-attachments/assets/8f205275-a44b-4284-a86f-98b81f77304e" alt="Cascabela thevetia - Image 2" class="additional-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/4fbdbea4-c908-498c-af09-3857f6e41958" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F4fbdbea4-c908-498c-af09-3857f6e41958&w=800&output=webp&we" alt="Cascabela thevetia" class="primary-img" loading="lazy">
+        </a>
+        
+                <a href="https://github.com/user-attachments/assets/8f205275-a44b-4284-a86f-98b81f77304e" target="_blank" title="Click to view full resolution">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F8f205275-a44b-4284-a86f-98b81f77304e&w=800&output=webp&we" alt="Cascabela thevetia - Image 2" class="additional-img" loading="lazy">
+                </a>
+                
             </div>
             <div class="card-content">
                 <h2>Cascabela thevetia</h2>
@@ -616,7 +833,11 @@
         
         <article class="card" id="plant-43">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/2828de9a-d78f-4c83-bafd-f080f928618c" alt="Ravenea rivularis" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/2828de9a-d78f-4c83-bafd-f080f928618c" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F2828de9a-d78f-4c83-bafd-f080f928618c&w=800&output=webp&we" alt="Ravenea rivularis" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Ravenea rivularis</h2>
@@ -627,7 +848,11 @@
         
         <article class="card" id="plant-44">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/54b0fdad-474e-4ed4-85c9-0b78544304f1" alt="Colocasia esculenta" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/54b0fdad-474e-4ed4-85c9-0b78544304f1" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F54b0fdad-474e-4ed4-85c9-0b78544304f1&w=800&output=webp&we" alt="Colocasia esculenta" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Colocasia esculenta</h2>
@@ -638,7 +863,11 @@
         
         <article class="card" id="plant-45">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/f4ee8bc8-ec06-424c-93ed-741a2df1eec3" alt="Codiaeum variegatum 'Petra'" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/f4ee8bc8-ec06-424c-93ed-741a2df1eec3" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Ff4ee8bc8-ec06-424c-93ed-741a2df1eec3&w=800&output=webp&we" alt="Codiaeum variegatum 'Petra'" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Codiaeum variegatum 'Petra'</h2>
@@ -649,7 +878,11 @@
         
         <article class="card" id="plant-46">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/05881fa7-00b6-4990-8e14-2f828ba1fd0a" alt="Phoenix sylvestris" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/05881fa7-00b6-4990-8e14-2f828ba1fd0a" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F05881fa7-00b6-4990-8e14-2f828ba1fd0a&w=800&output=webp&we" alt="Phoenix sylvestris" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Phoenix sylvestris</h2>
@@ -660,7 +893,11 @@
         
         <article class="card" id="plant-47">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/91d22cf4-e986-4d3e-86b5-a73aeca790a3" alt="Unknown" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/91d22cf4-e986-4d3e-86b5-a73aeca790a3" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F91d22cf4-e986-4d3e-86b5-a73aeca790a3&w=800&output=webp&we" alt="Unknown" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Unknown</h2>
@@ -671,7 +908,11 @@
         
         <article class="card" id="plant-48">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/90e53ced-6c37-4360-bdf9-ef6f2b3d347c" alt="Solanum americanum" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/90e53ced-6c37-4360-bdf9-ef6f2b3d347c" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F90e53ced-6c37-4360-bdf9-ef6f2b3d347c&w=800&output=webp&we" alt="Solanum americanum" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Solanum americanum</h2>
@@ -682,7 +923,15 @@
         
         <article class="card" id="plant-49">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/523447f8-4779-4b5f-9bca-74aa1a319d2c" alt="Bambusoideae" class="primary-img" loading="lazy"><img src="https://github.com/user-attachments/assets/3e5249c7-f233-4c87-8823-d1409e485ef0" alt="Bambusoideae - Image 2" class="additional-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/523447f8-4779-4b5f-9bca-74aa1a319d2c" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F523447f8-4779-4b5f-9bca-74aa1a319d2c&w=800&output=webp&we" alt="Bambusoideae" class="primary-img" loading="lazy">
+        </a>
+        
+                <a href="https://github.com/user-attachments/assets/3e5249c7-f233-4c87-8823-d1409e485ef0" target="_blank" title="Click to view full resolution">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F3e5249c7-f233-4c87-8823-d1409e485ef0&w=800&output=webp&we" alt="Bambusoideae - Image 2" class="additional-img" loading="lazy">
+                </a>
+                
             </div>
             <div class="card-content">
                 <h2>Bambusoideae</h2>
@@ -693,7 +942,15 @@
         
         <article class="card" id="plant-50">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/e52078bd-577e-462a-913b-c68db01b9b28" alt="Wodyetia bifurcata" class="primary-img" loading="lazy"><img src="https://github.com/user-attachments/assets/3e699c51-ab16-41f3-a54f-5cab0cfa6882" alt="Wodyetia bifurcata - Image 2" class="additional-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/e52078bd-577e-462a-913b-c68db01b9b28" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fe52078bd-577e-462a-913b-c68db01b9b28&w=800&output=webp&we" alt="Wodyetia bifurcata" class="primary-img" loading="lazy">
+        </a>
+        
+                <a href="https://github.com/user-attachments/assets/3e699c51-ab16-41f3-a54f-5cab0cfa6882" target="_blank" title="Click to view full resolution">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F3e699c51-ab16-41f3-a54f-5cab0cfa6882&w=800&output=webp&we" alt="Wodyetia bifurcata - Image 2" class="additional-img" loading="lazy">
+                </a>
+                
             </div>
             <div class="card-content">
                 <h2>Wodyetia bifurcata</h2>
@@ -704,7 +961,11 @@
         
         <article class="card" id="plant-51">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/ad1c85a3-dfb3-4d50-8e75-df920156f1da" alt="Casuarina equisetifolia" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/ad1c85a3-dfb3-4d50-8e75-df920156f1da" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fad1c85a3-dfb3-4d50-8e75-df920156f1da&w=800&output=webp&we" alt="Casuarina equisetifolia" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Casuarina equisetifolia</h2>
@@ -715,7 +976,11 @@
         
         <article class="card" id="plant-52">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/2990b0ed-d44c-4f52-920e-d5f56de69ed7" alt="Areca catechu" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/2990b0ed-d44c-4f52-920e-d5f56de69ed7" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F2990b0ed-d44c-4f52-920e-d5f56de69ed7&w=800&output=webp&we" alt="Areca catechu" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Areca catechu</h2>
@@ -726,7 +991,15 @@
         
         <article class="card" id="plant-53">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/90c18e17-05b4-4d04-8d85-a53a4c8a9d9d" alt="Dalbergia sissoo" class="primary-img" loading="lazy"><img src="https://github.com/user-attachments/assets/43121217-0af8-4212-a870-6d3779a659b9" alt="Dalbergia sissoo - Image 2" class="additional-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/90c18e17-05b4-4d04-8d85-a53a4c8a9d9d" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F90c18e17-05b4-4d04-8d85-a53a4c8a9d9d&w=800&output=webp&we" alt="Dalbergia sissoo" class="primary-img" loading="lazy">
+        </a>
+        
+                <a href="https://github.com/user-attachments/assets/43121217-0af8-4212-a870-6d3779a659b9" target="_blank" title="Click to view full resolution">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F43121217-0af8-4212-a870-6d3779a659b9&w=800&output=webp&we" alt="Dalbergia sissoo - Image 2" class="additional-img" loading="lazy">
+                </a>
+                
             </div>
             <div class="card-content">
                 <h2>Dalbergia sissoo</h2>
@@ -737,7 +1010,11 @@
         
         <article class="card" id="plant-54">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/12a1797f-cb72-4fa3-ab89-e5ac98e2c4c8" alt="Melaleuca viminalis" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/12a1797f-cb72-4fa3-ab89-e5ac98e2c4c8" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F12a1797f-cb72-4fa3-ab89-e5ac98e2c4c8&w=800&output=webp&we" alt="Melaleuca viminalis" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Melaleuca viminalis</h2>
@@ -748,7 +1025,11 @@
         
         <article class="card" id="plant-55">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/c3d960f6-b5b0-4cb8-8ffb-b66f4ede2eb2" alt="Mangifera indica" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/c3d960f6-b5b0-4cb8-8ffb-b66f4ede2eb2" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fc3d960f6-b5b0-4cb8-8ffb-b66f4ede2eb2&w=800&output=webp&we" alt="Mangifera indica" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Mangifera indica</h2>
@@ -759,7 +1040,11 @@
         
         <article class="card" id="plant-56">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/98c42f36-dfce-45da-992b-9ac3272b1831" alt="Arecaceae" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/98c42f36-dfce-45da-992b-9ac3272b1831" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F98c42f36-dfce-45da-992b-9ac3272b1831&w=800&output=webp&we" alt="Arecaceae" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Arecaceae</h2>
@@ -770,7 +1055,15 @@
         
         <article class="card" id="plant-57">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/8e119a06-3db0-4249-82e1-7ec34d64c332" alt="Bauhinia × blakeana" class="primary-img" loading="lazy"><img src="https://github.com/user-attachments/assets/b6c2fe76-28be-4713-aeb5-0394ac6753bf" alt="Bauhinia × blakeana - Image 2" class="additional-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/8e119a06-3db0-4249-82e1-7ec34d64c332" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F8e119a06-3db0-4249-82e1-7ec34d64c332&w=800&output=webp&we" alt="Bauhinia × blakeana" class="primary-img" loading="lazy">
+        </a>
+        
+                <a href="https://github.com/user-attachments/assets/b6c2fe76-28be-4713-aeb5-0394ac6753bf" target="_blank" title="Click to view full resolution">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fb6c2fe76-28be-4713-aeb5-0394ac6753bf&w=800&output=webp&we" alt="Bauhinia × blakeana - Image 2" class="additional-img" loading="lazy">
+                </a>
+                
             </div>
             <div class="card-content">
                 <h2>Bauhinia × blakeana</h2>
@@ -781,7 +1074,11 @@
         
         <article class="card" id="plant-58">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/c923e386-7263-4664-97b0-3995268ec5b8" alt="Unknown" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/c923e386-7263-4664-97b0-3995268ec5b8" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fc923e386-7263-4664-97b0-3995268ec5b8&w=800&output=webp&we" alt="Unknown" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Unknown</h2>
@@ -792,7 +1089,11 @@
         
         <article class="card" id="plant-59">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/06e456e7-b4cf-489f-b45a-6d687c3bfa96" alt="Musa" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/06e456e7-b4cf-489f-b45a-6d687c3bfa96" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F06e456e7-b4cf-489f-b45a-6d687c3bfa96&w=800&output=webp&we" alt="Musa" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Musa</h2>
@@ -803,7 +1104,11 @@
         
         <article class="card" id="plant-60">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/4a6fd0d2-8613-4468-9f3d-0440814bc18b" alt="Helianthus tuberosus" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/4a6fd0d2-8613-4468-9f3d-0440814bc18b" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F4a6fd0d2-8613-4468-9f3d-0440814bc18b&w=800&output=webp&we" alt="Helianthus tuberosus" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Helianthus tuberosus</h2>
@@ -814,7 +1119,11 @@
         
         <article class="card" id="plant-61">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/f7b53c52-d464-4fee-9dfd-660e4ef00279" alt="Euphorbia milii" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/f7b53c52-d464-4fee-9dfd-660e4ef00279" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Ff7b53c52-d464-4fee-9dfd-660e4ef00279&w=800&output=webp&we" alt="Euphorbia milii" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Euphorbia milii</h2>
@@ -825,7 +1134,11 @@
         
         <article class="card" id="plant-62">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/678eb91e-6563-4876-9c3d-b6650a2de4cb" alt="Pennisetum glaucum" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/678eb91e-6563-4876-9c3d-b6650a2de4cb" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F678eb91e-6563-4876-9c3d-b6650a2de4cb&w=800&output=webp&we" alt="Pennisetum glaucum" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Pennisetum glaucum</h2>
@@ -836,7 +1149,11 @@
         
         <article class="card" id="plant-63">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/e13e415d-3a1e-46f4-a4d2-b8184c8e4fa2" alt="Terminalia catappa" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/e13e415d-3a1e-46f4-a4d2-b8184c8e4fa2" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fe13e415d-3a1e-46f4-a4d2-b8184c8e4fa2&w=800&output=webp&we" alt="Terminalia catappa" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Terminalia catappa</h2>
@@ -847,7 +1164,11 @@
         
         <article class="card" id="plant-64">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/5495d7d4-198a-4aca-8f7f-080dc365d7c3" alt="Ficus benghalensis" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/5495d7d4-198a-4aca-8f7f-080dc365d7c3" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F5495d7d4-198a-4aca-8f7f-080dc365d7c3&w=800&output=webp&we" alt="Ficus benghalensis" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Ficus benghalensis</h2>
@@ -858,7 +1179,15 @@
         
         <article class="card" id="plant-65">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/139d15b1-0529-4cc8-8876-1ce3e218e9f5" alt="Neolamarckia cadamba" class="primary-img" loading="lazy"><img src="https://github.com/user-attachments/assets/a0f8e585-575a-473e-87fa-c3fbeca4ecc9" alt="Neolamarckia cadamba - Image 2" class="additional-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/139d15b1-0529-4cc8-8876-1ce3e218e9f5" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F139d15b1-0529-4cc8-8876-1ce3e218e9f5&w=800&output=webp&we" alt="Neolamarckia cadamba" class="primary-img" loading="lazy">
+        </a>
+        
+                <a href="https://github.com/user-attachments/assets/a0f8e585-575a-473e-87fa-c3fbeca4ecc9" target="_blank" title="Click to view full resolution">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fa0f8e585-575a-473e-87fa-c3fbeca4ecc9&w=800&output=webp&we" alt="Neolamarckia cadamba - Image 2" class="additional-img" loading="lazy">
+                </a>
+                
             </div>
             <div class="card-content">
                 <h2>Neolamarckia cadamba</h2>
@@ -869,7 +1198,11 @@
         
         <article class="card" id="plant-66-67">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/fb3a1e9d-aaf1-4768-a226-07cc7e53af35" alt="Nymphaeaceae & Cactaceae" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/fb3a1e9d-aaf1-4768-a226-07cc7e53af35" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Ffb3a1e9d-aaf1-4768-a226-07cc7e53af35&w=800&output=webp&we" alt="Nymphaeaceae & Cactaceae" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Nymphaeaceae & Cactaceae</h2>
@@ -880,7 +1213,11 @@
         
         <article class="card" id="plant-68">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/d21e47a3-4e9b-47ab-aa44-8855cce85c1e" alt="Pritchardia pacifica" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/d21e47a3-4e9b-47ab-aa44-8855cce85c1e" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fd21e47a3-4e9b-47ab-aa44-8855cce85c1e&w=800&output=webp&we" alt="Pritchardia pacifica" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Pritchardia pacifica</h2>
@@ -891,7 +1228,11 @@
         
         <article class="card" id="plant-69">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/5231944b-663e-4f56-99cc-35d37126e7b3" alt="Tecoma capensis" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/5231944b-663e-4f56-99cc-35d37126e7b3" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2F5231944b-663e-4f56-99cc-35d37126e7b3&w=800&output=webp&we" alt="Tecoma capensis" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Tecoma capensis</h2>
@@ -902,7 +1243,11 @@
         
         <article class="card" id="plant-70">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/a17adbb6-bf51-4315-8d38-b9187d55611b" alt="Hibiscus rosa-sinensis var. alba" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/a17adbb6-bf51-4315-8d38-b9187d55611b" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fa17adbb6-bf51-4315-8d38-b9187d55611b&w=800&output=webp&we" alt="Hibiscus rosa-sinensis var. alba" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Hibiscus rosa-sinensis var. alba</h2>
@@ -913,7 +1258,11 @@
         
         <article class="card" id="plant-71">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/fc506c9e-42e9-4f1c-ac3b-4f1e13d6760f" alt="Canna indica" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/fc506c9e-42e9-4f1c-ac3b-4f1e13d6760f" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Ffc506c9e-42e9-4f1c-ac3b-4f1e13d6760f&w=800&output=webp&we" alt="Canna indica" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Canna indica</h2>
@@ -924,7 +1273,11 @@
         
         <article class="card" id="plant-72">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/b967f1a0-6f8c-43d0-86de-ad9bcd4e494c" alt="Pandanus" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/b967f1a0-6f8c-43d0-86de-ad9bcd4e494c" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fb967f1a0-6f8c-43d0-86de-ad9bcd4e494c&w=800&output=webp&we" alt="Pandanus" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Pandanus</h2>
@@ -935,7 +1288,15 @@
         
         <article class="card" id="plant-73">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/a4712a03-7000-4d6c-9951-589be7c4dbae" alt="Caesalpinia pulcherrima" class="primary-img" loading="lazy"><img src="https://github.com/user-attachments/assets/a64603b8-6969-41ff-ab7c-65ecb800a66d" alt="Caesalpinia pulcherrima - Image 2" class="additional-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/a4712a03-7000-4d6c-9951-589be7c4dbae" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fa4712a03-7000-4d6c-9951-589be7c4dbae&w=800&output=webp&we" alt="Caesalpinia pulcherrima" class="primary-img" loading="lazy">
+        </a>
+        
+                <a href="https://github.com/user-attachments/assets/a64603b8-6969-41ff-ab7c-65ecb800a66d" target="_blank" title="Click to view full resolution">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fa64603b8-6969-41ff-ab7c-65ecb800a66d&w=800&output=webp&we" alt="Caesalpinia pulcherrima - Image 2" class="additional-img" loading="lazy">
+                </a>
+                
             </div>
             <div class="card-content">
                 <h2>Caesalpinia pulcherrima</h2>
@@ -946,7 +1307,11 @@
         
         <article class="card" id="plant-74">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/c952622e-c5d6-4af0-aa5e-1962a17cd350" alt="Plumeria" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/c952622e-c5d6-4af0-aa5e-1962a17cd350" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fc952622e-c5d6-4af0-aa5e-1962a17cd350&w=800&output=webp&we" alt="Plumeria" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Plumeria</h2>
@@ -957,7 +1322,11 @@
         
         <article class="card" id="plant-75">
             <div class="image-gallery">
-                <img src="https://github.com/user-attachments/assets/c589b3a0-34f2-4ab7-b529-c0dae48291a7" alt="Poaceae" class="primary-img" loading="lazy">
+                
+        <a href="https://github.com/user-attachments/assets/c589b3a0-34f2-4ab7-b529-c0dae48291a7" target="_blank" title="Click to view full resolution">
+            <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fc589b3a0-34f2-4ab7-b529-c0dae48291a7&w=800&output=webp&we" alt="Poaceae" class="primary-img" loading="lazy">
+        </a>
+        
             </div>
             <div class="card-content">
                 <h2>Poaceae</h2>
@@ -996,6 +1365,9 @@
         }
 
         document.getElementById('gallery').addEventListener('click', function(e) {
+            // Prevent accordion toggle if clicking on an image link
+            if (e.target.closest('a')) return;
+
             if (this.classList.contains('view-accordion')) {
                 const card = e.target.closest('.card');
                 if (card) {
