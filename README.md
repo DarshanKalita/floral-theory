@@ -6,7 +6,7 @@ is an archive of plants I have spotted in CMI that I deem archive-worthy of.
 
 ---
 
-Find the archive here: https://github.com/DarshanKalita/floral-theory/blob/main/florary-headers.md 
+Find the archive here: https://darshankalita.github.io/floral-theory/
 
 A lot more trees are available on campus than the cardinality of this archive. You are encouraged to mail me with pictures of the specific plant if you want it updated. 
 
