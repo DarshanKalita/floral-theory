@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floral Theory | CMI Archive</title>
+    <style>
+        :root {
+            --bg-color: #F4F1EA;
+            --text-main: #2E4F3F;
+            --text-muted: #5A7065;
+            --accent: #8E9B82;
+            --card-bg: #FCFAF6;
+            --border: #D8D3C4;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0 40px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 40px;
+        }
+
+        h1 { font-size: 2.5rem; font-weight: normal; margin-bottom: 10px; }
+        h2 { font-weight: normal; color: var(--text-muted); margin-top: 0; }
+        
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        button {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 8px 16px;
+            cursor: pointer;
+            font-family: inherit;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        button:hover, button.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        /* --- Views --- */
+        #gallery {
+            display: flex;
+            transition: all 0.3s ease;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 5px; /* Slight gap between multiple images */
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .card-content { padding: 20px; }
+        .meta { font-size: 0.9rem; color: var(--text-muted); font-style: italic; margin-bottom: 10px;}
+
+        /* Full View (Default) */
+        #gallery.view-full {
+            flex-direction: column;
+        }
+        #gallery.view-full img {
+            max-height: 80vh;
+        }
+
+        /* Grid View */
+        #gallery.view-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        #gallery.view-grid .card { margin-bottom: 0; }
+        #gallery.view-grid img.primary-img { height: 250px; }
+        #gallery.view-grid img.additional-img { display: none; } /* Hide extras to keep grid clean */
+        #gallery.view-grid .card-content { font-size: 0.9rem; }
+
+        /* Accordion View */
+        #gallery.view-accordion {
+            flex-direction: column;
+            gap: 10px;
+        }
+        #gallery.view-accordion .card {
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+        #gallery.view-accordion .card .image-gallery,
+        #gallery.view-accordion .card p.desc {
+            display: none; 
+        }
+        #gallery.view-accordion .card.open .image-gallery,
+        #gallery.view-accordion .card.open p.desc {
+            display: flex;
+        }
+        #gallery.view-accordion .card-content { padding: 15px 20px; }
+
+        /* --- Form --- */
+        .submission-section {
+            margin: 60px 0;
+            padding: 40px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid var(--border);
+            background: var(--bg-color);
+            color: var(--text-main);
+            font-family: inherit;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Floral Theory</h1>
+        <p>An archive of flora present at CMI, documented in plain sight.</p>
+    </header>
+
+    <div class="controls">
+        <button onclick="setView('view-full')" id="btn-full" class="active">Full View</button>
+        <button onclick="setView('view-grid')" id="btn-grid">Grid View</button>
+        <button onclick="setView('view-accordion')" id="btn-accordion">Accordion Index</button>
+    </div>
+
+    <main id="gallery" class="view-full">
+        {{CONTENT}}
+    </main>
+
+    <section class="submission-section">
+        <h2>Submit a Discovery</h2>
+        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+            <label>Plant Name / Subject</label>
+            <input type="text" name="subject" required>
+            
+            <label>Location & Date</label>
+            <input type="text" name="location" required>
+            
+            <label>Notes or Image URL</label>
+            <textarea name="message" rows="4" required></textarea>
+            
+            <button type="submit">Submit to Archive</button>
+        </form>
+    </section>
+
+    <script>
+        function setView(viewName) {
+            const gallery = document.getElementById('gallery');
+            gallery.className = viewName;
+            
+            document.querySelectorAll('.controls button').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('btn-' + viewName.split('-')[1]).classList.add('active');
+
+            document.querySelectorAll('.card').forEach(card => card.classList.remove('open'));
+        }
+
+        document.getElementById('gallery').addEventListener('click', function(e) {
+            if (this.classList.contains('view-accordion')) {
+                const card = e.target.closest('.card');
+                if (card) {
+                    card.classList.toggle('open');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
