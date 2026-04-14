@@ -76,7 +76,15 @@
         .image-gallery {
             display: flex;
             flex-direction: column;
-            gap: 5px; /* Slight gap between multiple images */
+            gap: 5px; 
+        }
+
+        /* Anchor tag styling fix */
+        .image-gallery a {
+            display: block;
+            text-decoration: none;
+            outline: none;
+            border: none;
         }
 
         .image-gallery img {
@@ -84,6 +92,7 @@
             height: auto;
             display: block;
             object-fit: cover;
+            border: none;
         }
 
         .card-content { padding: 20px; }
@@ -105,7 +114,7 @@
         }
         #gallery.view-grid .card { margin-bottom: 0; }
         #gallery.view-grid img.primary-img { height: 250px; }
-        #gallery.view-grid img.additional-img { display: none; } /* Hide extras to keep grid clean */
+        #gallery.view-grid a:not(:first-child) { display: none; } /* Hide extra image links in grid */
         #gallery.view-grid .card-content { font-size: 0.9rem; }
 
         /* Accordion View */
@@ -193,6 +202,9 @@
         }
 
         document.getElementById('gallery').addEventListener('click', function(e) {
+            // Prevent accordion toggle if clicking on an image link
+            if (e.target.closest('a')) return;
+
             if (this.classList.contains('view-accordion')) {
                 const card = e.target.closest('.card');
                 if (card) {
