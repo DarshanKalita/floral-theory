@@ -5,36 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Floral Theory | CMI Archive</title>
     <style>
+        /* Dark Museum Archive Theme Variables */
         :root {
-            --bg-color: #F4F1EA;
-            --text-main: #2E4F3F;
-            --text-muted: #5A7065;
-            --accent: #8E9B82;
-            --card-bg: #FCFAF6;
-            --border: #D8D3C4;
+            --bg-color: #121614; 
+            --text-main: #E8E8E8;
+            --text-muted: #9BAE9E;
+            --accent: #6C8C74;
+            --card-bg: rgba(25, 30, 27, 0.6);
+            --border: rgba(255, 255, 255, 0.1);
         }
 
         body {
-            background-color: var(--bg-color);
+            /* PASTE YOUR BACKGROUND IMAGE URL HERE */
+            background-image: url('https://github.com/user-attachments/assets/6a19a08a-bd36-437b-aa56-48c7641324cf'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #121614;
+            
             color: var(--text-main);
             font-family: 'Georgia', serif;
             line-height: 1.6;
             margin: 0;
-            padding: 0 20px;
+            padding: 40px 20px;
+        }
+
+        /* The Dark Frosted Glass Container */
+        .container {
             max-width: 900px;
             margin: 0 auto;
+            padding: 40px 40px 60px;
+            background-color: rgba(18, 22, 20, 0.75);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
         }
 
         header {
             text-align: center;
-            padding: 60px 0 40px;
+            padding-bottom: 30px;
             border-bottom: 1px solid var(--border);
             margin-bottom: 40px;
         }
 
-        h1 { font-size: 2.5rem; font-weight: normal; margin-bottom: 10px; }
-        h2 { font-weight: normal; color: var(--text-muted); margin-top: 0; }
+        h1 { 
+            font-size: 3rem; 
+            font-weight: normal; 
+            letter-spacing: 1px;
+            margin: 0 0 10px 0; 
+        }
         
+        h2 { font-weight: normal; color: var(--text-muted); margin-top: 0; }
+        .subtitle { font-style: italic; color: var(--text-muted); }
+
         .controls {
             display: flex;
             justify-content: center;
@@ -59,7 +84,7 @@
             border-color: var(--accent);
         }
 
-        /* --- Views --- */
+        /* --- Views & Multi-Image Gallery --- */
         #gallery {
             display: flex;
             transition: all 0.3s ease;
@@ -71,6 +96,7 @@
             border-radius: 6px;
             overflow: hidden;
             margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         .image-gallery {
@@ -79,7 +105,6 @@
             gap: 5px; 
         }
 
-        /* Anchor tag styling fix */
         .image-gallery a {
             display: block;
             text-decoration: none;
@@ -95,16 +120,17 @@
             border: none;
         }
 
-        .card-content { padding: 20px; }
+        /* Left-aligned content for a cleaner reading experience */
+        .card-content { 
+            padding: 25px; 
+            text-align: left; 
+        }
+        
         .meta { font-size: 0.9rem; color: var(--text-muted); font-style: italic; margin-bottom: 10px;}
 
-        /* Full View (Default) */
-        #gallery.view-full {
-            flex-direction: column;
-        }
-        #gallery.view-full img {
-            max-height: 80vh;
-        }
+        /* Full View */
+        #gallery.view-full { flex-direction: column; }
+        #gallery.view-full img { max-height: 80vh; }
 
         /* Grid View */
         #gallery.view-grid {
@@ -114,31 +140,21 @@
         }
         #gallery.view-grid .card { margin-bottom: 0; }
         #gallery.view-grid img.primary-img { height: 250px; }
-        #gallery.view-grid a:not(:first-child) { display: none; } /* Hide extra image links in grid */
+        #gallery.view-grid a:not(:first-child) { display: none; } 
         #gallery.view-grid .card-content { font-size: 0.9rem; }
 
         /* Accordion View */
-        #gallery.view-accordion {
-            flex-direction: column;
-            gap: 10px;
-        }
-        #gallery.view-accordion .card {
-            margin-bottom: 0;
-            cursor: pointer;
-        }
+        #gallery.view-accordion { flex-direction: column; gap: 10px; }
+        #gallery.view-accordion .card { margin-bottom: 0; cursor: pointer; }
         #gallery.view-accordion .card .image-gallery,
-        #gallery.view-accordion .card p.desc {
-            display: none; 
-        }
+        #gallery.view-accordion .card p.desc { display: none; }
         #gallery.view-accordion .card.open .image-gallery,
-        #gallery.view-accordion .card.open p.desc {
-            display: flex;
-        }
+        #gallery.view-accordion .card.open p.desc { display: flex; }
         #gallery.view-accordion .card-content { padding: 15px 20px; }
 
         /* --- Form --- */
         .submission-section {
-            margin: 60px 0;
+            margin: 60px 0 0;
             padding: 40px;
             background: var(--card-bg);
             border: 1px solid var(--border);
@@ -150,45 +166,56 @@
             padding: 10px;
             margin-bottom: 15px;
             border: 1px solid var(--border);
-            background: var(--bg-color);
+            background: rgba(0,0,0,0.3); /* Dark inputs */
             color: var(--text-main);
             font-family: inherit;
             box-sizing: border-box;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 20px 10px; }
+            .container { padding: 20px; }
+            h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Floral Theory</h1>
-        <p>An archive of flora present at CMI, documented in plain sight.</p>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Floral Theory</h1>
+            <p class="subtitle">Welcome to the nature-inspired archive of plain-sight discoveries.</p>
+            <p>An archive of flora present at CMI, documented by Darshan.</p>
+        </header>
 
-    <div class="controls">
-        <button onclick="setView('view-full')" id="btn-full" class="active">Full View</button>
-        <button onclick="setView('view-grid')" id="btn-grid">Grid View</button>
+        <<div class="controls">
+        <button onclick="setView('view-full')" id="btn-full">Full View</button>
+        <button onclick="setView('view-grid')" id="btn-grid" class="active">Grid View</button>
         <button onclick="setView('view-accordion')" id="btn-accordion">Accordion Index</button>
+        <a href="map.html" style="text-decoration:none;"><button style="border-color: var(--accent);">Explore Map</button></a>
+    </div>  
+
+        <!-- Main gallery defaults to view-grid -->
+        <main id="gallery" class="view-grid">
+            {{CONTENT}}
+        </main>
+
+        <section class="submission-section">
+            <h2>Submit a Discovery</h2>
+            <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+                <label>Plant Name / Subject (if known)</label>
+                <input type="text" name="subject">
+                
+                <label>Location & Date of Sighting</label>
+                <input type="text" name="location">
+                
+                <label>A decent description, or link to picture(s)</label>
+                <textarea name="message" rows="4" required></textarea>
+                
+                <button type="submit">Submit to Archive</button>
+            </form>
+        </section>
     </div>
-
-    <main id="gallery" class="view-full">
-        {{CONTENT}}
-    </main>
-
-    <section class="submission-section">
-        <h2>Submit a Discovery</h2>
-        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-            <label>Plant Name / Subject</label>
-            <input type="text" name="subject" required>
-            
-            <label>Location & Date</label>
-            <input type="text" name="location" required>
-            
-            <label>Notes or Image URL</label>
-            <textarea name="message" rows="4" required></textarea>
-            
-            <button type="submit">Submit to Archive</button>
-        </form>
-    </section>
 
     <script>
         function setView(viewName) {
@@ -202,7 +229,6 @@
         }
 
         document.getElementById('gallery').addEventListener('click', function(e) {
-            // Prevent accordion toggle if clicking on an image link
             if (e.target.closest('a')) return;
 
             if (this.classList.contains('view-accordion')) {
@@ -212,6 +238,39 @@
                 }
             }
         });
+                // Check for Location Filters on Page Load
+  // Check for specific Plant ID on Page Load (from the Map)
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const targetId = urlParams.get('id');
+            
+            if (targetId) {
+                // Ensure the layout is Full View or Accordion so scrolling works properly
+                setView('view-full');
+                
+                // Find the target plant card
+                const targetCard = document.getElementById(targetId);
+                
+                if (targetCard) {
+                    // Highlight it briefly
+                    targetCard.style.transition = 'box-shadow 0.5s, transform 0.5s';
+                    targetCard.style.boxShadow = '0 0 20px #6C8C74';
+                    targetCard.style.transform = 'scale(1.02)';
+                    
+                    // Scroll to it
+                    setTimeout(() => {
+                        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 300);
+
+                    // Remove highlight after 3 seconds
+                    setTimeout(() => {
+                        targetCard.style.boxShadow = '0 4px 10px rgba(0,0,0,0.2)';
+                        targetCard.style.transform = 'scale(1)';
+                    }, 3000);
+                }
+            }
+        });
+        
     </script>
 </body>
 </html>

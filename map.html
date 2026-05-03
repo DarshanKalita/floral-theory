@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Botanical Map | Floral Theory</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        :root { --bg-color: #121614; --text-main: #E8E8E8; --accent: #6C8C74; --border: rgba(255, 255, 255, 0.1); }
+        body { margin: 0; padding: 0; background-color: var(--bg-color); color: var(--text-main); font-family: 'Georgia', serif; display: flex; flex-direction: column; height: 100vh; }
+        header { padding: 20px; text-align: center; border-bottom: 1px solid var(--border); background: rgba(18, 22, 20, 0.9); z-index: 1000; }
+        h1 { margin: 0; font-size: 1.8rem; font-weight: normal; }
+        a.back-link { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+        a.back-link:hover { text-decoration: underline; }
+        #map { flex-grow: 1; background-color: var(--bg-color); cursor: crosshair; }
+        
+        /* Custom Popup Styling */
+        .leaflet-popup-content-wrapper { background: rgba(244, 241, 234, 0.95); color: #121614; border-radius: 6px; font-family: 'Georgia', serif;}
+        .leaflet-popup-tip { background: rgba(244, 241, 234, 0.95); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Campus Botanical Map</h1>
+        <a href="index.html" class="back-link">← Return to Full Archive</a>
+        <p style="font-size: 0.85rem; color: #9BAE9E; margin: 5px 0 0 0; font-style: italic;">Click a dot to expand the area, or click empty space to get coordinates for new plants.</p>
+    </header>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // 1. Initialize Map
+        const map = L.map('map', { crs: L.CRS.Simple, minZoom: -1, maxZoom: 3, zoomControl: true });
+
+        // UPDATE THESE to match your satellite image exactly
+        const imgWidth = 1200; 
+        const imgHeight = 800;
+        const bounds = [[imgHeight, 0], [0, imgWidth]];
+
+        // PASTE YOUR SATELLITE IMAGE URL HERE
+        const imageUrl = 'PASTE_RAW_URL_TO_CAMPUS_SATELLITE_JPG_HERE';
+        L.imageOverlay(imageUrl, bounds).addTo(map);
+        map.fitBounds(bounds);
+
+        // Function to generate high-saturation random color
+        function getRandomSaturatedColor() {
+            const hue = Math.floor(Math.random() * 360);
+            return `hsl(${hue}, 100%, 50%)`; // 100% saturation, 50% lightness
+        }
+
+        // 2. Fetch data.json and plot the dots
+        fetch('data.json')
+            .then(response => response.json())
+            .then(plants => {
+                plants.forEach(plant => {
+                    // Only plot if coordinates exist
+                    if (plant.coordinates && plant.coordinates.length === 2) {
+                        
+                        // Create the colored dot
+                        const dot = L.circleMarker(plant.coordinates, {
+                            radius: 8,
+                            fillColor: getRandomSaturatedColor(),
+                            color: '#ffffff', // White border so it pops against dark backgrounds
+                            weight: 2,
+                            fillOpacity: 0.9
+                        }).addTo(map);
+
+                        // Build the popup content
+                        const popupContent = `
+                            <div style="text-align: center; padding: 5px;">
+                                <h3 style="margin: 0 0 5px 0; font-size: 1.2rem; color: #2E4F3F;">${plant.name}</h3>
+                                <p style="margin: 0 0 15px 0; font-size: 0.9rem; color: #5A7065; font-style: italic;">${plant.location || 'Location unverified'}</p>
+                                <a href="index.html?id=${plant.id}" style="background: #6C8C74; color: white; padding: 8px 12px; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block;">View in Archive</a>
+                            </div>
+                        `;
+                        dot.bindPopup(popupContent);
+
+                        // Click event to "Expand" (Zoom in smoothly)
+                        dot.on('click', function(e) {
+                            // Fly to the coordinates at zoom level 2
+                            map.flyTo(plant.coordinates, 2, { duration: 0.5 });
+                            this.openPopup();
+                        });
+                    }
+                });
+            })
+            .catch(err => console.error("Could not load data.json. Note: This feature only works when accessed via a server (like GitHub Pages or localhost), not direct file:// protocol.", err));
+
+        // 3. Coordinate Helper (Click empty space to get Y, X)
+        map.on('click', function(e) {
+            let y = Math.round(e.latlng.lat);
+            let x = Math.round(e.latlng.lng);
+            
+            L.popup()
+                .setLatLng(e.latlng)
+                .setContent(`
+                    <div style="text-align:center;">
+                        <b>Target Coordinates:</b><br>
+                        <code style="font-size: 1.2rem; display:block; margin: 10px 0;">[${y}, ${x}]</code>
+                        <span style="font-size: 0.8rem; color: #666;">Copy into data.json</span>
+                    </div>
+                `)
+                .openOn(map);
+        });
+    </script>
+</body>
+</html>

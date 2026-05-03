@@ -45,13 +45,13 @@ def build_site():
 
         # Build individual cards
         card = f"""
-        <article class="card" id="{plant['id']}">
+        <article class="card" id="{plant['id']}" data-location="{plant.get('location', '')}">
             <div class="image-gallery">
                 {images_html}
             </div>
             <div class="card-content">
                 <h2>{plant['name']}</h2>
-                <div class="meta">{plant.get('common_name', '')} | {plant.get('location', '')} | {plant.get('date', '')}</div>
+                <div class="meta">{plant.get('common_name', '')} | <span class="loc-text">{plant.get('location', '')}</span> | {plant.get('date', '')}</div>
                 <p class="desc">{plant.get('description', '')}</p>
             </div>
         </article>
