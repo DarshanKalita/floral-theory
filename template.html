@@ -3,75 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Import Water Brush and Quintessential from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Quintessential&family=Water+Brush&display=swap" rel="stylesheet">
     <title>Floral Theory | CMI Archive</title>
     <style>
-        /* Dark Museum Archive Theme Variables */
         :root {
-            --bg-color: #121614; 
+            --bg-deep: #0D0F0E;
+            --card-solid: rgba(22, 27, 24, 0); 
             --text-main: #E8E8E8;
             --text-muted: #9BAE9E;
             --accent: #6C8C74;
-            --card-bg: rgba(25, 30, 27, 0.6);
-            --border: rgba(255, 255, 255, 0.1);
+            --border: rgba(255, 255, 255, 0.08);
         }
 
         body {
-            /* PASTE YOUR BACKGROUND IMAGE URL HERE */
-            background-image: url('https://github.com/user-attachments/assets/6a19a08a-bd36-437b-aa56-48c7641324cf'); 
+    background-color: var(--bg-deep);
+    color: var(--text-main);
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    
+    /* Forces the entire page to scale up by 33% */
+    zoom: 1.33; 
+}
+
+        /* --- Second Background (Fades in on scroll) --- */
+        /* --- Second Background (Fades in on scroll) --- */
+.bg-archive {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('./assets/cmi\ light.jpeg'); 
+    
+    /* CHANGE THESE TWO LINES: */
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    
+    background-position: center;
+    z-index: 0;
+    opacity: 0; 
+    pointer-events: none;
+    will-change: opacity;
+}
+
+        .bg-archive::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(13, 15, 14, 0.35); 
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            position: relative;
+            z-index: 1; 
+            width: 100%;
+            height: 85vh;
+            background-image: url('https://github-production-user-asset-6210df.s3.amazonaws.com/66469041/577454877-a4712a03-7000-4d6c-9951-589be7c4dbae.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260506%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260506T121133Z&X-Amz-Expires=300&X-Amz-Signature=29a97897c6d91705b44642af28a9074ed385aa3e16ab5baa409b8cf1401775e3&X-Amz-SignedHeaders=host&response-content-type=image%2Fjpeg'); 
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
-            background-color: #121614;
-            
-            color: var(--text-main);
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 40px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        /* The Dark Frosted Glass Container */
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 40px 60px;
-            background-color: rgba(18, 22, 20, 0.75);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(13,15,14,0.2) 0%, rgba(13,15,14,1) 100%);
         }
 
-        header {
+        .hero-text {
+            position: relative;
+            z-index: 1;
             text-align: center;
-            padding-bottom: 30px;
-            border-bottom: 1px solid var(--border);
-            margin-bottom: 40px;
+            padding: 0 20px;
         }
 
-        h1 { 
-            font-size: 3rem; 
+        .hero-text h1 { 
+            font-family: 'Water Brush', cursive; 
+            font-size: 8rem; 
             font-weight: normal; 
-            letter-spacing: 1px;
-            margin: 0 0 10px 0; 
+            letter-spacing: 2px;
+            margin: 0;
+            text-shadow: 0 10px 30px rgba(0,0,0,0.8);
         }
-        
-        h2 { font-weight: normal; color: var(--text-muted); margin-top: 0; }
-        .subtitle { font-style: italic; color: var(--text-muted); }
+
+        .hero-text p.subtitle { 
+            font-size: 1.2rem; 
+            color: var(--text-muted); 
+            font-style: italic;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.8);
+        }
+
+        /* --- Archive Container --- */
+        .container {
+            max-width: 1000px; 
+            margin: 0 auto;
+            padding: 40px 20px 100px;
+            position: relative;
+            z-index: 2; 
+        }
+
+        .archive-header { text-align: center; margin-bottom: 50px; }
 
         .controls {
             display: flex;
             justify-content: center;
             gap: 15px;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
 
         button {
-            background: transparent;
+            background: rgba(255,255,255,0.03);
             border: 1px solid var(--border);
             color: var(--text-main);
-            padding: 8px 16px;
+            padding: 10px 20px;
             cursor: pointer;
             font-family: inherit;
             border-radius: 4px;
@@ -84,118 +135,196 @@
             border-color: var(--accent);
         }
 
-        /* --- Views & Multi-Image Gallery --- */
-        #gallery {
-            display: flex;
-            transition: all 0.3s ease;
-        }
+        /* --- Base Card Styles (Applies to all views) --- */
+        #gallery { transition: all 0.3s ease; }
 
         .card {
-            background: var(--card-bg);
+            width: 100%; /* Default to full width, overridden by Grid view */
+            background: var(--card-solid);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             border: 1px solid var(--border);
-            border-radius: 6px;
+            border-radius: 8px;
             overflow: hidden;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-
-        .image-gallery {
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            transition: transform 0.3s, border-color 0.3s;
             display: flex;
             flex-direction: column;
-            gap: 5px; 
         }
 
-        .image-gallery a {
-            display: block;
-            text-decoration: none;
-            outline: none;
-            border: none;
-        }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent); }
 
-        .image-gallery img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-            border: none;
-        }
+        .image-gallery { display: flex; flex-direction: column; gap: 8px; background: rgba(0,0,0,0.3); }
+        
+        .image-gallery img { 
+            width: 100%; 
+            display: block; 
+            opacity: 0.9; 
+            transition: opacity 0.3s; 
+        } 
+        
+        .card:hover img { opacity: 1; }
 
-        /* Left-aligned content for a cleaner reading experience */
         .card-content { 
             padding: 25px; 
-            text-align: left; 
+            text-align: center;
+            flex-grow: 1; 
+        }
+
+        /* Typography */
+        .card-content h2 { 
+            font-family: 'Quintessential', serif;
+            font-weight: 700; 
+            margin: 0 0 10px 0; 
+            font-size: 1.5rem;
+            color: var(--text-main);
+            letter-spacing: -0.5px; 
+        }
+
+        .meta { 
+            font-family: 'Lora', serif;
+            font-size: 0.9rem; 
+            color: var(--text-muted); 
+            font-style: italic; 
+            margin-bottom: 15px; 
+            border-bottom: 1px solid var(--border); 
+            padding-bottom: 10px;
+            display: inline-block; 
+            width: 80%; 
+        }
+
+        .card-content p:not(.meta) {
+            font-size: 1.1rem; 
+            line-height: 1.7;
+            color: var(--text-main);
+        }
+
+        /* --- 1. Grid View Layout --- */
+        #gallery.view-grid { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 40px; 
+            width: 100%;
         }
         
-        .meta { font-size: 0.9rem; color: var(--text-muted); font-style: italic; margin-bottom: 10px;}
-
-        /* Full View */
-        #gallery.view-full { flex-direction: column; }
-        #gallery.view-full img { max-height: 80vh; }
-
-        /* Grid View */
-        #gallery.view-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
+        #gallery.view-grid .card {
+            width: 300px; /* Forces cards to 300px ONLY in Grid view */
         }
-        #gallery.view-grid .card { margin-bottom: 0; }
-        #gallery.view-grid img.primary-img { height: 250px; }
-        #gallery.view-grid a:not(:first-child) { display: none; } 
-        #gallery.view-grid .card-content { font-size: 0.9rem; }
+        
+        #gallery.view-grid img.primary-img { 
+            height: 250px; 
+            object-fit: cover; 
+        }
+        
+        #gallery.view-grid a:not(:first-child) { display: none; }
 
-        /* Accordion View */
-        #gallery.view-accordion { flex-direction: column; gap: 10px; }
-        #gallery.view-accordion .card { margin-bottom: 0; cursor: pointer; }
-        #gallery.view-accordion .card .image-gallery,
-        #gallery.view-accordion .card p.desc { display: none; }
-        #gallery.view-accordion .card.open .image-gallery,
-        #gallery.view-accordion .card.open p.desc { display: flex; }
-        #gallery.view-accordion .card-content { padding: 15px 20px; }
+        /* --- 2. Full View Layout --- */
+        #gallery.view-full { 
+            display: flex;
+            flex-direction: column; 
+            gap: 60px;
+            width: 100%;
+        }
+        
+        #gallery.view-full img.primary-img { 
+            max-height: 85vh; 
+            object-fit: contain; /* Prevents image cropping in full view */
+        }
 
-        /* --- Form --- */
+        /* --- 3. Accordion (Index) View Layout --- */
+        #gallery.view-accordion { 
+            display: flex;
+            flex-direction: column; 
+            gap: 15px;
+            width: 100%;
+        }
+        
+        #gallery.view-accordion .card { 
+            cursor: pointer; 
+        }
+        
+        /* Hide images and standard descriptions by default */
+        #gallery.view-accordion .card .image-gallery, 
+        #gallery.view-accordion .card p:not(.meta) { 
+            display: none; 
+        }
+        
+        /* Reveal them when card has .open class */
+        #gallery.view-accordion .card.open .image-gallery { 
+            display: flex; 
+        }
+        #gallery.view-accordion .card.open p:not(.meta) { 
+            display: block; 
+        }
+
+        /* --- Submission Section --- */
         .submission-section {
-            margin: 60px 0 0;
+            margin-top: 80px;
             padding: 40px;
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 6px;
+            background: rgba(255,255,255,0.02);
+            border: 1px dashed var(--border);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
         }
         
         input, textarea {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
+            padding: 12px;
+            margin-bottom: 20px;
             border: 1px solid var(--border);
-            background: rgba(0,0,0,0.3); /* Dark inputs */
+            background: rgba(0,0,0,0.5);
             color: var(--text-main);
             font-family: inherit;
             box-sizing: border-box;
         }
 
+        .submit-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        /* --- Responsive Media Queries --- */
         @media (max-width: 600px) {
-            body { padding: 20px 10px; }
-            .container { padding: 20px; }
-            h1 { font-size: 2.2rem; }
+            .hero-text h1 { font-size: 5rem; }
+        }   
+        
+        @media (max-width: 340px) {
+            #gallery.view-grid .card {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <header>
+    <!-- The fixed background that fades in -->
+    <div class="bg-archive" id="bg-archive"></div>
+
+    <section class="hero">
+        <div class="hero-text">
             <h1>Floral Theory</h1>
-            <p class="subtitle">Welcome to the nature-inspired archive of plain-sight discoveries.</p>
-            <p>An archive of flora present at CMI, documented by Darshan.</p>
+            <p class="subtitle">An archive of plain-sight discoveries at CMI.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <header class="archive-header">
+            <p id="dynamic-subtitle" style="color: var(--text-muted); font-style: italic;">Documented by Darshan</p>
         </header>
 
         <div class="controls">
-        <button onclick="setView('view-full')" id="btn-full">Full View</button>
-        <button onclick="setView('view-grid')" id="btn-grid" class="active">Grid View</button>
-        <button onclick="setView('view-accordion')" id="btn-accordion">Accordion Index</button>
-        <a href="map.html" style="text-decoration:none;"><button style="border-color: var(--accent);">Explore Map</button></a>
-    </div>  
+            <button onclick="setView('view-grid')" id="btn-grid" class="active">Grid View</button>
+            <button onclick="setView('view-full')" id="btn-full">Full View</button>
+            <button onclick="setView('view-accordion')" id="btn-accordion">Index View</button>
+            <a href="map.html" style="text-decoration:none;"><button style="border-color: var(--accent);">Cartography</button></a>
+        </div>
 
-        <!-- Main gallery defaults to view-grid -->
         <main id="gallery" class="view-grid">
             {{CONTENT}}
         </main>
@@ -203,74 +332,73 @@
         <section class="submission-section">
             <h2>Submit a Discovery</h2>
             <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-                <label>Plant Name / Subject (if known)</label>
-                <input type="text" name="subject">
-                
-                <label>Location & Date of Sighting</label>
-                <input type="text" name="location">
-                
-                <label>A decent description, or link to picture(s)</label>
-                <textarea name="message" rows="4" required></textarea>
-                
-                <button type="submit">Submit to Archive</button>
+                <input type="text" name="subject" placeholder="Plant Name">
+                <input type="text" name="location" placeholder="Location">
+                <textarea name="message" rows="4" placeholder="Observations or Image Link" required></textarea>
+                <button type="submit" class="submit-btn">Send for Review</button>
             </form>
         </section>
     </div>
 
     <script>
+        // --- View Controls Logic ---
         function setView(viewName) {
             const gallery = document.getElementById('gallery');
             gallery.className = viewName;
-            
             document.querySelectorAll('.controls button').forEach(btn => btn.classList.remove('active'));
             document.getElementById('btn-' + viewName.split('-')[1]).classList.add('active');
-
             document.querySelectorAll('.card').forEach(card => card.classList.remove('open'));
         }
 
         document.getElementById('gallery').addEventListener('click', function(e) {
             if (e.target.closest('a')) return;
-
             if (this.classList.contains('view-accordion')) {
                 const card = e.target.closest('.card');
-                if (card) {
-                    card.classList.toggle('open');
-                }
+                if (card) { card.classList.toggle('open'); }
             }
         });
-                // Check for Location Filters on Page Load
-  // Check for specific Plant ID on Page Load (from the Map)
+
+        // --- Second Background Scroll Fade Logic ---
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const heroHeight = document.querySelector('.hero').offsetHeight;
+            
+            const fadeStart = heroHeight * 0.5;
+            const fadeEnd = heroHeight * 3; 
+
+            const bgArchive = document.getElementById('bg-archive');
+            
+            if (scrollY <= fadeStart) {
+                bgArchive.style.opacity = 0;
+            } else if (scrollY >= fadeEnd) {
+                bgArchive.style.opacity = 1;
+            } else {
+                bgArchive.style.opacity = (scrollY - fadeStart) / (fadeEnd - fadeStart);
+            }
+        });
+
         window.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
+            const loc = urlParams.get('location');
             const targetId = urlParams.get('id');
             
-            if (targetId) {
-                // Ensure the layout is Full View or Accordion so scrolling works properly
-                setView('view-full');
-                
-                // Find the target plant card
-                const targetCard = document.getElementById(targetId);
-                
-                if (targetCard) {
-                    // Highlight it briefly
-                    targetCard.style.transition = 'box-shadow 0.5s, transform 0.5s';
-                    targetCard.style.boxShadow = '0 0 20px #6C8C74';
-                    targetCard.style.transform = 'scale(1.02)';
-                    
-                    // Scroll to it
-                    setTimeout(() => {
-                        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    }, 300);
+            if (loc) {
+                document.getElementById('dynamic-subtitle').innerText = `Location: ${loc}`;
+                document.querySelectorAll('.card').forEach(card => {
+                    if (card.getAttribute('data-location') !== loc) card.style.display = 'none';
+                });
+                document.querySelector('.container').scrollIntoView({ behavior: 'smooth' });
+            }
 
-                    // Remove highlight after 3 seconds
-                    setTimeout(() => {
-                        targetCard.style.boxShadow = '0 4px 10px rgba(0,0,0,0.2)';
-                        targetCard.style.transform = 'scale(1)';
-                    }, 3000);
+            if (targetId) {
+                setView('view-full');
+                const targetCard = document.getElementById(targetId);
+                if (targetCard) {
+                    setTimeout(() => { targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 300);
+                    targetCard.style.borderColor = 'var(--accent)';
                 }
             }
         });
-        
     </script>
 </body>
 </html>

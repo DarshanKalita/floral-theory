@@ -50,8 +50,8 @@ def build_site():
                 {images_html}
             </div>
             <div class="card-content">
-                <h2>{plant['name']}</h2>
-                <div class="meta">{plant.get('common_name', '')} | <span class="loc-text">{plant.get('location', '')}</span> | {plant.get('date', '')}</div>
+                <h2>{plant['common_name']}</h2>
+                <div class="meta">{plant.get('name', '')} | <span class="loc-text">{plant.get('location', '')}</span> | {plant.get('date', '')}</div>
                 <p class="desc">{plant.get('description', '')}</p>
             </div>
         </article>

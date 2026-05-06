@@ -6,7 +6,10 @@
     "date": "5th March 2026",
     "location": "",
     "coordinates": [100,100],
-    "image": "https://github.com/user-attachments/assets/2531268b-0495-4927-b6d1-965b17a26880"
+    "image" : "https://github.com/user-attachments/assets/6a19a08a-bd36-437b-aa56-48c7641324cf" ,
+    "additional_images": [
+       "https://github.com/user-attachments/assets/2531268b-0495-4927-b6d1-965b17a26880"
+    ]
   },
   {
     "id": "plant-2",
@@ -283,8 +286,10 @@
     "date": "5th March 2026",
     "location": "",
     "coordinates": [100,100],
-    "image": "https://github.com/user-attachments/assets/ac8de929-bf90-4911-983d-18a47ddab879"
-  },
+    "image": "./assets/copperpodedited.jpeg",
+    "additional_images": [
+      "https://github.com/user-attachments/assets/ac8de929-bf90-4911-983d-18a47ddab879"
+    ]  },
   {
     "id": "plant-31",
     "name": "Plumeria rubra",
@@ -616,9 +621,9 @@
     "date": "",
     "location": "",
     "coordinates": [100,100],
-    "image": "https://github.com/user-attachments/assets/139d15b1-0529-4cc8-8876-1ce3e218e9f5",
+    "image": "https://github.com/user-attachments/assets/a0f8e585-575a-473e-87fa-c3fbeca4ecc9",
     "additional_images": [
-      "https://github.com/user-attachments/assets/a0f8e585-575a-473e-87fa-c3fbeca4ecc9"
+      "https://github.com/user-attachments/assets/139d15b1-0529-4cc8-8876-1ce3e218e9f5"
     ]
   },
   {
