@@ -22,7 +22,6 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            /* Global zoom removed. Handled by individual views below. */
         }
 
         /* --- Second Background (Fades in on scroll) --- */
@@ -42,7 +41,6 @@
             will-change: opacity;
         }
 
-        /* Dark tint so the cards remain legible against the new image */
         .bg-archive::after {
             content: '';
             position: absolute;
@@ -68,7 +66,6 @@
             content: '';
             position: absolute;
             inset: 0;
-            /* Keeps the top 20% completely clear, then fades to solid black slightly before the bottom edge */
             background: linear-gradient(
                 to bottom, 
                 rgba(13, 15, 14, 0.2) 0%,   
@@ -108,7 +105,7 @@
             z-index: 2; 
         }
 
-        .archive-header { text-align: center; margin-bottom: 50px; }
+        .archive-header { text-align: center; margin-bottom: 80px; }
 
         .controls {
             display: flex;
@@ -182,14 +179,26 @@
 
         .meta { 
             font-family: 'Lora', serif;
-            font-size: 1.3rem; 
             color: var(--text-muted); 
             font-style: italic; 
             margin-bottom: 15px; 
             border-bottom: 1px solid var(--border); 
             padding-bottom: 10px;
-            display: inline-block; 
+            display: flex;
+            flex-direction: column; 
+            gap: 4px; 
             width: 80%; 
+            margin: 0 auto 15px auto; 
+        }
+
+        .meta-name {
+            font-size: 1.2rem; /* Slightly smaller base size so most fit on one line anyway */
+            width: 100%;
+            line-height: 1.3; /* Keeps multi-line names tightly grouped */
+        }
+
+        .meta-detail {
+            font-size: 1.0rem; 
         }
 
         .card-content p:not(.meta) {
@@ -236,7 +245,6 @@
             gap: 15px; width: 100%; zoom: 0.9; 
         }
 
-        /* Base closed state: Fluid width locked to max 900px */
         #gallery.view-accordion .card { 
             width: 100%; 
             max-width: 900px; 
@@ -244,12 +252,10 @@
             transition: max-width 0.3s ease; 
         }
 
-        /* Open state: Expands to fit the high-res image */
         #gallery.view-accordion .card.open { 
             max-width: 100%; 
         }
 
-        /* Hide/Show logic */
         #gallery.view-accordion .card .image-gallery, 
         #gallery.view-accordion .card p:not(.meta) { display: none; }
         #gallery.view-accordion .card.open .image-gallery { display: flex; }
@@ -287,32 +293,23 @@
             border-radius: 4px;
         }
 
-        /* --- Responsive Media Queries for Mobile --- */
+        /* --- Responsive Media Queries --- */
         @media (max-width: 800px) {
-            /* 1. Kill the custom zoom on smaller screens */
             #gallery.view-grid,
             #gallery.view-full,
             #gallery.view-accordion {
                 zoom: 1.0 !important;
             }
-
-            /* 2. Shrink title and adjust container */
             .hero-text h1 { font-size: 4rem; }
             .hero-text p.subtitle { font-size: 1rem; }
             .container { padding: 20px 15px 60px; }
-
-            /* 3. Wrap controls so buttons don't overflow */
             .controls { 
                 flex-wrap: wrap; 
                 gap: 10px;
             }
-
-            /* 4. Force grid cards to take full width */
             #gallery.view-grid .card { width: 100%; }
             #gallery.view-grid { gap: 25px; }
             #gallery.view-full { gap: 40px; }
-
-            /* 5. Restrict image height so they fit vertically on a phone */
             #gallery.view-full img, 
             #gallery.view-accordion .card.open img { 
                 max-height: 60vh; 
@@ -356,10 +353,21 @@
                 <button type="submit" class="submit-btn">Send for Review</button>
             </form>
         </section>
+
+        <footer style="text-align: center; margin-top: 80px; padding-top: 30px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+    <p style="margin: 0 0 10px 0;"><strong>&copy; 2026 Darshan Kalita.</strong></p>
+    <p style="margin: 0; font-size: 0.85rem;">
+        The images and text in the Floral Theory archive are licensed under a <br>
+        <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" style="color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent);">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+    </p>
+    <p style="margin: 10px 0 0 0; font-size: 0.85rem;">
+        Commercial use is strictly prohibited without explicit written permission and licensing.
+    </p>
+</footer>
     </div>
 
     <script>
-        // --- View Controls Logic ---
+
         function setView(viewName) {
             const gallery = document.getElementById('gallery');
             gallery.className = viewName;
@@ -367,19 +375,20 @@
             document.getElementById('btn-' + viewName.split('-')[1]).classList.add('active');
             document.querySelectorAll('.card').forEach(card => card.classList.remove('open'));
             
-            // Save layout choice to browser memory
             localStorage.setItem('preferredView', viewName);
-        }
-
+            
+}
         document.getElementById('gallery').addEventListener('click', function(e) {
             if (e.target.closest('a')) return;
             if (this.classList.contains('view-accordion')) {
                 const card = e.target.closest('.card');
-                if (card) { card.classList.toggle('open'); }
+                if (card) { 
+                    card.classList.toggle('open'); 
+                    fitScientificNames(); // Recalculate if opening changes width
+                }
             }
         });
 
-        // --- Second Background Scroll Fade Logic ---
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
             const heroHeight = document.querySelector('.hero').offsetHeight;
@@ -399,17 +408,15 @@
         });
 
         window.addEventListener('beforeunload', () => {
-            sessionStorage.setItem('scrollPos', window.scrollY);
+            sessionStorage.setItem('scrollPos', Math.max(0, Math.round(window.scrollY)));
         });
 
         window.addEventListener('DOMContentLoaded', () => {
-            // 1. Restore the saved layout (or default to grid)
             const savedView = localStorage.getItem('preferredView') || 'view-grid';
             setView(savedView);
             
-            // 2. Restore scroll position
             const savedScroll = sessionStorage.getItem('scrollPos');
-            if (savedScroll) {
+            if (savedScroll !== null && parseInt(savedScroll) > 0) {
                 setTimeout(() => window.scrollTo(0, parseInt(savedScroll)), 50); 
             }
 

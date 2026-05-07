@@ -22,7 +22,7 @@ def build_site():
         # Click opens the raw link; grid displays the fast proxy
         images_html = f"""
             <a href="{raw_url}" target="_blank" title="Click to view full resolution">
-                <img src="{proxy_url}" alt="{plant.get('name', '')}" class="primary-img" loading="lazy">
+                <img src="{proxy_url}" alt="{plant.get('name', '')}" class="primary-img">
             </a>
         """
 
@@ -32,7 +32,7 @@ def build_site():
                 extra_proxy = f"https://wsrv.nl/?url={extra_img}&w=800&output=webp"
                 images_html += f"""
                     <a href="{extra_img}" target="_blank" title="Click to view full resolution">
-                        <img src="{extra_proxy}" alt="Additional image for {plant.get('name', '')}" loading="lazy">
+                        <img src="{extra_proxy}" alt="Additional image for {plant.get('name', '')}">
                     </a>
                 """
 
@@ -43,8 +43,11 @@ def build_site():
             </div>
             <div class="card-content">
                 <h2>{plant.get('common_name', '')}</h2>
-                <p class="meta">{plant.get('name', '')} | {plant.get('location', '')} | {plant.get('date', '')}</p>
-                <p class="desc">{plant.get('description', '')}</p>
+<div class="meta">
+                    <span class="meta-name">{plant.get('name', '')}</span>
+                    <span class="meta-detail">{plant.get('location', '')}</span>
+                    <span class="meta-detail">{plant.get('date', '')}</span>
+                </div>                <p class="desc">{plant.get('description', '')}</p>
             </div>
         </div>
         """
