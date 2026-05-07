@@ -2,13 +2,23 @@ import json
 import os
 import urllib.parse
 
-def optimize_url(raw_url, width=800):
-    """
-    Passes the raw GitHub image URL through a free CDN proxy to 
-    resize, compress, and convert it to WebP format instantly.
-    """
-    encoded_url = urllib.parse.quote(raw_url, safe='')
-    return f"https://wsrv.nl/?url={encoded_url}&w={width}&output=webp&we"
+# def optimize_url(raw_url, width=800):
+#     """
+#     Passes the raw GitHub image URL through a free CDN proxy to 
+#     resize, compress, and convert it to WebP format instantly.
+#     """
+#     encoded_url = urllib.parse.quote(raw_url, safe='')
+#     return f"https://wsrv.nl/?url={encoded_url}&w={width}&output=webp&we"
+
+def optimize_url(url):
+    # If it's a local file (doesn't start with http), return it exactly as is
+    if not url.startswith('http'):
+        return url
+        
+    # Otherwise, apply the proxy to external links
+    return f"https://wsrv.nl/?url={url}&w=800&output=webp"
+
+
 
 def build_site():
     print("Reading data.json...")
