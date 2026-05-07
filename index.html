@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Import Water Brush and Quintessential from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Quintessential&family=Water+Brush&display=swap" rel="stylesheet">
     <title>Floral Theory | CMI Archive</title>
     <style>
@@ -17,43 +16,37 @@
         }
 
         body {
-    background-color: var(--bg-deep);
-    color: var(--text-main);
-    font-family: 'Georgia', serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    
-    /* Forces the entire page to scale up by 33% */
-    zoom: 1.0; 
-}
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            zoom: 1.33; /* Baked-in 133% zoom */
+        }
 
         /* --- Second Background (Fades in on scroll) --- */
-        /* --- Second Background (Fades in on scroll) --- */
-.bg-archive {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-image: url('./assets/cmi\ light.jpeg'); 
-    
-    /* CHANGE THESE TWO LINES: */
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    
-    background-position: center;
-    z-index: 0;
-    opacity: 0; 
-    pointer-events: none;
-    will-change: opacity;
-}
+        .bg-archive {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-image: url('./assets/cmi\ light.jpeg'); /* Make sure filename has no spaces */
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center;
+            z-index: 0;
+            opacity: 0; 
+            pointer-events: none;
+            will-change: opacity;
+        }
 
         .bg-archive::after {
             content: '';
             position: absolute;
             inset: 0;
-            background: rgba(13, 15, 14, 0.35); 
+            background: rgba(13, 15, 14, 0.85); /* Adjust darkness here */
         }
 
         /* --- Hero Section --- */
@@ -62,7 +55,7 @@
             z-index: 1; 
             width: 100%;
             height: 85vh;
-            background-image: url('https://github.com/user-attachments/assets/a4712a03-7000-4d6c-9951-589be7c4dbae'); 
+            background-image: url('./assets/prideofbarbados.jpeg'); /* Make sure filename has no spaces */
             background-size: cover;
             background-position: center;
             display: flex;
@@ -135,11 +128,11 @@
             border-color: var(--accent);
         }
 
-        /* --- Base Card Styles (Applies to all views) --- */
+        /* --- Base Card Styles --- */
         #gallery { transition: all 0.3s ease; }
 
         .card {
-            width: 100%; /* Default to full width, overridden by Grid view */
+            width: 100%; 
             background: var(--card-solid);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
@@ -199,7 +192,7 @@
             color: var(--text-main);
         }
 
-        /* --- 1. Grid View Layout --- */
+        /* --- Grid View Layout --- */
         #gallery.view-grid { 
             display: flex; 
             flex-wrap: wrap; 
@@ -208,102 +201,47 @@
             width: 100%;
         }
         
-        #gallery.view-grid .card {
-            width: 300px; /* Forces cards to 300px ONLY in Grid view */
-        }
-        
-        #gallery.view-grid img.primary-img { 
-            height: 250px; 
-            object-fit: cover; 
-        }
-        
+        #gallery.view-grid .card { width: 300px; }
+        #gallery.view-grid img.primary-img { height: 250px; object-fit: cover; }
         #gallery.view-grid a:not(:first-child) { display: none; }
 
-        /* --- 2. Full View Layout --- */
-        #gallery.view-full { 
-            display: flex;
-            flex-direction: column; 
-            gap: 60px;
-            width: 100%;
-        }
-        
-        #gallery.view-full img.primary-img { 
-            max-height: 85vh; 
-            object-fit: contain; /* Prevents image cropping in full view */
-        }
+        /* --- Full View Layout --- */
+        #gallery.view-full { display: flex; flex-direction: column; gap: 60px; width: 100%; }
+        #gallery.view-full img.primary-img { max-height: 85vh; object-fit: contain; }
 
-        /* --- 3. Accordion (Index) View Layout --- */
-        #gallery.view-accordion { 
-            display: flex;
-            flex-direction: column; 
-            gap: 15px;
-            width: 100%;
-        }
-        
-        #gallery.view-accordion .card { 
-            cursor: pointer; 
-        }
-        
-        /* Hide images and standard descriptions by default */
+        /* --- Accordion (Index) View Layout --- */
+        #gallery.view-accordion { display: flex; flex-direction: column; gap: 15px; width: 100%; }
+        #gallery.view-accordion .card { cursor: pointer; }
         #gallery.view-accordion .card .image-gallery, 
-        #gallery.view-accordion .card p:not(.meta) { 
-            display: none; 
-        }
-        
-        /* Reveal them when card has .open class */
-        #gallery.view-accordion .card.open .image-gallery { 
-            display: flex; 
-        }
-        #gallery.view-accordion .card.open p:not(.meta) { 
-            display: block; 
-        }
+        #gallery.view-accordion .card p:not(.meta) { display: none; }
+        #gallery.view-accordion .card.open .image-gallery { display: flex; }
+        #gallery.view-accordion .card.open p:not(.meta) { display: block; }
 
         /* --- Submission Section --- */
         .submission-section {
-            margin-top: 80px;
-            padding: 40px;
+            margin-top: 80px; padding: 40px;
             background: rgba(255,255,255,0.02);
             border: 1px dashed var(--border);
-            border-radius: 8px;
-            backdrop-filter: blur(10px);
+            border-radius: 8px; backdrop-filter: blur(10px);
         }
         
         input, textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 20px;
-            border: 1px solid var(--border);
-            background: rgba(0,0,0,0.5);
-            color: var(--text-main);
-            font-family: inherit;
-            box-sizing: border-box;
+            width: 100%; padding: 12px; margin-bottom: 20px;
+            border: 1px solid var(--border); background: rgba(0,0,0,0.5);
+            color: var(--text-main); font-family: inherit; box-sizing: border-box;
         }
 
         .submit-btn {
-            background: var(--accent);
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-weight: bold;
-            cursor: pointer;
-            border-radius: 4px;
+            background: var(--accent); color: white; border: none;
+            padding: 15px 30px; font-weight: bold; cursor: pointer; border-radius: 4px;
         }
 
-        /* --- Responsive Media Queries --- */
-        @media (max-width: 600px) {
-            .hero-text h1 { font-size: 5rem; }
-        }   
-        
-        @media (max-width: 340px) {
-            #gallery.view-grid .card {
-                width: 100%;
-            }
-        }
+        @media (max-width: 600px) { .hero-text h1 { font-size: 5rem; } }   
+        @media (max-width: 340px) { #gallery.view-grid .card { width: 100%; } }
     </style>
 </head>
 <body>
 
-    <!-- The fixed background that fades in -->
     <div class="bg-archive" id="bg-archive"></div>
 
     <section class="hero">
@@ -327,1176 +265,1176 @@
 
         <main id="gallery" class="view-grid">
             
-        <article class="card" id="plant-1" data-location="">
+        <div class="card" id="plant-1" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/6a19a08a-bd36-437b-aa56-48c7641324cf" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/6a19a08a-bd36-437b-aa56-48c7641324cf&w=800&output=webp" alt="Pseuderanthemum" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/6a19a08a-bd36-437b-aa56-48c7641324cf" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/6a19a08a-bd36-437b-aa56-48c7641324cf&w=800&output=webp" alt="Pseuderanthemum" class="primary-img" loading="lazy">
+            </a>
         
-                <a href="https://github.com/user-attachments/assets/2531268b-0495-4927-b6d1-965b17a26880" target="_blank" title="Click to view full resolution">
-                    <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/2531268b-0495-4927-b6d1-965b17a26880&w=800&output=webp" alt="Pseuderanthemum - Image 2" class="additional-img" loading="lazy">
-                </a>
+                    <a href="https://github.com/user-attachments/assets/2531268b-0495-4927-b6d1-965b17a26880" target="_blank" title="Click to view full resolution">
+                        <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/2531268b-0495-4927-b6d1-965b17a26880&w=800&output=webp" alt="Additional image for Pseuderanthemum" loading="lazy">
+                    </a>
                 
             </div>
             <div class="card-content">
                 <h2>False Eranthemum</h2>
-                <div class="meta">Pseuderanthemum | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Pseuderanthemum |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-2" data-location="">
+        <div class="card" id="plant-2" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/07d1a479-cd97-4cc0-b3ea-69c607bc57f6" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/07d1a479-cd97-4cc0-b3ea-69c607bc57f6&w=800&output=webp" alt="Acalypha wilkesiana" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/07d1a479-cd97-4cc0-b3ea-69c607bc57f6" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/07d1a479-cd97-4cc0-b3ea-69c607bc57f6&w=800&output=webp" alt="Acalypha wilkesiana" class="primary-img" loading="lazy">
+            </a>
         
-                <a href="https://github.com/user-attachments/assets/bc337ae5-3aed-48ed-a470-de18c6b44f42" target="_blank" title="Click to view full resolution">
-                    <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/bc337ae5-3aed-48ed-a470-de18c6b44f42&w=800&output=webp" alt="Acalypha wilkesiana - Image 2" class="additional-img" loading="lazy">
-                </a>
+                    <a href="https://github.com/user-attachments/assets/bc337ae5-3aed-48ed-a470-de18c6b44f42" target="_blank" title="Click to view full resolution">
+                        <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/bc337ae5-3aed-48ed-a470-de18c6b44f42&w=800&output=webp" alt="Additional image for Acalypha wilkesiana" loading="lazy">
+                    </a>
                 
             </div>
             <div class="card-content">
                 <h2>Copperleaf</h2>
-                <div class="meta">Acalypha wilkesiana | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Acalypha wilkesiana |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-3" data-location="">
+        <div class="card" id="plant-3" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/e478cf8c-303c-4598-bcce-6fed659b21f1" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/e478cf8c-303c-4598-bcce-6fed659b21f1&w=800&output=webp" alt="Trachelospermum jasminoides" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/e478cf8c-303c-4598-bcce-6fed659b21f1" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/e478cf8c-303c-4598-bcce-6fed659b21f1&w=800&output=webp" alt="Trachelospermum jasminoides" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Star Jasmine</h2>
-                <div class="meta">Trachelospermum jasminoides | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Trachelospermum jasminoides |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-4" data-location="">
+        <div class="card" id="plant-4" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/3a428939-9861-44c5-88c5-682511d564e1" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/3a428939-9861-44c5-88c5-682511d564e1&w=800&output=webp" alt="Clerodendrum thomsoniae" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/3a428939-9861-44c5-88c5-682511d564e1" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/3a428939-9861-44c5-88c5-682511d564e1&w=800&output=webp" alt="Clerodendrum thomsoniae" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Bleeding Heart</h2>
-                <div class="meta">Clerodendrum thomsoniae | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Clerodendrum thomsoniae |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-5" data-location="">
+        <div class="card" id="plant-5" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/eec0e2a0-e2bd-46e9-a9c6-18034b1bbadb" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/eec0e2a0-e2bd-46e9-a9c6-18034b1bbadb&w=800&output=webp" alt="Ligustrum" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/eec0e2a0-e2bd-46e9-a9c6-18034b1bbadb" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/eec0e2a0-e2bd-46e9-a9c6-18034b1bbadb&w=800&output=webp" alt="Ligustrum" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Privet</h2>
-                <div class="meta">Ligustrum | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Ligustrum |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-6" data-location="">
+        <div class="card" id="plant-6" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/8d8e6d80-3408-412d-baf7-2f061ad25abc" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/8d8e6d80-3408-412d-baf7-2f061ad25abc&w=800&output=webp" alt="Tabernaemontana divaricata" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/8d8e6d80-3408-412d-baf7-2f061ad25abc" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/8d8e6d80-3408-412d-baf7-2f061ad25abc&w=800&output=webp" alt="Tabernaemontana divaricata" class="primary-img" loading="lazy">
+            </a>
         
-                <a href="https://github.com/user-attachments/assets/e38c27bc-d60f-4387-99c0-b927f8a98aeb" target="_blank" title="Click to view full resolution">
-                    <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/e38c27bc-d60f-4387-99c0-b927f8a98aeb&w=800&output=webp" alt="Tabernaemontana divaricata - Image 2" class="additional-img" loading="lazy">
-                </a>
+                    <a href="https://github.com/user-attachments/assets/e38c27bc-d60f-4387-99c0-b927f8a98aeb" target="_blank" title="Click to view full resolution">
+                        <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/e38c27bc-d60f-4387-99c0-b927f8a98aeb&w=800&output=webp" alt="Additional image for Tabernaemontana divaricata" loading="lazy">
+                    </a>
                 
             </div>
             <div class="card-content">
                 <h2>Crape Jasmine</h2>
-                <div class="meta">Tabernaemontana divaricata | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Tabernaemontana divaricata |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-7" data-location="">
+        <div class="card" id="plant-7" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/369834a5-fed4-4060-a862-34f8ff9b5362" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/369834a5-fed4-4060-a862-34f8ff9b5362&w=800&output=webp" alt="Ravenala madagascariensis" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/369834a5-fed4-4060-a862-34f8ff9b5362" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/369834a5-fed4-4060-a862-34f8ff9b5362&w=800&output=webp" alt="Ravenala madagascariensis" class="primary-img" loading="lazy">
+            </a>
         
-                <a href="https://github.com/user-attachments/assets/0bde1ee8-c62a-465e-9466-7f7b4bc17083" target="_blank" title="Click to view full resolution">
-                    <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/0bde1ee8-c62a-465e-9466-7f7b4bc17083&w=800&output=webp" alt="Ravenala madagascariensis - Image 2" class="additional-img" loading="lazy">
-                </a>
+                    <a href="https://github.com/user-attachments/assets/0bde1ee8-c62a-465e-9466-7f7b4bc17083" target="_blank" title="Click to view full resolution">
+                        <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/0bde1ee8-c62a-465e-9466-7f7b4bc17083&w=800&output=webp" alt="Additional image for Ravenala madagascariensis" loading="lazy">
+                    </a>
                 
             </div>
             <div class="card-content">
                 <h2>Traveler's Palm</h2>
-                <div class="meta">Ravenala madagascariensis | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Ravenala madagascariensis |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-8" data-location="">
+        <div class="card" id="plant-8" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/7c1b4fa9-0ddc-40b8-bd61-7a6da8176fe8" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/7c1b4fa9-0ddc-40b8-bd61-7a6da8176fe8&w=800&output=webp" alt="Adansonia" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/7c1b4fa9-0ddc-40b8-bd61-7a6da8176fe8" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/7c1b4fa9-0ddc-40b8-bd61-7a6da8176fe8&w=800&output=webp" alt="Adansonia" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>"Karan's Baobab" leaf</h2>
-                <div class="meta">Adansonia | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Adansonia |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-9" data-location="">
+        <div class="card" id="plant-9" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/deb736c8-eab8-4a8e-bd91-97f5cd4d7c41" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/deb736c8-eab8-4a8e-bd91-97f5cd4d7c41&w=800&output=webp" alt="Epipremnum aureum" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/deb736c8-eab8-4a8e-bd91-97f5cd4d7c41" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/deb736c8-eab8-4a8e-bd91-97f5cd4d7c41&w=800&output=webp" alt="Epipremnum aureum" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Devil's Ivy</h2>
-                <div class="meta">Epipremnum aureum | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Epipremnum aureum |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-10" data-location="">
+        <div class="card" id="plant-10" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/0338fab9-f014-4c50-b016-294574efd0f0" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/0338fab9-f014-4c50-b016-294574efd0f0&w=800&output=webp" alt="Ixora coccinea" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/0338fab9-f014-4c50-b016-294574efd0f0" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/0338fab9-f014-4c50-b016-294574efd0f0&w=800&output=webp" alt="Ixora coccinea" class="primary-img" loading="lazy">
+            </a>
         
-                <a href="https://github.com/user-attachments/assets/59af56ba-f117-4f05-bdbb-cd941b5fcfe2" target="_blank" title="Click to view full resolution">
-                    <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/59af56ba-f117-4f05-bdbb-cd941b5fcfe2&w=800&output=webp" alt="Ixora coccinea - Image 2" class="additional-img" loading="lazy">
-                </a>
+                    <a href="https://github.com/user-attachments/assets/59af56ba-f117-4f05-bdbb-cd941b5fcfe2" target="_blank" title="Click to view full resolution">
+                        <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/59af56ba-f117-4f05-bdbb-cd941b5fcfe2&w=800&output=webp" alt="Additional image for Ixora coccinea" loading="lazy">
+                    </a>
                 
             </div>
             <div class="card-content">
                 <h2>Jungle Geranium</h2>
-                <div class="meta">Ixora coccinea | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Ixora coccinea |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-11" data-location="">
+        <div class="card" id="plant-11" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/4ec278cd-82be-4e55-9097-eacd1466874b" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/4ec278cd-82be-4e55-9097-eacd1466874b&w=800&output=webp" alt="Cordyline fruticosa" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/4ec278cd-82be-4e55-9097-eacd1466874b" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/4ec278cd-82be-4e55-9097-eacd1466874b&w=800&output=webp" alt="Cordyline fruticosa" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Hawaiian Ti Plant</h2>
-                <div class="meta">Cordyline fruticosa | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Cordyline fruticosa |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-12" data-location="">
+        <div class="card" id="plant-12" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/9b5683e2-accc-4ada-a6be-a43902e18306" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/9b5683e2-accc-4ada-a6be-a43902e18306&w=800&output=webp" alt="Cocos nucifera" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/9b5683e2-accc-4ada-a6be-a43902e18306" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/9b5683e2-accc-4ada-a6be-a43902e18306&w=800&output=webp" alt="Cocos nucifera" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Coconut Palm</h2>
-                <div class="meta">Cocos nucifera | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Cocos nucifera |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-13" data-location="">
+        <div class="card" id="plant-13" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/6559cc52-c40a-4b61-b33f-84c5b4f9e34c" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/6559cc52-c40a-4b61-b33f-84c5b4f9e34c&w=800&output=webp" alt="Nephrolepis exaltata" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/6559cc52-c40a-4b61-b33f-84c5b4f9e34c" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/6559cc52-c40a-4b61-b33f-84c5b4f9e34c&w=800&output=webp" alt="Nephrolepis exaltata" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Boston Fern</h2>
-                <div class="meta">Nephrolepis exaltata | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Nephrolepis exaltata |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-14" data-location="">
+        <div class="card" id="plant-14" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/ce4d1920-4d4b-4042-87ba-66d6ca330ae6" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/ce4d1920-4d4b-4042-87ba-66d6ca330ae6&w=800&output=webp" alt="Caladium bicolor" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/ce4d1920-4d4b-4042-87ba-66d6ca330ae6" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/ce4d1920-4d4b-4042-87ba-66d6ca330ae6&w=800&output=webp" alt="Caladium bicolor" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Heart of Jesus</h2>
-                <div class="meta">Caladium bicolor | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Caladium bicolor |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-15" data-location="">
+        <div class="card" id="plant-15" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/930c41d5-a31b-4f5b-bb05-922fa9500305" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/930c41d5-a31b-4f5b-bb05-922fa9500305&w=800&output=webp" alt="Chlorophytum comosum" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/930c41d5-a31b-4f5b-bb05-922fa9500305" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/930c41d5-a31b-4f5b-bb05-922fa9500305&w=800&output=webp" alt="Chlorophytum comosum" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Spider Plant</h2>
-                <div class="meta">Chlorophytum comosum | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Chlorophytum comosum |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-16" data-location="">
+        <div class="card" id="plant-16" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/97a55b04-187d-4a93-b287-82126e41ba96" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/97a55b04-187d-4a93-b287-82126e41ba96&w=800&output=webp" alt="Codiaeum variegatum" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/97a55b04-187d-4a93-b287-82126e41ba96" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/97a55b04-187d-4a93-b287-82126e41ba96&w=800&output=webp" alt="Codiaeum variegatum" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Croton</h2>
-                <div class="meta">Codiaeum variegatum | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Codiaeum variegatum |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-17" data-location="">
+        <div class="card" id="plant-17" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/59fffdb8-299d-4491-8abd-2199a8bb845e" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/59fffdb8-299d-4491-8abd-2199a8bb845e&w=800&output=webp" alt="Ficus benjamina 'Variegata'" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/59fffdb8-299d-4491-8abd-2199a8bb845e" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/59fffdb8-299d-4491-8abd-2199a8bb845e&w=800&output=webp" alt="Ficus benjamina 'Variegata'" class="primary-img" loading="lazy">
+            </a>
         
-                <a href="https://github.com/user-attachments/assets/b2d53e14-0abc-430b-b513-e7ea168a2684" target="_blank" title="Click to view full resolution">
-                    <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/b2d53e14-0abc-430b-b513-e7ea168a2684&w=800&output=webp" alt="Ficus benjamina 'Variegata' - Image 2" class="additional-img" loading="lazy">
-                </a>
+                    <a href="https://github.com/user-attachments/assets/b2d53e14-0abc-430b-b513-e7ea168a2684" target="_blank" title="Click to view full resolution">
+                        <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/b2d53e14-0abc-430b-b513-e7ea168a2684&w=800&output=webp" alt="Additional image for Ficus benjamina 'Variegata'" loading="lazy">
+                    </a>
                 
             </div>
             <div class="card-content">
                 <h2>Variegated Weeping Fig</h2>
-                <div class="meta">Ficus benjamina 'Variegata' | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Ficus benjamina 'Variegata' |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-18" data-location="">
+        <div class="card" id="plant-18" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/e0c0093e-1534-48c0-8b14-dfb126bb11c6" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/e0c0093e-1534-48c0-8b14-dfb126bb11c6&w=800&output=webp" alt="Bougainvillea" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/e0c0093e-1534-48c0-8b14-dfb126bb11c6" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/e0c0093e-1534-48c0-8b14-dfb126bb11c6&w=800&output=webp" alt="Bougainvillea" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Bougainvillea</h2>
-                <div class="meta">Bougainvillea | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Bougainvillea |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-19" data-location="">
+        <div class="card" id="plant-19" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/dee7867d-3121-4f89-a7a9-4032540b293e" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/dee7867d-3121-4f89-a7a9-4032540b293e&w=800&output=webp" alt="Hamelia patens" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/dee7867d-3121-4f89-a7a9-4032540b293e" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/dee7867d-3121-4f89-a7a9-4032540b293e&w=800&output=webp" alt="Hamelia patens" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Firebush</h2>
-                <div class="meta">Hamelia patens | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Hamelia patens |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-20" data-location="">
+        <div class="card" id="plant-20" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/2a64344b-193a-4f2e-af5b-bec209a0e6ea" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/2a64344b-193a-4f2e-af5b-bec209a0e6ea&w=800&output=webp" alt="Dracaena marginata" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/2a64344b-193a-4f2e-af5b-bec209a0e6ea" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/2a64344b-193a-4f2e-af5b-bec209a0e6ea&w=800&output=webp" alt="Dracaena marginata" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Dragon Tree</h2>
-                <div class="meta">Dracaena marginata | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Dracaena marginata |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-21" data-location="">
+        <div class="card" id="plant-21" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/1362ba9d-35a6-4558-96e1-bd53aa555a97" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/1362ba9d-35a6-4558-96e1-bd53aa555a97&w=800&output=webp" alt="Phalaenopsis" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/1362ba9d-35a6-4558-96e1-bd53aa555a97" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/1362ba9d-35a6-4558-96e1-bd53aa555a97&w=800&output=webp" alt="Phalaenopsis" class="primary-img" loading="lazy">
+            </a>
         
-                <a href="https://github.com/user-attachments/assets/fdd66384-f327-465e-a00e-b4382afb8b03" target="_blank" title="Click to view full resolution">
-                    <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/fdd66384-f327-465e-a00e-b4382afb8b03&w=800&output=webp" alt="Phalaenopsis - Image 2" class="additional-img" loading="lazy">
-                </a>
+                    <a href="https://github.com/user-attachments/assets/fdd66384-f327-465e-a00e-b4382afb8b03" target="_blank" title="Click to view full resolution">
+                        <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/fdd66384-f327-465e-a00e-b4382afb8b03&w=800&output=webp" alt="Additional image for Phalaenopsis" loading="lazy">
+                    </a>
                 
             </div>
             <div class="card-content">
                 <h2>Dwarf White Orchid</h2>
-                <div class="meta">Phalaenopsis | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Phalaenopsis |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-22" data-location="">
+        <div class="card" id="plant-22" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/f7f9a90e-9617-4b3d-b4b0-41f064cfa088" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/f7f9a90e-9617-4b3d-b4b0-41f064cfa088&w=800&output=webp" alt="Delonix regia" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/f7f9a90e-9617-4b3d-b4b0-41f064cfa088" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/f7f9a90e-9617-4b3d-b4b0-41f064cfa088&w=800&output=webp" alt="Delonix regia" class="primary-img" loading="lazy">
+            </a>
         
-                <a href="https://github.com/user-attachments/assets/16c331ec-bed0-4fb6-b8a5-a86befa07340" target="_blank" title="Click to view full resolution">
-                    <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/16c331ec-bed0-4fb6-b8a5-a86befa07340&w=800&output=webp" alt="Delonix regia - Image 2" class="additional-img" loading="lazy">
-                </a>
+                    <a href="https://github.com/user-attachments/assets/16c331ec-bed0-4fb6-b8a5-a86befa07340" target="_blank" title="Click to view full resolution">
+                        <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/16c331ec-bed0-4fb6-b8a5-a86befa07340&w=800&output=webp" alt="Additional image for Delonix regia" loading="lazy">
+                    </a>
                 
             </div>
             <div class="card-content">
                 <h2>Flame Tree</h2>
-                <div class="meta">Delonix regia | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Delonix regia |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-23" data-location="">
+        <div class="card" id="plant-23" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/4e9db1e6-27c1-4c74-a9dc-6bfe4b23dfe6" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/4e9db1e6-27c1-4c74-a9dc-6bfe4b23dfe6&w=800&output=webp" alt="Dracaena trifasciata" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/4e9db1e6-27c1-4c74-a9dc-6bfe4b23dfe6" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/4e9db1e6-27c1-4c74-a9dc-6bfe4b23dfe6&w=800&output=webp" alt="Dracaena trifasciata" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Mother-in-law's tongue</h2>
-                <div class="meta">Dracaena trifasciata | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Dracaena trifasciata |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-24" data-location="">
+        <div class="card" id="plant-24" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/2bf81e4a-07dd-4639-90a6-ab19a268d98b" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/2bf81e4a-07dd-4639-90a6-ab19a268d98b&w=800&output=webp" alt="Catharanthus roseus" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/2bf81e4a-07dd-4639-90a6-ab19a268d98b" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/2bf81e4a-07dd-4639-90a6-ab19a268d98b&w=800&output=webp" alt="Catharanthus roseus" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Periwinkle</h2>
-                <div class="meta">Catharanthus roseus | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Catharanthus roseus |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-25" data-location="">
+        <div class="card" id="plant-25" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/a0bcb8cb-d3ce-41e4-9a31-2d20f954ceb1" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/a0bcb8cb-d3ce-41e4-9a31-2d20f954ceb1&w=800&output=webp" alt="Crossandra infundibuliformis" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/a0bcb8cb-d3ce-41e4-9a31-2d20f954ceb1" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/a0bcb8cb-d3ce-41e4-9a31-2d20f954ceb1&w=800&output=webp" alt="Crossandra infundibuliformis" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Crossandra</h2>
-                <div class="meta">Crossandra infundibuliformis | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Crossandra infundibuliformis |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-26" data-location="">
+        <div class="card" id="plant-26" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/765af0a6-7950-41c1-89e1-e6b2a778d796" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/765af0a6-7950-41c1-89e1-e6b2a778d796&w=800&output=webp" alt="Crotalaria retusa" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/765af0a6-7950-41c1-89e1-e6b2a778d796" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/765af0a6-7950-41c1-89e1-e6b2a778d796&w=800&output=webp" alt="Crotalaria retusa" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Rattleweed</h2>
-                <div class="meta">Crotalaria retusa | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Crotalaria retusa |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-27" data-location="">
+        <div class="card" id="plant-27" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/e95d67cd-7b5e-4a95-b39c-f2fb7f561234" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/e95d67cd-7b5e-4a95-b39c-f2fb7f561234&w=800&output=webp" alt="Azadirachta indica" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/e95d67cd-7b5e-4a95-b39c-f2fb7f561234" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/e95d67cd-7b5e-4a95-b39c-f2fb7f561234&w=800&output=webp" alt="Azadirachta indica" class="primary-img" loading="lazy">
+            </a>
         
-                <a href="https://github.com/user-attachments/assets/7190d3d2-a51a-492e-bbc2-6106d624437a" target="_blank" title="Click to view full resolution">
-                    <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/7190d3d2-a51a-492e-bbc2-6106d624437a&w=800&output=webp" alt="Azadirachta indica - Image 2" class="additional-img" loading="lazy">
-                </a>
+                    <a href="https://github.com/user-attachments/assets/7190d3d2-a51a-492e-bbc2-6106d624437a" target="_blank" title="Click to view full resolution">
+                        <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/7190d3d2-a51a-492e-bbc2-6106d624437a&w=800&output=webp" alt="Additional image for Azadirachta indica" loading="lazy">
+                    </a>
                 
-                <a href="https://github.com/user-attachments/assets/5ff0070a-12d9-425f-a138-107e2ba5bca9" target="_blank" title="Click to view full resolution">
-                    <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/5ff0070a-12d9-425f-a138-107e2ba5bca9&w=800&output=webp" alt="Azadirachta indica - Image 3" class="additional-img" loading="lazy">
-                </a>
+                    <a href="https://github.com/user-attachments/assets/5ff0070a-12d9-425f-a138-107e2ba5bca9" target="_blank" title="Click to view full resolution">
+                        <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/5ff0070a-12d9-425f-a138-107e2ba5bca9&w=800&output=webp" alt="Additional image for Azadirachta indica" loading="lazy">
+                    </a>
                 
             </div>
             <div class="card-content">
                 <h2>Neem</h2>
-                <div class="meta">Azadirachta indica | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Azadirachta indica |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-29" data-location="">
+        <div class="card" id="plant-29" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/3eb83e27-6013-4514-a03d-8a88d7ee9f13" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/3eb83e27-6013-4514-a03d-8a88d7ee9f13&w=800&output=webp" alt="Tinospora cordifolia" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/3eb83e27-6013-4514-a03d-8a88d7ee9f13" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/3eb83e27-6013-4514-a03d-8a88d7ee9f13&w=800&output=webp" alt="Tinospora cordifolia" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Giloy</h2>
-                <div class="meta">Tinospora cordifolia | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Tinospora cordifolia |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-30" data-location="">
+        <div class="card" id="plant-30" data-location="">
             <div class="image-gallery">
                 
-        <a href="assets/copperpodedited.webp" target="_blank" title="Click to view full resolution">
-            <img src="assets/copperpodedited.webp" alt="Peltophorum pterocarpum" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/604ab63a-c761-4648-9e17-967607f7d83f" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/604ab63a-c761-4648-9e17-967607f7d83f&w=800&output=webp" alt="Peltophorum pterocarpum" class="primary-img" loading="lazy">
+            </a>
         
-                <a href="https://github.com/user-attachments/assets/ac8de929-bf90-4911-983d-18a47ddab879" target="_blank" title="Click to view full resolution">
-                    <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/ac8de929-bf90-4911-983d-18a47ddab879&w=800&output=webp" alt="Peltophorum pterocarpum - Image 2" class="additional-img" loading="lazy">
-                </a>
+                    <a href="https://github.com/user-attachments/assets/ac8de929-bf90-4911-983d-18a47ddab879" target="_blank" title="Click to view full resolution">
+                        <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/ac8de929-bf90-4911-983d-18a47ddab879&w=800&output=webp" alt="Additional image for Peltophorum pterocarpum" loading="lazy">
+                    </a>
                 
             </div>
             <div class="card-content">
                 <h2>Copperpod</h2>
-                <div class="meta">Peltophorum pterocarpum | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Peltophorum pterocarpum |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-31" data-location="">
+        <div class="card" id="plant-31" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/805a7daf-f014-4d70-9f84-4835838cdaba" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/805a7daf-f014-4d70-9f84-4835838cdaba&w=800&output=webp" alt="Plumeria rubra" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/805a7daf-f014-4d70-9f84-4835838cdaba" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/805a7daf-f014-4d70-9f84-4835838cdaba&w=800&output=webp" alt="Plumeria rubra" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Plumeria</h2>
-                <div class="meta">Plumeria rubra | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Plumeria rubra |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-32" data-location="">
+        <div class="card" id="plant-32" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/6ee5fd52-c439-429c-99ce-ec98ae18cf3c" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/6ee5fd52-c439-429c-99ce-ec98ae18cf3c&w=800&output=webp" alt="Citrus limon" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/6ee5fd52-c439-429c-99ce-ec98ae18cf3c" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/6ee5fd52-c439-429c-99ce-ec98ae18cf3c&w=800&output=webp" alt="Citrus limon" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Round Lemon</h2>
-                <div class="meta">Citrus limon | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Citrus limon |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-33" data-location="">
+        <div class="card" id="plant-33" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/0270d7b8-6666-4445-80f8-72c9855fbdab" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/0270d7b8-6666-4445-80f8-72c9855fbdab&w=800&output=webp" alt="Unknown" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/0270d7b8-6666-4445-80f8-72c9855fbdab" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/0270d7b8-6666-4445-80f8-72c9855fbdab&w=800&output=webp" alt="Unknown" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Unidentified</h2>
-                <div class="meta">Unknown | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Unknown |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-34" data-location="">
+        <div class="card" id="plant-34" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/cb0d20a8-3b13-4635-acb2-f723be92fe08" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/cb0d20a8-3b13-4635-acb2-f723be92fe08&w=800&output=webp" alt="Araucaria heterophylla" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/cb0d20a8-3b13-4635-acb2-f723be92fe08" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/cb0d20a8-3b13-4635-acb2-f723be92fe08&w=800&output=webp" alt="Araucaria heterophylla" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Norfolk Island Pine</h2>
-                <div class="meta">Araucaria heterophylla | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Araucaria heterophylla |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-35" data-location="">
+        <div class="card" id="plant-35" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/06ea06d3-9589-4488-9512-0c5b542d5999" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/06ea06d3-9589-4488-9512-0c5b542d5999&w=800&output=webp" alt="Millettia pinnata" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/06ea06d3-9589-4488-9512-0c5b542d5999" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/06ea06d3-9589-4488-9512-0c5b542d5999&w=800&output=webp" alt="Millettia pinnata" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Karanj</h2>
-                <div class="meta">Millettia pinnata | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Millettia pinnata |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-36" data-location="">
+        <div class="card" id="plant-36" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/dd67fe63-57d8-4b6e-9db8-32f6c1632714" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/dd67fe63-57d8-4b6e-9db8-32f6c1632714&w=800&output=webp" alt="Albizia procera" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/dd67fe63-57d8-4b6e-9db8-32f6c1632714" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/dd67fe63-57d8-4b6e-9db8-32f6c1632714&w=800&output=webp" alt="Albizia procera" class="primary-img" loading="lazy">
+            </a>
         
-                <a href="https://github.com/user-attachments/assets/4b65793f-f9bd-4b2a-9ab4-9e5c85dc5d86" target="_blank" title="Click to view full resolution">
-                    <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/4b65793f-f9bd-4b2a-9ab4-9e5c85dc5d86&w=800&output=webp" alt="Albizia procera - Image 2" class="additional-img" loading="lazy">
-                </a>
+                    <a href="https://github.com/user-attachments/assets/4b65793f-f9bd-4b2a-9ab4-9e5c85dc5d86" target="_blank" title="Click to view full resolution">
+                        <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/4b65793f-f9bd-4b2a-9ab4-9e5c85dc5d86&w=800&output=webp" alt="Additional image for Albizia procera" loading="lazy">
+                    </a>
                 
             </div>
             <div class="card-content">
                 <h2>Shil Koroi</h2>
-                <div class="meta">Albizia procera | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Albizia procera |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-37" data-location="">
+        <div class="card" id="plant-37" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/4c8f9fb3-af6b-4870-a57f-0be1018cfc8e" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/4c8f9fb3-af6b-4870-a57f-0be1018cfc8e&w=800&output=webp" alt="Mimusops elengi" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/4c8f9fb3-af6b-4870-a57f-0be1018cfc8e" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/4c8f9fb3-af6b-4870-a57f-0be1018cfc8e&w=800&output=webp" alt="Mimusops elengi" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Bokul</h2>
-                <div class="meta">Mimusops elengi | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Mimusops elengi |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-38" data-location="">
+        <div class="card" id="plant-38" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/29223269-5df4-4ccb-abf8-b38ce6cd10eb" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/29223269-5df4-4ccb-abf8-b38ce6cd10eb&w=800&output=webp" alt="Turnera ulmifolia" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/29223269-5df4-4ccb-abf8-b38ce6cd10eb" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/29223269-5df4-4ccb-abf8-b38ce6cd10eb&w=800&output=webp" alt="Turnera ulmifolia" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Sage Rose</h2>
-                <div class="meta">Turnera ulmifolia | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Turnera ulmifolia |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-39" data-location="">
+        <div class="card" id="plant-39" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/837533c1-a807-49ed-b9a8-7476a35c3566" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/837533c1-a807-49ed-b9a8-7476a35c3566&w=800&output=webp" alt="Unknown" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/837533c1-a807-49ed-b9a8-7476a35c3566" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/837533c1-a807-49ed-b9a8-7476a35c3566&w=800&output=webp" alt="Unknown" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Unidentified</h2>
-                <div class="meta">Unknown | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Unknown |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-40" data-location="">
+        <div class="card" id="plant-40" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/9b4b2cff-1860-4462-83f8-ee166711b9a8" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/9b4b2cff-1860-4462-83f8-ee166711b9a8&w=800&output=webp" alt="Unknown" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/9b4b2cff-1860-4462-83f8-ee166711b9a8" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/9b4b2cff-1860-4462-83f8-ee166711b9a8&w=800&output=webp" alt="Unknown" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Unidentified</h2>
-                <div class="meta">Unknown | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Unknown |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-41" data-location="">
+        <div class="card" id="plant-41" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/1f04c554-614d-483e-86d7-b3f24ffc9c0f" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/1f04c554-614d-483e-86d7-b3f24ffc9c0f&w=800&output=webp" alt="Unknown" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/1f04c554-614d-483e-86d7-b3f24ffc9c0f" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/1f04c554-614d-483e-86d7-b3f24ffc9c0f&w=800&output=webp" alt="Unknown" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Unidentified</h2>
-                <div class="meta">Unknown | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Unknown |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-42" data-location="">
+        <div class="card" id="plant-42" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/4fbdbea4-c908-498c-af09-3857f6e41958" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/4fbdbea4-c908-498c-af09-3857f6e41958&w=800&output=webp" alt="Cascabela thevetia" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/4fbdbea4-c908-498c-af09-3857f6e41958" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/4fbdbea4-c908-498c-af09-3857f6e41958&w=800&output=webp" alt="Cascabela thevetia" class="primary-img" loading="lazy">
+            </a>
         
-                <a href="https://github.com/user-attachments/assets/8f205275-a44b-4284-a86f-98b81f77304e" target="_blank" title="Click to view full resolution">
-                    <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/8f205275-a44b-4284-a86f-98b81f77304e&w=800&output=webp" alt="Cascabela thevetia - Image 2" class="additional-img" loading="lazy">
-                </a>
+                    <a href="https://github.com/user-attachments/assets/8f205275-a44b-4284-a86f-98b81f77304e" target="_blank" title="Click to view full resolution">
+                        <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/8f205275-a44b-4284-a86f-98b81f77304e&w=800&output=webp" alt="Additional image for Cascabela thevetia" loading="lazy">
+                    </a>
                 
             </div>
             <div class="card-content">
                 <h2>Yellow Oleander</h2>
-                <div class="meta">Cascabela thevetia | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Cascabela thevetia |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-43" data-location="">
+        <div class="card" id="plant-43" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/2828de9a-d78f-4c83-bafd-f080f928618c" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/2828de9a-d78f-4c83-bafd-f080f928618c&w=800&output=webp" alt="Ravenea rivularis" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/2828de9a-d78f-4c83-bafd-f080f928618c" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/2828de9a-d78f-4c83-bafd-f080f928618c&w=800&output=webp" alt="Ravenea rivularis" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Majesty Palm</h2>
-                <div class="meta">Ravenea rivularis | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Ravenea rivularis |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-44" data-location="">
+        <div class="card" id="plant-44" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/54b0fdad-474e-4ed4-85c9-0b78544304f1" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/54b0fdad-474e-4ed4-85c9-0b78544304f1&w=800&output=webp" alt="Colocasia esculenta" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/54b0fdad-474e-4ed4-85c9-0b78544304f1" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/54b0fdad-474e-4ed4-85c9-0b78544304f1&w=800&output=webp" alt="Colocasia esculenta" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Elephant Ear</h2>
-                <div class="meta">Colocasia esculenta | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Colocasia esculenta |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-45" data-location="">
+        <div class="card" id="plant-45" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/f4ee8bc8-ec06-424c-93ed-741a2df1eec3" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/f4ee8bc8-ec06-424c-93ed-741a2df1eec3&w=800&output=webp" alt="Codiaeum variegatum 'Petra'" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/f4ee8bc8-ec06-424c-93ed-741a2df1eec3" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/f4ee8bc8-ec06-424c-93ed-741a2df1eec3&w=800&output=webp" alt="Codiaeum variegatum 'Petra'" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Petra Croton</h2>
-                <div class="meta">Codiaeum variegatum 'Petra' | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Codiaeum variegatum 'Petra' |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-46" data-location="">
+        <div class="card" id="plant-46" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/05881fa7-00b6-4990-8e14-2f828ba1fd0a" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/05881fa7-00b6-4990-8e14-2f828ba1fd0a&w=800&output=webp" alt="Phoenix sylvestris" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/05881fa7-00b6-4990-8e14-2f828ba1fd0a" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/05881fa7-00b6-4990-8e14-2f828ba1fd0a&w=800&output=webp" alt="Phoenix sylvestris" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Wild Date Palm</h2>
-                <div class="meta">Phoenix sylvestris | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Phoenix sylvestris |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-47" data-location="">
+        <div class="card" id="plant-47" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/91d22cf4-e986-4d3e-86b5-a73aeca790a3" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/91d22cf4-e986-4d3e-86b5-a73aeca790a3&w=800&output=webp" alt="Unknown" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/91d22cf4-e986-4d3e-86b5-a73aeca790a3" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/91d22cf4-e986-4d3e-86b5-a73aeca790a3&w=800&output=webp" alt="Unknown" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Unidentified</h2>
-                <div class="meta">Unknown | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Unknown |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-48" data-location="">
+        <div class="card" id="plant-48" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/90e53ced-6c37-4360-bdf9-ef6f2b3d347c" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/90e53ced-6c37-4360-bdf9-ef6f2b3d347c&w=800&output=webp" alt="Solanum americanum" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/90e53ced-6c37-4360-bdf9-ef6f2b3d347c" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/90e53ced-6c37-4360-bdf9-ef6f2b3d347c&w=800&output=webp" alt="Solanum americanum" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>American Black Nightshade</h2>
-                <div class="meta">Solanum americanum | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Solanum americanum |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-49" data-location="">
+        <div class="card" id="plant-49" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/523447f8-4779-4b5f-9bca-74aa1a319d2c" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/523447f8-4779-4b5f-9bca-74aa1a319d2c&w=800&output=webp" alt="Bambusoideae" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/523447f8-4779-4b5f-9bca-74aa1a319d2c" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/523447f8-4779-4b5f-9bca-74aa1a319d2c&w=800&output=webp" alt="Bambusoideae" class="primary-img" loading="lazy">
+            </a>
         
-                <a href="https://github.com/user-attachments/assets/3e5249c7-f233-4c87-8823-d1409e485ef0" target="_blank" title="Click to view full resolution">
-                    <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/3e5249c7-f233-4c87-8823-d1409e485ef0&w=800&output=webp" alt="Bambusoideae - Image 2" class="additional-img" loading="lazy">
-                </a>
+                    <a href="https://github.com/user-attachments/assets/3e5249c7-f233-4c87-8823-d1409e485ef0" target="_blank" title="Click to view full resolution">
+                        <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/3e5249c7-f233-4c87-8823-d1409e485ef0&w=800&output=webp" alt="Additional image for Bambusoideae" loading="lazy">
+                    </a>
                 
             </div>
             <div class="card-content">
                 <h2>Bamboo</h2>
-                <div class="meta">Bambusoideae | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Bambusoideae |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-50" data-location="">
+        <div class="card" id="plant-50" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/e52078bd-577e-462a-913b-c68db01b9b28" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/e52078bd-577e-462a-913b-c68db01b9b28&w=800&output=webp" alt="Wodyetia bifurcata" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/e52078bd-577e-462a-913b-c68db01b9b28" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/e52078bd-577e-462a-913b-c68db01b9b28&w=800&output=webp" alt="Wodyetia bifurcata" class="primary-img" loading="lazy">
+            </a>
         
-                <a href="https://github.com/user-attachments/assets/3e699c51-ab16-41f3-a54f-5cab0cfa6882" target="_blank" title="Click to view full resolution">
-                    <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/3e699c51-ab16-41f3-a54f-5cab0cfa6882&w=800&output=webp" alt="Wodyetia bifurcata - Image 2" class="additional-img" loading="lazy">
-                </a>
+                    <a href="https://github.com/user-attachments/assets/3e699c51-ab16-41f3-a54f-5cab0cfa6882" target="_blank" title="Click to view full resolution">
+                        <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/3e699c51-ab16-41f3-a54f-5cab0cfa6882&w=800&output=webp" alt="Additional image for Wodyetia bifurcata" loading="lazy">
+                    </a>
                 
             </div>
             <div class="card-content">
                 <h2>Foxtail Palm</h2>
-                <div class="meta">Wodyetia bifurcata | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Wodyetia bifurcata |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-51" data-location="">
+        <div class="card" id="plant-51" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/ad1c85a3-dfb3-4d50-8e75-df920156f1da" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/ad1c85a3-dfb3-4d50-8e75-df920156f1da&w=800&output=webp" alt="Casuarina equisetifolia" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/ad1c85a3-dfb3-4d50-8e75-df920156f1da" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/ad1c85a3-dfb3-4d50-8e75-df920156f1da&w=800&output=webp" alt="Casuarina equisetifolia" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Horsetail She-Oak</h2>
-                <div class="meta">Casuarina equisetifolia | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Casuarina equisetifolia |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-52" data-location="">
+        <div class="card" id="plant-52" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/2990b0ed-d44c-4f52-920e-d5f56de69ed7" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/2990b0ed-d44c-4f52-920e-d5f56de69ed7&w=800&output=webp" alt="Areca catechu" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/2990b0ed-d44c-4f52-920e-d5f56de69ed7" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/2990b0ed-d44c-4f52-920e-d5f56de69ed7&w=800&output=webp" alt="Areca catechu" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Betel Nut</h2>
-                <div class="meta">Areca catechu | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Areca catechu |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-53" data-location="">
+        <div class="card" id="plant-53" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/90c18e17-05b4-4d04-8d85-a53a4c8a9d9d" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/90c18e17-05b4-4d04-8d85-a53a4c8a9d9d&w=800&output=webp" alt="Dalbergia sissoo" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/90c18e17-05b4-4d04-8d85-a53a4c8a9d9d" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/90c18e17-05b4-4d04-8d85-a53a4c8a9d9d&w=800&output=webp" alt="Dalbergia sissoo" class="primary-img" loading="lazy">
+            </a>
         
-                <a href="https://github.com/user-attachments/assets/43121217-0af8-4212-a870-6d3779a659b9" target="_blank" title="Click to view full resolution">
-                    <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/43121217-0af8-4212-a870-6d3779a659b9&w=800&output=webp" alt="Dalbergia sissoo - Image 2" class="additional-img" loading="lazy">
-                </a>
+                    <a href="https://github.com/user-attachments/assets/43121217-0af8-4212-a870-6d3779a659b9" target="_blank" title="Click to view full resolution">
+                        <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/43121217-0af8-4212-a870-6d3779a659b9&w=800&output=webp" alt="Additional image for Dalbergia sissoo" loading="lazy">
+                    </a>
                 
             </div>
             <div class="card-content">
                 <h2>Indian Rosewood (?)</h2>
-                <div class="meta">Dalbergia sissoo | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Dalbergia sissoo |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-54" data-location="">
+        <div class="card" id="plant-54" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/12a1797f-cb72-4fa3-ab89-e5ac98e2c4c8" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/12a1797f-cb72-4fa3-ab89-e5ac98e2c4c8&w=800&output=webp" alt="Melaleuca viminalis" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/12a1797f-cb72-4fa3-ab89-e5ac98e2c4c8" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/12a1797f-cb72-4fa3-ab89-e5ac98e2c4c8&w=800&output=webp" alt="Melaleuca viminalis" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Weeping Bottlebrush</h2>
-                <div class="meta">Melaleuca viminalis | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Melaleuca viminalis |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-55" data-location="">
+        <div class="card" id="plant-55" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/c3d960f6-b5b0-4cb8-8ffb-b66f4ede2eb2" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/c3d960f6-b5b0-4cb8-8ffb-b66f4ede2eb2&w=800&output=webp" alt="Mangifera indica" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/c3d960f6-b5b0-4cb8-8ffb-b66f4ede2eb2" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/c3d960f6-b5b0-4cb8-8ffb-b66f4ede2eb2&w=800&output=webp" alt="Mangifera indica" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Mango</h2>
-                <div class="meta">Mangifera indica | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Mangifera indica |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-56" data-location="">
+        <div class="card" id="plant-56" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/98c42f36-dfce-45da-992b-9ac3272b1831" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/98c42f36-dfce-45da-992b-9ac3272b1831&w=800&output=webp" alt="Arecaceae" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/98c42f36-dfce-45da-992b-9ac3272b1831" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/98c42f36-dfce-45da-992b-9ac3272b1831&w=800&output=webp" alt="Arecaceae" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Palm</h2>
-                <div class="meta">Arecaceae | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Arecaceae |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-57" data-location="">
+        <div class="card" id="plant-57" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/8e119a06-3db0-4249-82e1-7ec34d64c332" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/8e119a06-3db0-4249-82e1-7ec34d64c332&w=800&output=webp" alt="Bauhinia × blakeana" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/8e119a06-3db0-4249-82e1-7ec34d64c332" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/8e119a06-3db0-4249-82e1-7ec34d64c332&w=800&output=webp" alt="Bauhinia Ã— blakeana" class="primary-img" loading="lazy">
+            </a>
         
-                <a href="https://github.com/user-attachments/assets/b6c2fe76-28be-4713-aeb5-0394ac6753bf" target="_blank" title="Click to view full resolution">
-                    <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/b6c2fe76-28be-4713-aeb5-0394ac6753bf&w=800&output=webp" alt="Bauhinia × blakeana - Image 2" class="additional-img" loading="lazy">
-                </a>
+                    <a href="https://github.com/user-attachments/assets/b6c2fe76-28be-4713-aeb5-0394ac6753bf" target="_blank" title="Click to view full resolution">
+                        <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/b6c2fe76-28be-4713-aeb5-0394ac6753bf&w=800&output=webp" alt="Additional image for Bauhinia Ã— blakeana" loading="lazy">
+                    </a>
                 
             </div>
             <div class="card-content">
                 <h2>Hong Kong Orchid</h2>
-                <div class="meta">Bauhinia × blakeana | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Bauhinia Ã— blakeana |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-58" data-location="">
+        <div class="card" id="plant-58" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/c923e386-7263-4664-97b0-3995268ec5b8" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/c923e386-7263-4664-97b0-3995268ec5b8&w=800&output=webp" alt="Unknown" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/c923e386-7263-4664-97b0-3995268ec5b8" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/c923e386-7263-4664-97b0-3995268ec5b8&w=800&output=webp" alt="Unknown" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Unidentified</h2>
-                <div class="meta">Unknown | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Unknown |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-59" data-location="">
+        <div class="card" id="plant-59" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/06e456e7-b4cf-489f-b45a-6d687c3bfa96" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/06e456e7-b4cf-489f-b45a-6d687c3bfa96&w=800&output=webp" alt="Musa" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/06e456e7-b4cf-489f-b45a-6d687c3bfa96" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/06e456e7-b4cf-489f-b45a-6d687c3bfa96&w=800&output=webp" alt="Musa" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Banana</h2>
-                <div class="meta">Musa | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Musa |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-60" data-location="">
+        <div class="card" id="plant-60" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/4a6fd0d2-8613-4468-9f3d-0440814bc18b" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/4a6fd0d2-8613-4468-9f3d-0440814bc18b&w=800&output=webp" alt="Helianthus tuberosus" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/4a6fd0d2-8613-4468-9f3d-0440814bc18b" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/4a6fd0d2-8613-4468-9f3d-0440814bc18b&w=800&output=webp" alt="Helianthus tuberosus" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Jerusalem Artichoke</h2>
-                <div class="meta">Helianthus tuberosus | <span class="loc-text"></span> | 5th March 2026</div>
+                <p class="meta">Helianthus tuberosus |  | 5th March 2026</p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-61" data-location="">
+        <div class="card" id="plant-61" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/f7b53c52-d464-4fee-9dfd-660e4ef00279" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/f7b53c52-d464-4fee-9dfd-660e4ef00279&w=800&output=webp" alt="Euphorbia milii" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/f7b53c52-d464-4fee-9dfd-660e4ef00279" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/f7b53c52-d464-4fee-9dfd-660e4ef00279&w=800&output=webp" alt="Euphorbia milii" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Crown of Thorns</h2>
-                <div class="meta">Euphorbia milii | <span class="loc-text"></span> | </div>
+                <p class="meta">Euphorbia milii |  | </p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-62" data-location="">
+        <div class="card" id="plant-62" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/678eb91e-6563-4876-9c3d-b6650a2de4cb" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/678eb91e-6563-4876-9c3d-b6650a2de4cb&w=800&output=webp" alt="Pennisetum glaucum" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/678eb91e-6563-4876-9c3d-b6650a2de4cb" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/678eb91e-6563-4876-9c3d-b6650a2de4cb&w=800&output=webp" alt="Pennisetum glaucum" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Bajra</h2>
-                <div class="meta">Pennisetum glaucum | <span class="loc-text"></span> | </div>
+                <p class="meta">Pennisetum glaucum |  | </p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-63" data-location="">
+        <div class="card" id="plant-63" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/e13e415d-3a1e-46f4-a4d2-b8184c8e4fa2" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/e13e415d-3a1e-46f4-a4d2-b8184c8e4fa2&w=800&output=webp" alt="Terminalia catappa" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/e13e415d-3a1e-46f4-a4d2-b8184c8e4fa2" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/e13e415d-3a1e-46f4-a4d2-b8184c8e4fa2&w=800&output=webp" alt="Terminalia catappa" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Sea Almond</h2>
-                <div class="meta">Terminalia catappa | <span class="loc-text"></span> | </div>
+                <p class="meta">Terminalia catappa |  | </p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-64" data-location="">
+        <div class="card" id="plant-64" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/5495d7d4-198a-4aca-8f7f-080dc365d7c3" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/5495d7d4-198a-4aca-8f7f-080dc365d7c3&w=800&output=webp" alt="Ficus benghalensis" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/5495d7d4-198a-4aca-8f7f-080dc365d7c3" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/5495d7d4-198a-4aca-8f7f-080dc365d7c3&w=800&output=webp" alt="Ficus benghalensis" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Banyan</h2>
-                <div class="meta">Ficus benghalensis | <span class="loc-text"></span> | </div>
+                <p class="meta">Ficus benghalensis |  | </p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-65" data-location="">
+        <div class="card" id="plant-65" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/a0f8e585-575a-473e-87fa-c3fbeca4ecc9" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/a0f8e585-575a-473e-87fa-c3fbeca4ecc9&w=800&output=webp" alt="Neolamarckia cadamba" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/a0f8e585-575a-473e-87fa-c3fbeca4ecc9" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/a0f8e585-575a-473e-87fa-c3fbeca4ecc9&w=800&output=webp" alt="Neolamarckia cadamba" class="primary-img" loading="lazy">
+            </a>
         
-                <a href="https://github.com/user-attachments/assets/139d15b1-0529-4cc8-8876-1ce3e218e9f5" target="_blank" title="Click to view full resolution">
-                    <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/139d15b1-0529-4cc8-8876-1ce3e218e9f5&w=800&output=webp" alt="Neolamarckia cadamba - Image 2" class="additional-img" loading="lazy">
-                </a>
+                    <a href="https://github.com/user-attachments/assets/139d15b1-0529-4cc8-8876-1ce3e218e9f5" target="_blank" title="Click to view full resolution">
+                        <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/139d15b1-0529-4cc8-8876-1ce3e218e9f5&w=800&output=webp" alt="Additional image for Neolamarckia cadamba" loading="lazy">
+                    </a>
                 
             </div>
             <div class="card-content">
                 <h2>Burflower</h2>
-                <div class="meta">Neolamarckia cadamba | <span class="loc-text"></span> | </div>
+                <p class="meta">Neolamarckia cadamba |  | </p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-66-67" data-location="">
+        <div class="card" id="plant-66-67" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/fb3a1e9d-aaf1-4768-a226-07cc7e53af35" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/fb3a1e9d-aaf1-4768-a226-07cc7e53af35&w=800&output=webp" alt="Nymphaeaceae & Cactaceae" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/fb3a1e9d-aaf1-4768-a226-07cc7e53af35" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/fb3a1e9d-aaf1-4768-a226-07cc7e53af35&w=800&output=webp" alt="Nymphaeaceae & Cactaceae" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Water Lily & Cactus</h2>
-                <div class="meta">Nymphaeaceae & Cactaceae | <span class="loc-text"></span> | </div>
+                <p class="meta">Nymphaeaceae & Cactaceae |  | </p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-68" data-location="">
+        <div class="card" id="plant-68" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/d21e47a3-4e9b-47ab-aa44-8855cce85c1e" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/d21e47a3-4e9b-47ab-aa44-8855cce85c1e&w=800&output=webp" alt="Pritchardia pacifica" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/d21e47a3-4e9b-47ab-aa44-8855cce85c1e" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/d21e47a3-4e9b-47ab-aa44-8855cce85c1e&w=800&output=webp" alt="Pritchardia pacifica" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Fiji Fan Palm</h2>
-                <div class="meta">Pritchardia pacifica | <span class="loc-text"></span> | </div>
+                <p class="meta">Pritchardia pacifica |  | </p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-69" data-location="">
+        <div class="card" id="plant-69" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/5231944b-663e-4f56-99cc-35d37126e7b3" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/5231944b-663e-4f56-99cc-35d37126e7b3&w=800&output=webp" alt="Tecoma capensis" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/5231944b-663e-4f56-99cc-35d37126e7b3" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/5231944b-663e-4f56-99cc-35d37126e7b3&w=800&output=webp" alt="Tecoma capensis" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Cape Honey-suckle</h2>
-                <div class="meta">Tecoma capensis | <span class="loc-text"></span> | </div>
+                <p class="meta">Tecoma capensis |  | </p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-70" data-location="">
+        <div class="card" id="plant-70" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/a17adbb6-bf51-4315-8d38-b9187d55611b" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/a17adbb6-bf51-4315-8d38-b9187d55611b&w=800&output=webp" alt="Hibiscus rosa-sinensis var. alba" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/a17adbb6-bf51-4315-8d38-b9187d55611b" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/a17adbb6-bf51-4315-8d38-b9187d55611b&w=800&output=webp" alt="Hibiscus rosa-sinensis var. alba" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>White Hibiscus</h2>
-                <div class="meta">Hibiscus rosa-sinensis var. alba | <span class="loc-text"></span> | </div>
+                <p class="meta">Hibiscus rosa-sinensis var. alba |  | </p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-71" data-location="">
+        <div class="card" id="plant-71" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/fc506c9e-42e9-4f1c-ac3b-4f1e13d6760f" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/fc506c9e-42e9-4f1c-ac3b-4f1e13d6760f&w=800&output=webp" alt="Canna indica" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/fc506c9e-42e9-4f1c-ac3b-4f1e13d6760f" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/fc506c9e-42e9-4f1c-ac3b-4f1e13d6760f&w=800&output=webp" alt="Canna indica" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Canna Lily</h2>
-                <div class="meta">Canna indica | <span class="loc-text"></span> | </div>
+                <p class="meta">Canna indica |  | </p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-72" data-location="">
+        <div class="card" id="plant-72" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/b967f1a0-6f8c-43d0-86de-ad9bcd4e494c" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/b967f1a0-6f8c-43d0-86de-ad9bcd4e494c&w=800&output=webp" alt="Pandanus" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/b967f1a0-6f8c-43d0-86de-ad9bcd4e494c" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/b967f1a0-6f8c-43d0-86de-ad9bcd4e494c&w=800&output=webp" alt="Pandanus" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Screwpine</h2>
-                <div class="meta">Pandanus | <span class="loc-text"></span> | </div>
+                <p class="meta">Pandanus |  | </p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-73" data-location="">
+        <div class="card" id="plant-73" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/a4712a03-7000-4d6c-9951-589be7c4dbae" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/a4712a03-7000-4d6c-9951-589be7c4dbae&w=800&output=webp" alt="Caesalpinia pulcherrima" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/a4712a03-7000-4d6c-9951-589be7c4dbae" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/a4712a03-7000-4d6c-9951-589be7c4dbae&w=800&output=webp" alt="Caesalpinia pulcherrima" class="primary-img" loading="lazy">
+            </a>
         
-                <a href="https://github.com/user-attachments/assets/a64603b8-6969-41ff-ab7c-65ecb800a66d" target="_blank" title="Click to view full resolution">
-                    <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/a64603b8-6969-41ff-ab7c-65ecb800a66d&w=800&output=webp" alt="Caesalpinia pulcherrima - Image 2" class="additional-img" loading="lazy">
-                </a>
+                    <a href="https://github.com/user-attachments/assets/a64603b8-6969-41ff-ab7c-65ecb800a66d" target="_blank" title="Click to view full resolution">
+                        <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/a64603b8-6969-41ff-ab7c-65ecb800a66d&w=800&output=webp" alt="Additional image for Caesalpinia pulcherrima" loading="lazy">
+                    </a>
                 
             </div>
             <div class="card-content">
                 <h2>Pride of Barbados</h2>
-                <div class="meta">Caesalpinia pulcherrima | <span class="loc-text"></span> | </div>
+                <p class="meta">Caesalpinia pulcherrima |  | </p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-74" data-location="">
+        <div class="card" id="plant-74" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/c952622e-c5d6-4af0-aa5e-1962a17cd350" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/c952622e-c5d6-4af0-aa5e-1962a17cd350&w=800&output=webp" alt="Plumeria" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/c952622e-c5d6-4af0-aa5e-1962a17cd350" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/c952622e-c5d6-4af0-aa5e-1962a17cd350&w=800&output=webp" alt="Plumeria" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>Plumeria</h2>
-                <div class="meta">Plumeria | <span class="loc-text"></span> | </div>
+                <p class="meta">Plumeria |  | </p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
-        <article class="card" id="plant-75" data-location="">
+        <div class="card" id="plant-75" data-location="">
             <div class="image-gallery">
                 
-        <a href="https://github.com/user-attachments/assets/c589b3a0-34f2-4ab7-b529-c0dae48291a7" target="_blank" title="Click to view full resolution">
-            <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/c589b3a0-34f2-4ab7-b529-c0dae48291a7&w=800&output=webp" alt="Poaceae" class="primary-img" loading="lazy">
-        </a>
+            <a href="https://github.com/user-attachments/assets/c589b3a0-34f2-4ab7-b529-c0dae48291a7" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/c589b3a0-34f2-4ab7-b529-c0dae48291a7&w=800&output=webp" alt="Poaceae" class="primary-img" loading="lazy">
+            </a>
         
             </div>
             <div class="card-content">
                 <h2>grass</h2>
-                <div class="meta">Poaceae | <span class="loc-text"></span> | </div>
+                <p class="meta">Poaceae |  | </p>
                 <p class="desc"></p>
             </div>
-        </article>
+        </div>
         
         </main>
 
@@ -1512,7 +1450,6 @@
     </div>
 
     <script>
-        // --- View Controls Logic ---
         function setView(viewName) {
             const gallery = document.getElementById('gallery');
             gallery.className = viewName;
@@ -1529,14 +1466,11 @@
             }
         });
 
-        // --- Second Background Scroll Fade Logic ---
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
             const heroHeight = document.querySelector('.hero').offsetHeight;
-            
             const fadeStart = heroHeight * 0.5;
-            const fadeEnd = heroHeight * 5; 
-
+            const fadeEnd = heroHeight * 3; 
             const bgArchive = document.getElementById('bg-archive');
             
             if (scrollY <= fadeStart) {
