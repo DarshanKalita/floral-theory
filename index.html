@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Import Water Brush and Quintessential from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Quintessential&family=Water+Brush&display=swap" rel="stylesheet">
     <title>Floral Theory | CMI Archive</title>
     <style>
@@ -17,45 +16,39 @@
         }
 
         body {
-    background-color: var(--bg-deep);
-    color: var(--text-main);
-    font-family: 'Georgia', serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    
-    /* Forces the entire page to scale up by 33% */
-    zoom: 1.33;
-}
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            /* Global zoom removed. Handled by individual views below. */
+        }
 
         /* --- Second Background (Fades in on scroll) --- */
-        /* --- Second Background (Fades in on scroll) --- */
-.bg-archive {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-image: url('https://github.com/user-attachments/assets/e7b07c85-accc-4a98-9a74-451fd85ec440'); 
-    
-    /* CHANGE THESE TWO LINES: */
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    
-    background-position: center;
-    z-index: 0;
-    opacity: 0; 
-    pointer-events: none;
-    will-change: opacity;
-}
+        .bg-archive {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-image: url('https://github.com/user-attachments/assets/e7b07c85-accc-4a98-9a74-451fd85ec440'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center;
+            z-index: 0;
+            opacity: 0; 
+            pointer-events: none;
+            will-change: opacity;
+        }
+
         /* Dark tint so the cards remain legible against the new image */
-.bg-archive::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    /* Adjust the last number (0.85) to change the darkness */
-    background: rgba(13, 15, 14, 0.45); 
-}
+        .bg-archive::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(13, 15, 14, 0.45); 
+        }
 
         /* --- Hero Section --- */
         .hero {
@@ -72,17 +65,16 @@
         }
 
         .hero::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    /* This keeps the top 40% completely clear, then fades to solid black slightly before the bottom edge */
-    background: linear-gradient(
-        to bottom, 
-        rgba(13, 15, 14, 0.2) 0%,   /* Top edge: transparent */
-    
-        rgba(13, 15, 14, 1) 100%   /* 90% down: fully opaque black */
-    );
-}
+            content: '';
+            position: absolute;
+            inset: 0;
+            /* Keeps the top 20% completely clear, then fades to solid black slightly before the bottom edge */
+            background: linear-gradient(
+                to bottom, 
+                rgba(13, 15, 14, 0.2) 0%,   
+                rgba(13, 15, 14, 1) 100%   
+            );
+        }
 
         .hero-text {
             position: relative;
@@ -109,7 +101,7 @@
 
         /* --- Archive Container --- */
         .container {
-            max-width: 1000px; 
+            max-width: 1600px; 
             margin: 0 auto;
             padding: 40px 20px 100px;
             position: relative;
@@ -146,7 +138,7 @@
         #gallery { transition: all 0.3s ease; }
 
         .card {
-            width: 100%; /* Default to full width, overridden by Grid view */
+            width: 100%; 
             background: var(--card-solid);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
@@ -206,19 +198,18 @@
             color: var(--text-main);
         }
 
-        /* --- 1. Grid View Layout --- */
         /* --- Grid View Layout --- */
-#gallery.view-grid { 
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center; 
-    gap: 40px; 
-    width: 100%;
-    zoom: 0.67; /* Add it here instead */
-}
+        #gallery.view-grid { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 40px; 
+            width: 100%;
+            zoom: 1.0; 
+        }
         
         #gallery.view-grid .card {
-            width: 300px; /* Forces cards to 300px ONLY in Grid view */
+            width: 300px; 
         }
         
         #gallery.view-grid img.primary-img { 
@@ -229,42 +220,42 @@
         #gallery.view-grid a:not(:first-child) { display: none; }
 
         /* --- Full View Layout --- */
-/* --- Full View Layout --- */
-#gallery.view-full { 
-    display: flex; flex-direction: column; 
-    align-items: center; /* Stops cards from stretching across the screen */
-    gap: 60px; width: 100%; zoom: 0.9; 
-}
-#gallery.view-full .card { width: fit-content; max-width: 100%; }
-#gallery.view-full img { max-height: 85vh; object-fit: contain; }
+        #gallery.view-full { 
+            display: flex; flex-direction: column; 
+            align-items: center; 
+            gap: 60px; width: 100%; zoom: 0.9; 
+        }
+        
+        #gallery.view-full .card { width: fit-content; max-width: 100%; }
+        #gallery.view-full img { max-height: 85vh; object-fit: contain; }
 
-/* --- Accordion (Index) View Layout --- */
-/* --- Accordion (Index) View Layout --- */
-#gallery.view-accordion { 
-    display: flex; flex-direction: column; 
-    align-items: center; 
-    gap: 15px; width: 100%; zoom: 0.9; 
-}
+        /* --- Accordion (Index) View Layout --- */
+        #gallery.view-accordion { 
+            display: flex; flex-direction: column; 
+            align-items: center; 
+            gap: 15px; width: 100%; zoom: 0.9; 
+        }
 
-/* Base closed state: Uniform width */
-#gallery.view-accordion .card { 
-    width: 900px; /* Adjust this number to fit your longest plant title */
-    max-width: 100%; /* Prevents breaking on mobile */
-    cursor: pointer; 
-    transition: width 0.3s ease; /* Adds a smooth expansion animation */
-}
+        /* Base closed state: Fluid width locked to max 900px */
+        #gallery.view-accordion .card { 
+            width: 100%; 
+            max-width: 900px; 
+            cursor: pointer; 
+            transition: max-width 0.3s ease; 
+        }
 
-/* Open state: Expands to fit the high-res image */
-#gallery.view-accordion .card.open { 
-    width: fit-content; 
-}
+        /* Open state: Expands to fit the high-res image */
+        #gallery.view-accordion .card.open { 
+            max-width: 100%; 
+        }
 
-/* Hide/Show logic remains the same */
-#gallery.view-accordion .card .image-gallery, 
-#gallery.view-accordion .card p:not(.meta) { display: none; }
-#gallery.view-accordion .card.open .image-gallery { display: flex; }
-#gallery.view-accordion .card.open p:not(.meta) { display: block; }
-#gallery.view-accordion .card.open img { max-height: 85vh; object-fit: contain; }
+        /* Hide/Show logic */
+        #gallery.view-accordion .card .image-gallery, 
+        #gallery.view-accordion .card p:not(.meta) { display: none; }
+        #gallery.view-accordion .card.open .image-gallery { display: flex; }
+        #gallery.view-accordion .card.open p:not(.meta) { display: block; }
+        #gallery.view-accordion .card.open img { max-height: 85vh; object-fit: contain; }
+        
         /* --- Submission Section --- */
         .submission-section {
             margin-top: 80px;
@@ -296,21 +287,41 @@
             border-radius: 4px;
         }
 
-        /* --- Responsive Media Queries --- */
-        @media (max-width: 600px) {
-            .hero-text h1 { font-size: 5rem; }
-        }   
-        
-        @media (max-width: 340px) {
-            #gallery.view-grid .card {
-                width: 100%;
+        /* --- Responsive Media Queries for Mobile --- */
+        @media (max-width: 800px) {
+            /* 1. Kill the custom zoom on smaller screens */
+            #gallery.view-grid,
+            #gallery.view-full,
+            #gallery.view-accordion {
+                zoom: 1.0 !important;
+            }
+
+            /* 2. Shrink title and adjust container */
+            .hero-text h1 { font-size: 4rem; }
+            .hero-text p.subtitle { font-size: 1rem; }
+            .container { padding: 20px 15px 60px; }
+
+            /* 3. Wrap controls so buttons don't overflow */
+            .controls { 
+                flex-wrap: wrap; 
+                gap: 10px;
+            }
+
+            /* 4. Force grid cards to take full width */
+            #gallery.view-grid .card { width: 100%; }
+            #gallery.view-grid { gap: 25px; }
+            #gallery.view-full { gap: 40px; }
+
+            /* 5. Restrict image height so they fit vertically on a phone */
+            #gallery.view-full img, 
+            #gallery.view-accordion .card.open img { 
+                max-height: 60vh; 
             }
         }
     </style>
 </head>
 <body>
     
-    <!-- The fixed background that fades in -->
     <div class="bg-archive" id="bg-archive"></div>
 
     <section class="hero">
@@ -1502,15 +1513,15 @@
     <script>
         // --- View Controls Logic ---
         function setView(viewName) {
-    const gallery = document.getElementById('gallery');
-    gallery.className = viewName;
-    document.querySelectorAll('.controls button').forEach(btn => btn.classList.remove('active'));
-    document.getElementById('btn-' + viewName.split('-')[1]).classList.add('active');
-    document.querySelectorAll('.card').forEach(card => card.classList.remove('open'));
-    
-    // Save layout choice to browser memory
-    localStorage.setItem('preferredView', viewName);
-}
+            const gallery = document.getElementById('gallery');
+            gallery.className = viewName;
+            document.querySelectorAll('.controls button').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('btn-' + viewName.split('-')[1]).classList.add('active');
+            document.querySelectorAll('.card').forEach(card => card.classList.remove('open'));
+            
+            // Save layout choice to browser memory
+            localStorage.setItem('preferredView', viewName);
+        }
 
         document.getElementById('gallery').addEventListener('click', function(e) {
             if (e.target.closest('a')) return;
@@ -1525,7 +1536,7 @@
             const scrollY = window.scrollY;
             const heroHeight = document.querySelector('.hero').offsetHeight;
             
-            const fadeStart = heroHeight *1;
+            const fadeStart = heroHeight * 1;
             const fadeEnd = heroHeight * 6; 
 
             const bgArchive = document.getElementById('bg-archive');
@@ -1538,21 +1549,21 @@
                 bgArchive.style.opacity = (scrollY - fadeStart) / (fadeEnd - fadeStart);
             }
         });
-window.addEventListener('beforeunload', () => {
-    sessionStorage.setItem('scrollPos', window.scrollY);
-});
-        window.addEventListener('DOMContentLoaded', () => {
 
-// 1. Restore the saved layout (or default to grid)
-    const savedView = localStorage.getItem('preferredView') || 'view-grid';
-    setView(savedView);
-    
-    // 2. Restore scroll position
-    const savedScroll = sessionStorage.getItem('scrollPos');
-    if (savedScroll) {
-        // Small timeout ensures the DOM has painted before scrolling
-        setTimeout(() => window.scrollTo(0, parseInt(savedScroll)), 50); 
-    }
+        window.addEventListener('beforeunload', () => {
+            sessionStorage.setItem('scrollPos', window.scrollY);
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            // 1. Restore the saved layout (or default to grid)
+            const savedView = localStorage.getItem('preferredView') || 'view-grid';
+            setView(savedView);
+            
+            // 2. Restore scroll position
+            const savedScroll = sessionStorage.getItem('scrollPos');
+            if (savedScroll) {
+                setTimeout(() => window.scrollTo(0, parseInt(savedScroll)), 50); 
+            }
 
             const urlParams = new URLSearchParams(window.location.search);
             const loc = urlParams.get('location');
