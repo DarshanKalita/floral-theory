@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Import Water Brush and Quintessential from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Quintessential&family=Water+Brush&display=swap" rel="stylesheet">
     <title>Floral Theory | CMI Archive</title>
     <style>
         :root {
             --bg-deep: #0D0F0E;
-            --card-solid: rgba(22, 27, 24, 0); 
+            --card-solid: rgba(22, 27, 24, 0.8); 
             --text-main: #E8E8E8;
             --text-muted: #9BAE9E;
             --accent: #6C8C74;
@@ -16,38 +17,45 @@
         }
 
         body {
-            background-color: var(--bg-deep);
-            color: var(--text-main);
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            zoom: 1.33; /* Baked-in 133% zoom */
-        }
+    background-color: var(--bg-deep);
+    color: var(--text-main);
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    
+    /* Forces the entire page to scale up by 33% */
+    zoom: 1.33;
+}
 
         /* --- Second Background (Fades in on scroll) --- */
-        .bg-archive {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background-image: url('./assets/cmi\ light.jpeg'); /* Make sure filename has no spaces */
-            background-size: cover; 
-            background-repeat: no-repeat; 
-            background-position: center;
-            z-index: 0;
-            opacity: 0; 
-            pointer-events: none;
-            will-change: opacity;
-        }
-
-        .bg-archive::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(13, 15, 14, 0.85); /* Adjust darkness here */
-        }
+        /* --- Second Background (Fades in on scroll) --- */
+.bg-archive {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://github.com/user-attachments/assets/e7b07c85-accc-4a98-9a74-451fd85ec440'); 
+    
+    /* CHANGE THESE TWO LINES: */
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    
+    background-position: center;
+    z-index: 0;
+    opacity: 0; 
+    pointer-events: none;
+    will-change: opacity;
+}
+        /* Dark tint so the cards remain legible against the new image */
+.bg-archive::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* Adjust the last number (0.85) to change the darkness */
+    background: rgba(13, 15, 14, 0.45); 
+}
 
         /* --- Hero Section --- */
         .hero {
@@ -55,7 +63,7 @@
             z-index: 1; 
             width: 100%;
             height: 85vh;
-            background-image: url('./assets/prideofbarbados.jpeg'); /* Make sure filename has no spaces */
+            background-image: url('https://github-production-user-asset-6210df.s3.amazonaws.com/66469041/577454877-a4712a03-7000-4d6c-9951-589be7c4dbae.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260506%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260506T121133Z&X-Amz-Expires=300&X-Amz-Signature=29a97897c6d91705b44642af28a9074ed385aa3e16ab5baa409b8cf1401775e3&X-Amz-SignedHeaders=host&response-content-type=image%2Fjpeg'); 
             background-size: cover;
             background-position: center;
             display: flex;
@@ -64,11 +72,17 @@
         }
 
         .hero::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to bottom, rgba(13,15,14,0.2) 0%, rgba(13,15,14,1) 100%);
-        }
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* This keeps the top 40% completely clear, then fades to solid black slightly before the bottom edge */
+    background: linear-gradient(
+        to bottom, 
+        rgba(13, 15, 14, 0.2) 0%,   /* Top edge: transparent */
+    
+        rgba(13, 15, 14, 1) 100%   /* 90% down: fully opaque black */
+    );
+}
 
         .hero-text {
             position: relative;
@@ -128,11 +142,11 @@
             border-color: var(--accent);
         }
 
-        /* --- Base Card Styles --- */
+        /* --- Base Card Styles (Applies to all views) --- */
         #gallery { transition: all 0.3s ease; }
 
         .card {
-            width: 100%; 
+            width: 100%; /* Default to full width, overridden by Grid view */
             background: var(--card-solid);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
@@ -176,7 +190,7 @@
 
         .meta { 
             font-family: 'Lora', serif;
-            font-size: 0.9rem; 
+            font-size: 1.3rem; 
             color: var(--text-muted); 
             font-style: italic; 
             margin-bottom: 15px; 
@@ -192,56 +206,111 @@
             color: var(--text-main);
         }
 
+        /* --- 1. Grid View Layout --- */
         /* --- Grid View Layout --- */
-        #gallery.view-grid { 
-            display: flex; 
-            flex-wrap: wrap; 
-            justify-content: center; 
-            gap: 40px; 
-            width: 100%;
+#gallery.view-grid { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 40px; 
+    width: 100%;
+    zoom: 0.67; /* Add it here instead */
+}
+        
+        #gallery.view-grid .card {
+            width: 300px; /* Forces cards to 300px ONLY in Grid view */
         }
         
-        #gallery.view-grid .card { width: 300px; }
-        #gallery.view-grid img.primary-img { height: 250px; object-fit: cover; }
+        #gallery.view-grid img.primary-img { 
+            height: 250px; 
+            object-fit: cover; 
+        }
+        
         #gallery.view-grid a:not(:first-child) { display: none; }
 
         /* --- Full View Layout --- */
-        #gallery.view-full { display: flex; flex-direction: column; gap: 60px; width: 100%; }
-        #gallery.view-full img.primary-img { max-height: 85vh; object-fit: contain; }
+/* --- Full View Layout --- */
+#gallery.view-full { 
+    display: flex; flex-direction: column; 
+    align-items: center; /* Stops cards from stretching across the screen */
+    gap: 60px; width: 100%; zoom: 0.9; 
+}
+#gallery.view-full .card { width: fit-content; max-width: 100%; }
+#gallery.view-full img { max-height: 85vh; object-fit: contain; }
 
-        /* --- Accordion (Index) View Layout --- */
-        #gallery.view-accordion { display: flex; flex-direction: column; gap: 15px; width: 100%; }
-        #gallery.view-accordion .card { cursor: pointer; }
-        #gallery.view-accordion .card .image-gallery, 
-        #gallery.view-accordion .card p:not(.meta) { display: none; }
-        #gallery.view-accordion .card.open .image-gallery { display: flex; }
-        #gallery.view-accordion .card.open p:not(.meta) { display: block; }
+/* --- Accordion (Index) View Layout --- */
+/* --- Accordion (Index) View Layout --- */
+#gallery.view-accordion { 
+    display: flex; flex-direction: column; 
+    align-items: center; 
+    gap: 15px; width: 100%; zoom: 0.9; 
+}
 
+/* Base closed state: Uniform width */
+#gallery.view-accordion .card { 
+    width: 900px; /* Adjust this number to fit your longest plant title */
+    max-width: 100%; /* Prevents breaking on mobile */
+    cursor: pointer; 
+    transition: width 0.3s ease; /* Adds a smooth expansion animation */
+}
+
+/* Open state: Expands to fit the high-res image */
+#gallery.view-accordion .card.open { 
+    width: fit-content; 
+}
+
+/* Hide/Show logic remains the same */
+#gallery.view-accordion .card .image-gallery, 
+#gallery.view-accordion .card p:not(.meta) { display: none; }
+#gallery.view-accordion .card.open .image-gallery { display: flex; }
+#gallery.view-accordion .card.open p:not(.meta) { display: block; }
+#gallery.view-accordion .card.open img { max-height: 85vh; object-fit: contain; }
         /* --- Submission Section --- */
         .submission-section {
-            margin-top: 80px; padding: 40px;
+            margin-top: 80px;
+            padding: 40px;
             background: rgba(255,255,255,0.02);
             border: 1px dashed var(--border);
-            border-radius: 8px; backdrop-filter: blur(10px);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
         }
         
         input, textarea {
-            width: 100%; padding: 12px; margin-bottom: 20px;
-            border: 1px solid var(--border); background: rgba(0,0,0,0.5);
-            color: var(--text-main); font-family: inherit; box-sizing: border-box;
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+            background: rgba(0,0,0,0.5);
+            color: var(--text-main);
+            font-family: inherit;
+            box-sizing: border-box;
         }
 
         .submit-btn {
-            background: var(--accent); color: white; border: none;
-            padding: 15px 30px; font-weight: bold; cursor: pointer; border-radius: 4px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
         }
 
-        @media (max-width: 600px) { .hero-text h1 { font-size: 5rem; } }   
-        @media (max-width: 340px) { #gallery.view-grid .card { width: 100%; } }
+        /* --- Responsive Media Queries --- */
+        @media (max-width: 600px) {
+            .hero-text h1 { font-size: 5rem; }
+        }   
+        
+        @media (max-width: 340px) {
+            #gallery.view-grid .card {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
-
+    
+    <!-- The fixed background that fades in -->
     <div class="bg-archive" id="bg-archive"></div>
 
     <section class="hero">
@@ -268,8 +337,8 @@
         <div class="card" id="plant-1" data-location="">
             <div class="image-gallery">
                 
-            <a href="https://github.com/user-attachments/assets/6a19a08a-bd36-437b-aa56-48c7641324cf" target="_blank" title="Click to view full resolution">
-                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/6a19a08a-bd36-437b-aa56-48c7641324cf&w=800&output=webp" alt="Pseuderanthemum" class="primary-img" loading="lazy">
+            <a href="https://github.com/user-attachments/assets/e7b07c85-accc-4a98-9a74-451fd85ec440" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/e7b07c85-accc-4a98-9a74-451fd85ec440&w=800&output=webp" alt="Pseuderanthemum" class="primary-img" loading="lazy">
             </a>
         
                     <a href="https://github.com/user-attachments/assets/2531268b-0495-4927-b6d1-965b17a26880" target="_blank" title="Click to view full resolution">
@@ -608,25 +677,6 @@
             </div>
         </div>
         
-        <div class="card" id="plant-22" data-location="">
-            <div class="image-gallery">
-                
-            <a href="https://github.com/user-attachments/assets/f7f9a90e-9617-4b3d-b4b0-41f064cfa088" target="_blank" title="Click to view full resolution">
-                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/f7f9a90e-9617-4b3d-b4b0-41f064cfa088&w=800&output=webp" alt="Delonix regia" class="primary-img" loading="lazy">
-            </a>
-        
-                    <a href="https://github.com/user-attachments/assets/16c331ec-bed0-4fb6-b8a5-a86befa07340" target="_blank" title="Click to view full resolution">
-                        <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/16c331ec-bed0-4fb6-b8a5-a86befa07340&w=800&output=webp" alt="Additional image for Delonix regia" loading="lazy">
-                    </a>
-                
-            </div>
-            <div class="card-content">
-                <h2>Flame Tree</h2>
-                <p class="meta">Delonix regia |  | 5th March 2026</p>
-                <p class="desc"></p>
-            </div>
-        </div>
-        
         <div class="card" id="plant-23" data-location="">
             <div class="image-gallery">
                 
@@ -728,8 +778,8 @@
         <div class="card" id="plant-30" data-location="">
             <div class="image-gallery">
                 
-            <a href="https://github.com/user-attachments/assets/604ab63a-c761-4648-9e17-967607f7d83f" target="_blank" title="Click to view full resolution">
-                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/604ab63a-c761-4648-9e17-967607f7d83f&w=800&output=webp" alt="Peltophorum pterocarpum" class="primary-img" loading="lazy">
+            <a href="https://github.com/user-attachments/assets/d5c82f7b-0201-4d64-8f20-eb71c5cf3f26" target="_blank" title="Click to view full resolution">
+                <img src="https://wsrv.nl/?url=https://github.com/user-attachments/assets/d5c82f7b-0201-4d64-8f20-eb71c5cf3f26&w=800&output=webp" alt="Peltophorum pterocarpum" class="primary-img" loading="lazy">
             </a>
         
                     <a href="https://github.com/user-attachments/assets/ac8de929-bf90-4911-983d-18a47ddab879" target="_blank" title="Click to view full resolution">
@@ -1450,13 +1500,17 @@
     </div>
 
     <script>
+        // --- View Controls Logic ---
         function setView(viewName) {
-            const gallery = document.getElementById('gallery');
-            gallery.className = viewName;
-            document.querySelectorAll('.controls button').forEach(btn => btn.classList.remove('active'));
-            document.getElementById('btn-' + viewName.split('-')[1]).classList.add('active');
-            document.querySelectorAll('.card').forEach(card => card.classList.remove('open'));
-        }
+    const gallery = document.getElementById('gallery');
+    gallery.className = viewName;
+    document.querySelectorAll('.controls button').forEach(btn => btn.classList.remove('active'));
+    document.getElementById('btn-' + viewName.split('-')[1]).classList.add('active');
+    document.querySelectorAll('.card').forEach(card => card.classList.remove('open'));
+    
+    // Save layout choice to browser memory
+    localStorage.setItem('preferredView', viewName);
+}
 
         document.getElementById('gallery').addEventListener('click', function(e) {
             if (e.target.closest('a')) return;
@@ -1466,11 +1520,14 @@
             }
         });
 
+        // --- Second Background Scroll Fade Logic ---
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
             const heroHeight = document.querySelector('.hero').offsetHeight;
-            const fadeStart = heroHeight * 0.5;
-            const fadeEnd = heroHeight * 3; 
+            
+            const fadeStart = heroHeight *1;
+            const fadeEnd = heroHeight * 6; 
+
             const bgArchive = document.getElementById('bg-archive');
             
             if (scrollY <= fadeStart) {
@@ -1481,8 +1538,22 @@
                 bgArchive.style.opacity = (scrollY - fadeStart) / (fadeEnd - fadeStart);
             }
         });
-
+window.addEventListener('beforeunload', () => {
+    sessionStorage.setItem('scrollPos', window.scrollY);
+});
         window.addEventListener('DOMContentLoaded', () => {
+
+// 1. Restore the saved layout (or default to grid)
+    const savedView = localStorage.getItem('preferredView') || 'view-grid';
+    setView(savedView);
+    
+    // 2. Restore scroll position
+    const savedScroll = sessionStorage.getItem('scrollPos');
+    if (savedScroll) {
+        // Small timeout ensures the DOM has painted before scrolling
+        setTimeout(() => window.scrollTo(0, parseInt(savedScroll)), 50); 
+    }
+
             const urlParams = new URLSearchParams(window.location.search);
             const loc = urlParams.get('location');
             const targetId = urlParams.get('id');

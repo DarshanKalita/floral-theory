@@ -1,3 +1,5 @@
+
+
 ![Header](https://github.com/user-attachments/assets/2cdd7ea7-40b2-412c-a7a4-9c883c2c5f7a)
 
 # Welcome to Floral Theory Minimalist!
@@ -5,6 +7,7 @@
 ---
 
 ### 1. False Eranthemum
+![False Compressed](https://github.com/user-attachments/assets/e7b07c85-accc-4a98-9a74-451fd85ec440)
 ![photo_81](https://github.com/user-attachments/assets/2531268b-0495-4927-b6d1-965b17a26880)
 
 ---
@@ -112,12 +115,6 @@
 ### 21. Dwarf White Orchid
 ![photo_54](https://github.com/user-attachments/assets/1362ba9d-35a6-4558-96e1-bd53aa555a97)
 ![photo_57](https://github.com/user-attachments/assets/fdd66384-f327-465e-a00e-b4382afb8b03)
-
----
-
-### 22. Flame Tree
-![photo_53](https://github.com/user-attachments/assets/f7f9a90e-9617-4b3d-b4b0-41f064cfa088)
-![photo_51](https://github.com/user-attachments/assets/16c331ec-bed0-4fb6-b8a5-a86befa07340)
 
 ---
 
@@ -388,6 +385,9 @@
 
 ### 75. grass
 ![95222 jpg](https://github.com/user-attachments/assets/c589b3a0-34f2-4ab7-b529-c0dae48291a7)
+
+### 76. Cpoperpod
+![copperpod](https://github.com/user-attachments/assets/d5c82f7b-0201-4d64-8f20-eb71c5cf3f26)
 
 
 
