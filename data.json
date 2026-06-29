@@ -5,7 +5,7 @@
     "common_name": "Banyan",
     "date": "26th September 2025",
     "location": "The true centre",
-    "coordinates": [100, 100],
+    "coordinates": [400, 500],
     "image": "https://github.com/user-attachments/assets/5495d7d4-198a-4aca-8f7f-080dc365d7c3"
   },
   {
@@ -14,7 +14,7 @@
     "common_name": "Flame Tree",
     "date": "28th September 2025",
     "location": "Outside Audifoyer",
-    "coordinates": [100, 100],
+    "coordinates": [749, 694],
     "image": "https://github.com/user-attachments/assets/a790615d-61ce-4c29-9be0-a089399897bc"
   },
   {
@@ -23,7 +23,7 @@
     "common_name": "Burflower",
     "date": "30th September 2025",
     "location": "Outside Library",
-    "coordinates": [100, 100],
+    "coordinates": [529, 343],
     "image": "https://github.com/user-attachments/assets/a0f8e585-575a-473e-87fa-c3fbeca4ecc9",
     "additional_images": ["https://github.com/user-attachments/assets/139d15b1-0529-4cc8-8876-1ce3e218e9f5"]
   },
@@ -33,7 +33,7 @@
     "common_name": "Water Lily & Cactus",
     "date": "3rd October 2025",
     "location": "Big Pond",
-    "coordinates": [100, 100],
+    "coordinates": [540, 478],
     "image": "https://github.com/user-attachments/assets/fb3a1e9d-aaf1-4768-a226-07cc7e53af35"
   },
   {
@@ -42,7 +42,7 @@
     "common_name": "Jungle Geranium",
     "date": "3rd October 2025",
     "location": "Near Frontdesk",
-    "coordinates": [100, 100],
+    "coordinates": [411, 227],
     "image": "https://github.com/user-attachments/assets/e0cf7ca9-0bb2-47cf-a2e3-dc68d60392e7",
     "additional_images": ["https://github.com/user-attachments/assets/0338fab9-f014-4c50-b016-294574efd0f0"]
   },
@@ -52,7 +52,7 @@
     "common_name": "Fiji Fan Palm",
     "date": "11th November 2025",
     "location": "Behind Big Pond",
-    "coordinates": [100, 100],
+    "coordinates": [549, 532],
     "image": "https://github.com/user-attachments/assets/d21e47a3-4e9b-47ab-aa44-8855cce85c1e"
   },
   {
@@ -61,7 +61,7 @@
     "common_name": "Crown of Thorns",
     "date": "4th January 2026",
     "location": "High Rise Floor 3, Pebble planet",
-    "coordinates": [100, 100],
+    "coordinates": [602, 604],
     "image": "https://github.com/user-attachments/assets/f7b53c52-d464-4fee-9dfd-660e4ef00279"
   },
   {
@@ -70,7 +70,7 @@
     "common_name": "Sea Almond",
     "date": "12th February 2026",
     "location": "Outside LH05",
-    "coordinates": [100, 100],
+    "coordinates": [292, 366],
     "image": "https://github.com/user-attachments/assets/e13e415d-3a1e-46f4-a4d2-b8184c8e4fa2"
   },
   {
@@ -79,7 +79,7 @@
     "common_name": "Bajra",
     "date": "22nd February 2026",
     "location": "Library High-Rise Isthmus, near Small Pond",
-    "coordinates": [100, 100],
+    "coordinates": [576, 494],
     "image": "https://github.com/user-attachments/assets/678eb91e-6563-4876-9c3d-b6650a2de4cb"
   },
   {
@@ -88,7 +88,7 @@
     "common_name": "Copperleaf",
     "date": "5th March 2026",
     "location": "Ahead of Buddha",
-    "coordinates": [100, 100],
+    "coordinates": [398, 231],
     "image": "https://github.com/user-attachments/assets/07d1a479-cd97-4cc0-b3ea-69c607bc57f6"
   },
   {
@@ -97,7 +97,7 @@
     "common_name": "Star Jasmine",
     "date": "5th March 2026",
     "location": "Outside Library, infront of Big Pond",
-    "coordinates": [100, 100],
+    "coordinates": [567, 400],
     "image": "https://github.com/user-attachments/assets/e478cf8c-303c-4598-bcce-6fed659b21f1"
   },
   {
@@ -106,7 +106,7 @@
     "common_name": "Bleeding Heart",
     "date": "5th March 2026",
     "location": "Outside Library",
-    "coordinates": [100, 100],
+    "coordinates": [584, 394],
     "image": "https://github.com/user-attachments/assets/3a428939-9861-44c5-88c5-682511d564e1"
   },
   {
@@ -115,7 +115,7 @@
     "common_name": "Privet",
     "date": "5th March 2026",
     "location": "Outside Library",
-    "coordinates": [100, 100],
+    "coordinates": [577, 367],
     "image": "https://github.com/user-attachments/assets/eec0e2a0-e2bd-46e9-a9c6-18034b1bbadb"
   },
   {
@@ -124,7 +124,7 @@
     "common_name": "Crape Jasmine",
     "date": "5th March 2026",
     "location": "Outside Library",
-    "coordinates": [100, 100],
+    "coordinates": [583, 382],
     "image": "https://github.com/user-attachments/assets/8d8e6d80-3408-412d-baf7-2f061ad25abc",
     "additional_images": ["https://github.com/user-attachments/assets/e38c27bc-d60f-4387-99c0-b927f8a98aeb"]
   },
@@ -134,7 +134,7 @@
     "common_name": "\"Karan's Baobab\" leaf",
     "date": "5th March 2026",
     "location": "Outside Library",
-    "coordinates": [100, 100],
+    "coordinates": [563, 325],
     "image": "https://github.com/user-attachments/assets/7c1b4fa9-0ddc-40b8-bd61-7a6da8176fe8"
   },
   {
@@ -143,7 +143,7 @@
     "common_name": "Devil's Ivy",
     "date": "5th March 2026",
     "location": "On Burflower",
-    "coordinates": [100, 100],
+    "coordinates": [529, 345],
     "image": "https://github.com/user-attachments/assets/deb736c8-eab8-4a8e-bd91-97f5cd4d7c41"
   },
   {
@@ -152,7 +152,7 @@
     "common_name": "Coconut Palm",
     "date": "5th March 2026",
     "location": "Infront of Frontdesk",
-    "coordinates": [100, 100],
+    "coordinates": [454, 188],
     "image": "https://github.com/user-attachments/assets/9b5683e2-accc-4ada-a6be-a43902e18306"
   },
   {
@@ -161,7 +161,7 @@
     "common_name": "Boston Fern",
     "date": "5th March 2026",
     "location": "Beside Frontdesk",
-    "coordinates": [100, 100],
+    "coordinates": [356, 195],
     "image": "https://github.com/user-attachments/assets/6559cc52-c40a-4b61-b33f-84c5b4f9e34c"
   },
   {
@@ -170,7 +170,7 @@
     "common_name": "Heart of Jesus",
     "date": "5th March 2026",
     "location": "Entrance Circle",
-    "coordinates": [100, 100],
+    "coordinates": [449, 155],
     "image": "https://github.com/user-attachments/assets/ce4d1920-4d4b-4042-87ba-66d6ca330ae6"
   },
   {
@@ -179,7 +179,7 @@
     "common_name": "Spider Plant",
     "date": "5th March 2026",
     "location": "Entrance Circle",
-    "coordinates": [100, 100],
+    "coordinates": [419, 118],
     "image": "https://github.com/user-attachments/assets/930c41d5-a31b-4f5b-bb05-922fa9500305"
   },
   {
@@ -188,7 +188,8 @@
     "common_name": "Croton",
     "date": "5th March 2026",
     "location": "Entrance Circle",
-    "coordinates": [100, 100],
+    "coordinates": [425, 118]
+,
     "image": "https://github.com/user-attachments/assets/97a55b04-187d-4a93-b287-82126e41ba96"
   },
   {
@@ -197,7 +198,7 @@
     "common_name": "Variegated Weeping Fig",
     "date": "5th March 2026",
     "location": "Left entrance",
-    "coordinates": [100, 100],
+    "coordinates": [481, 147],
     "image": "https://github.com/user-attachments/assets/59fffdb8-299d-4491-8abd-2199a8bb845e",
     "additional_images": ["https://github.com/user-attachments/assets/b2d53e14-0abc-430b-b513-e7ea168a2684"]
   },
@@ -207,7 +208,8 @@
     "common_name": "Bougainvillea",
     "date": "5th March 2026",
     "location": "Left entrance",
-    "coordinates": [100, 100],
+    "coordinates": [481, 157]
+,
     "image": "https://github.com/user-attachments/assets/e0c0093e-1534-48c0-8b14-dfb126bb11c6"
   },
   {
@@ -216,7 +218,7 @@
     "common_name": "Firebush",
     "date": "5th March 2026",
     "location": "Left entrance",
-    "coordinates": [100, 100],
+    "coordinates": [498, 149],
     "image": "https://github.com/user-attachments/assets/dee7867d-3121-4f89-a7a9-4032540b293e"
   },
   {
@@ -225,7 +227,8 @@
     "common_name": "Dragon Tree",
     "date": "5th March 2026",
     "location": "Left entrance",
-    "coordinates": [100, 100],
+    "coordinates": [490, 143]
+,
     "image": "https://github.com/user-attachments/assets/2a64344b-193a-4f2e-af5b-bec209a0e6ea"
   },
   {
@@ -234,7 +237,7 @@
     "common_name": "Dwarf White Orchid",
     "date": "5th March 2026",
     "location": "Left entrance",
-    "coordinates": [100, 100],
+    "coordinates": [502, 149],
     "image": "https://github.com/user-attachments/assets/1362ba9d-35a6-4558-96e1-bd53aa555a97",
     "additional_images": ["https://github.com/user-attachments/assets/fdd66384-f327-465e-a00e-b4382afb8b03"]
   },
@@ -244,7 +247,7 @@
     "common_name": "Mother-in-law's tongue",
     "date": "5th March 2026",
     "location": "Left entrance",
-    "coordinates": [100, 100],
+    "coordinates": [502, 159],
     "image": "https://github.com/user-attachments/assets/4e9db1e6-27c1-4c74-a9dc-6bfe4b23dfe6"
   },
   {
@@ -253,7 +256,7 @@
     "common_name": "Periwinkle",
     "date": "5th March 2026",
     "location": "Left entrance",
-    "coordinates": [100, 100],
+    "coordinates": [453, 104],
     "image": "https://github.com/user-attachments/assets/2bf81e4a-07dd-4639-90a6-ab19a268d98b"
   },
   {
@@ -262,7 +265,7 @@
     "common_name": "Crossandra",
     "date": "5th March 2026",
     "location": "Left entrance",
-    "coordinates": [100, 100],
+    "coordinates": [522, 137],
     "image": "https://github.com/user-attachments/assets/a0bcb8cb-d3ce-41e4-9a31-2d20f954ceb1"
   },
   {
@@ -271,7 +274,7 @@
     "common_name": "Rattleweed",
     "date": "5th March 2026",
     "location": "Left entrance",
-    "coordinates": [100, 100],
+    "coordinates": [528, 122],
     "image": "https://github.com/user-attachments/assets/765af0a6-7950-41c1-89e1-e6b2a778d796"
   },
   {
@@ -280,7 +283,7 @@
     "common_name": "Neem",
     "date": "5th March 2026",
     "location": "Left entrance",
-    "coordinates": [100, 100],
+    "coordinates": [558, 99],
     "image": "https://github.com/user-attachments/assets/e95d67cd-7b5e-4a95-b39c-f2fb7f561234",
     "additional_images": [
       "https://github.com/user-attachments/assets/7190d3d2-a51a-492e-bbc2-6106d624437a",
@@ -293,7 +296,7 @@
     "common_name": "Giloy",
     "date": "5th March 2026",
     "location": "Left entrance",
-    "coordinates": [100, 100],
+    "coordinates": [529, 1],
     "image": "https://github.com/user-attachments/assets/3eb83e27-6013-4514-a03d-8a88d7ee9f13"
   },
   {
@@ -302,7 +305,7 @@
     "common_name": "Plumeria",
     "date": "5th March 2026",
     "location": "Entrance garden, left side",
-    "coordinates": [100, 100],
+    "coordinates": [475, 28],
     "image": "https://github.com/user-attachments/assets/805a7daf-f014-4d70-9f84-4835838cdaba"
   },
   {
@@ -311,7 +314,7 @@
     "common_name": "Round Lemon",
     "date": "5th March 2026",
     "location": "Outside faculty lounge",
-    "coordinates": [100, 100],
+    "coordinates": [365, 126],
     "image": "https://github.com/user-attachments/assets/6ee5fd52-c439-429c-99ce-ec98ae18cf3c"
   },
   {
@@ -320,7 +323,7 @@
     "common_name": "Unidentified",
     "date": "5th March 2026",
     "location": "Outside admin's office",
-    "coordinates": [100, 100],
+    "coordinates": [308, 152],
     "image": "https://github.com/user-attachments/assets/0270d7b8-6666-4445-80f8-72c9855fbdab"
   },
   {
@@ -329,7 +332,7 @@
     "common_name": "Norfolk Island Pine",
     "date": "5th March 2026",
     "location": "Entrance garden, right side",
-    "coordinates": [100, 100],
+    "coordinates": [319, 87],
     "image": "https://github.com/user-attachments/assets/cb0d20a8-3b13-4635-acb2-f723be92fe08"
   },
   {
@@ -338,7 +341,7 @@
     "common_name": "Karanj",
     "date": "5th March 2026",
     "location": "Outside Power Station",
-    "coordinates": [100, 100],
+    "coordinates": [187, 108],
     "image": "https://github.com/user-attachments/assets/06ea06d3-9589-4488-9512-0c5b542d5999"
   },
   {
@@ -347,7 +350,7 @@
     "common_name": "Shil Koroi",
     "date": "5th March 2026",
     "location": "Outside Power Station",
-    "coordinates": [100, 100],
+    "coordinates": [119, 205],
     "image": "https://github.com/user-attachments/assets/e505991d-c6df-4fbd-b441-4d26aabde13d"
   },
   {
@@ -356,7 +359,7 @@
     "common_name": "Bokul",
     "date": "5th March 2026",
     "location": "Outside Power Station",
-    "coordinates": [100, 100],
+    "coordinates": [90, 272],
     "image": "https://github.com/user-attachments/assets/4c8f9fb3-af6b-4870-a57f-0be1018cfc8e"
   },
   {
@@ -365,7 +368,7 @@
     "common_name": "Sage Rose",
     "date": "5th March 2026",
     "location": "Outside LH01",
-    "coordinates": [100, 100],
+    "coordinates": [118, 293],
     "image": "https://github.com/user-attachments/assets/29223269-5df4-4ccb-abf8-b38ce6cd10eb"
   },
   {
@@ -374,7 +377,7 @@
     "common_name": "Unidentified",
     "date": "5th March 2026",
     "location": "Outside LH01",
-    "coordinates": [100, 100],
+    "coordinates": [114, 306],
     "image": "https://github.com/user-attachments/assets/837533c1-a807-49ed-b9a8-7476a35c3566"
   },
   {
@@ -383,7 +386,7 @@
     "common_name": "Unidentified",
     "date": "5th March 2026",
     "location": "Outside LH01, near wall",
-    "coordinates": [100, 100],
+    "coordinates": [30, 330],
     "image": "https://github.com/user-attachments/assets/9b4b2cff-1860-4462-83f8-ee166711b9a8"
   },
   {
@@ -392,7 +395,7 @@
     "common_name": "Yellow Oleander",
     "date": "5th March 2026",
     "location": "Outside Govind's Office, near Frontdesk",
-    "coordinates": [100, 100],
+    "coordinates": [440, 249],
     "image": "https://github.com/user-attachments/assets/4fbdbea4-c908-498c-af09-3857f6e41958",
     "additional_images": ["https://github.com/user-attachments/assets/8f205275-a44b-4284-a86f-98b81f77304e"]
   },
@@ -402,7 +405,7 @@
     "common_name": "Majesty Palm",
     "date": "5th March 2026",
     "location": "Outside Govind's Office, near Frontdesk",
-    "coordinates": [100, 100],
+    "coordinates": [449, 240],
     "image": "https://github.com/user-attachments/assets/2828de9a-d78f-4c83-bafd-f080f928618c"
   },
   {
@@ -411,7 +414,7 @@
     "common_name": "Elephant Ear",
     "date": "5th March 2026",
     "location": "Outside Govind's Office, near Frontdesk",
-    "coordinates": [100, 100],
+    "coordinates": [449, 238],
     "image": "https://github.com/user-attachments/assets/54b0fdad-474e-4ed4-85c9-0b78544304f1"
   },
   {
@@ -420,7 +423,7 @@
     "common_name": "Petra Croton",
     "date": "5th March 2026",
     "location": "Outside Govind's Office, near Frontdesk",
-    "coordinates": [100, 100],
+    "coordinates": [445, 240],
     "image": "https://github.com/user-attachments/assets/f4ee8bc8-ec06-424c-93ed-741a2df1eec3"
   },
   {
@@ -429,7 +432,7 @@
     "common_name": "Wild Date Palm",
     "date": "5th March 2026",
     "location": "Start of walkway connecting Parking road to LH01",
-    "coordinates": [100, 100],
+    "coordinates": [60, 484],
     "image": "https://github.com/user-attachments/assets/05881fa7-00b6-4990-8e14-2f828ba1fd0a"
   },
   {
@@ -438,7 +441,7 @@
     "common_name": "Unidentified",
     "date": "5th March 2026",
     "location": "True entrance to playground",
-    "coordinates": [100, 100],
+    "coordinates": [56, 771],
     "image": "https://github.com/user-attachments/assets/91d22cf4-e986-4d3e-86b5-a73aeca790a3"
   },
   {
@@ -447,7 +450,7 @@
     "common_name": "American Black Nightshade",
     "date": "5th March 2026",
     "location": "Parking road",
-    "coordinates": [100, 100],
+    "coordinates": [58, 842],
     "image": "https://github.com/user-attachments/assets/90e53ced-6c37-4360-bdf9-ef6f2b3d347c"
   },
   {
@@ -456,7 +459,7 @@
     "common_name": "Foxtail Palm",
     "date": "5th March 2026",
     "location": "Hostel entrance near playground",
-    "coordinates": [100, 100],
+    "coordinates": [144, 886],
     "image": "https://github.com/user-attachments/assets/e52078bd-577e-462a-913b-c68db01b9b28",
     "additional_images": ["https://github.com/user-attachments/assets/3e699c51-ab16-41f3-a54f-5cab0cfa6882"]
   },
@@ -466,7 +469,7 @@
     "common_name": "Horsetail She-Oak",
     "date": "5th March 2026",
     "location": "Hostel entrance near playground",
-    "coordinates": [100, 100],
+    "coordinates": [179, 881],
     "image": "https://github.com/user-attachments/assets/ad1c85a3-dfb3-4d50-8e75-df920156f1da"
   },
   {
@@ -475,7 +478,7 @@
     "common_name": "Indian Rosewood (?)",
     "date": "5th March 2026",
     "location": "Volleyball court",
-    "coordinates": [100, 100],
+    "coordinates": [549, 1104],
     "image": "https://github.com/user-attachments/assets/90c18e17-05b4-4d04-8d85-a53a4c8a9d9d",
     "additional_images": ["https://github.com/user-attachments/assets/43121217-0af8-4212-a870-6d3779a659b9"]
   },
@@ -485,7 +488,7 @@
     "common_name": "Weeping Bottlebrush",
     "date": "5th March 2026",
     "location": "Infront of G08",
-    "coordinates": [100, 100],
+    "coordinates": [558, 1009],
     "image": "https://github.com/user-attachments/assets/12a1797f-cb72-4fa3-ab89-e5ac98e2c4c8"
   },
   {
@@ -494,7 +497,7 @@
     "common_name": "Mango",
     "date": "5th March 2026",
     "location": "Hostel entrance",
-    "coordinates": [100, 100],
+    "coordinates": [677, 877],
     "image": "https://github.com/user-attachments/assets/c3d960f6-b5b0-4cb8-8ffb-b66f4ede2eb2"
   },
   {
@@ -503,7 +506,7 @@
     "common_name": "Palm",
     "date": "5th March 2026",
     "location": "Outside G04",
-    "coordinates": [100, 100],
+    "coordinates": [635, 1010],
     "image": "https://github.com/user-attachments/assets/98c42f36-dfce-45da-992b-9ac3272b1831"
   },
   {
@@ -512,7 +515,7 @@
     "common_name": "Hong Kong Orchid",
     "date": "5th March 2026",
     "location": "Outside G01",
-    "coordinates": [100, 100],
+    "coordinates": [635, 1050],
     "image": "https://github.com/user-attachments/assets/8e119a06-3db0-4249-82e1-7ec34d64c332",
     "additional_images": ["https://github.com/user-attachments/assets/b6c2fe76-28be-4713-aeb5-0394ac6753bf"]
   },
@@ -522,7 +525,7 @@
     "common_name": "Unidentified",
     "date": "5th March 2026",
     "location": "Volleyball court",
-    "coordinates": [100, 100],
+    "coordinates": [611, 1123],
     "image": "https://github.com/user-attachments/assets/c923e386-7263-4664-97b0-3995268ec5b8"
   },
   {
@@ -531,7 +534,7 @@
     "common_name": "Banana",
     "date": "5th March 2026",
     "location": "Volleyball court",
-    "coordinates": [100, 100],
+    "coordinates": [580, 1124],
     "image": "https://github.com/user-attachments/assets/06e456e7-b4cf-489f-b45a-6d687c3bfa96"
   },
   {
@@ -540,7 +543,7 @@
     "common_name": "Jerusalem Artichoke",
     "date": "5th March 2026",
     "location": "Volleyball court",
-    "coordinates": [100, 100],
+    "coordinates": [487, 1079],
     "image": "https://github.com/user-attachments/assets/4a6fd0d2-8613-4468-9f3d-0440814bc18b"
   },
   {
@@ -549,7 +552,7 @@
     "common_name": "Cape Honey-suckle",
     "date": "5th March 2026",
     "location": "Aforementioned isthmus 90 degree left bend",
-    "coordinates": [100, 100],
+    "coordinates": [592, 542],
     "image": "https://github.com/user-attachments/assets/5231944b-663e-4f56-99cc-35d37126e7b3"
   },
   {
@@ -558,7 +561,7 @@
     "common_name": "Bamboo",
     "date": "6th March 2026",
     "location": "Behind KV's office",
-    "coordinates": [100, 100],
+    "coordinates": [389, 387],
     "image": "https://github.com/user-attachments/assets/3e5249c7-f233-4c87-8823-d1409e485ef0"
   },
   {
@@ -567,7 +570,7 @@
     "common_name": "White Hibiscus",
     "date": "6th March 2026",
     "location": "Near Big Pond",
-    "coordinates": [100, 100],
+    "coordinates": [506, 463],
     "image": "https://github.com/user-attachments/assets/a17adbb6-bf51-4315-8d38-b9187d55611b"
   },
   {
@@ -576,7 +579,7 @@
     "common_name": "Canna Lily",
     "date": "6th March 2026",
     "location": "Near Big Pond",
-    "coordinates": [100, 100],
+    "coordinates": [486, 476],
     "image": "https://github.com/user-attachments/assets/fc506c9e-42e9-4f1c-ac3b-4f1e13d6760f"
   },
   {
@@ -585,7 +588,7 @@
     "common_name": "Screwpine",
     "date": "6th March 2026",
     "location": "Outside Library, Infront of Big Pond",
-    "coordinates": [100, 100],
+    "coordinates": [545, 399],
     "image": "https://github.com/user-attachments/assets/b967f1a0-6f8c-43d0-86de-ad9bcd4e494c"
   },
   {
@@ -594,7 +597,7 @@
     "common_name": "Plumeria",
     "date": "9th March 2026",
     "location": "Near Big Pond",
-    "coordinates": [100, 100],
+    "coordinates": [564, 467],
     "image": "https://github.com/user-attachments/assets/c952622e-c5d6-4af0-aa5e-1962a17cd350"
   },
   {
@@ -603,7 +606,7 @@
     "common_name": "Sulfur Cosmos",
     "date": "9th March 2026",
     "location": "Near Big Pond",
-    "coordinates": [100, 100],
+    "coordinates": [561, 495],
     "image": "https://github.com/user-attachments/assets/d72edebc-0239-44a1-a140-a1f47b68d784"
   },
   {
@@ -612,7 +615,7 @@
     "common_name": "Hawaiian Ti",
     "date": "10th March 2026",
     "location": "Near Big Pond; Infront of Frontdesk",
-    "coordinates": [100, 100],
+    "coordinates": [572, 493],
     "image": "https://github.com/user-attachments/assets/2be1788f-212f-421f-80d9-bb48a7643e1c",
     "additional_images": [
       "https://github.com/user-attachments/assets/0a46e1ca-b38c-4313-bb33-ab4e7a2d1a5f",
@@ -625,7 +628,7 @@
     "common_name": "Buddha Belly",
     "date": "10th March 2026",
     "location": "Near Big Pond",
-    "coordinates": [100, 100],
+    "coordinates": [561, 494],
     "image": "https://github.com/user-attachments/assets/b9955aad-ad63-430f-a985-5469d3b49bcb",
     "additional_images": ["https://github.com/user-attachments/assets/ab7b4d4b-2891-4c93-a40f-19e5b47f4413"]
   },
@@ -635,7 +638,7 @@
     "common_name": "Tulsi",
     "date": "10th March 2026",
     "location": "Behind Big Pond",
-    "coordinates": [100, 100],
+    "coordinates":[546, 526],
     "image": "https://github.com/user-attachments/assets/4487052b-ca4c-4722-a1b2-94a5994a992e",
     "additional_images": ["https://github.com/user-attachments/assets/b167c703-08ae-435d-9807-16c3f15c6783"]
   },
@@ -645,7 +648,7 @@
     "common_name": "Betel Nut",
     "date": "12th March 2026",
     "location": "Outside G25",
-    "coordinates": [100, 100],
+    "coordinates": [178, 1016],
     "image": "https://github.com/user-attachments/assets/fef0f5a1-c0d6-4322-a9de-09aab8060ba9"
   },
  
@@ -655,7 +658,7 @@
     "common_name": "Traveler's Palm",
     "date": "23rd March 2026",
     "location": "Outside Library",
-    "coordinates": [100, 100],
+    "coordinates": [496, 380],
     "image": "https://github.com/user-attachments/assets/b84991f3-f993-4aee-8541-7410e5f53e89"
   },
   {
@@ -664,7 +667,7 @@
     "common_name": "Pride of Barbados",
     "date": "8th April 2026",
     "location": "Outside KV's office",
-    "coordinates": [100, 100],
+    "coordinates": [328, 367],
     "image": "https://github.com/user-attachments/assets/a4712a03-7000-4d6c-9951-589be7c4dbae",
     "additional_images": ["https://github.com/user-attachments/assets/a64603b8-6969-41ff-ab7c-65ecb800a66d"]
   },
@@ -674,7 +677,7 @@
     "common_name": "grass",
     "date": "9th April 2026",
     "location": "Outside Audifoyer",
-    "coordinates": [100, 100],
+    "coordinates": [665, 785],
     "image": "https://github.com/user-attachments/assets/c589b3a0-34f2-4ab7-b529-c0dae48291a7"
   },
    {
@@ -683,7 +686,7 @@
     "common_name": "Copperpod",
     "date": "13th April 2026",
     "location": "Outside Audifoyer",
-    "coordinates": [100, 100],
+    "coordinates": [745, 710],
     "image": "https://github.com/user-attachments/assets/d5c82f7b-0201-4d64-8f20-eb71c5cf3f26"
   },
   {
@@ -692,7 +695,7 @@
     "common_name": "False Eranthemum",
     "date": "16th April 2026",
     "location": "Audifoyer left entrance, outside mess",
-    "coordinates": [100, 100],
+    "coordinates": [417, 857],
     "image": "https://github.com/user-attachments/assets/e7b07c85-accc-4a98-9a74-451fd85ec440"
   }
 ]
