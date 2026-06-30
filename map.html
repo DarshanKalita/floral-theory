@@ -5,18 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Botanical Map | Floral Theory</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Quintessential&family=Water+Brush&display=swap" rel="stylesheet">
     <style>
-        :root { --bg-color: #121614; --text-main: #E8E8E8; --accent: #6C8C74; --border: rgba(255, 255, 255, 0.1); }
+        :root { 
+            --bg-color: #0D0F0E; 
+            --card-solid: rgba(22, 27, 24, 0.95); 
+            --text-main: #E8E8E8; 
+            --text-muted: #9BAE9E;
+            --accent: #6C8C74; 
+            --border: rgba(255, 255, 255, 0.08); 
+        }
         body { margin: 0; padding: 0; background-color: var(--bg-color); color: var(--text-main); font-family: 'Georgia', serif; display: flex; flex-direction: column; height: 100vh; }
-        header { padding: 20px; text-align: center; border-bottom: 1px solid var(--border); background: rgba(18, 22, 20, 0.9); z-index: 1000; }
-        h1 { margin: 0; font-size: 1.8rem; font-weight: normal; }
+        header { padding: 20px; text-align: center; border-bottom: 1px solid var(--border); background: var(--bg-color); z-index: 1000; }
+        h1 { margin: 0; font-size: 1.8rem; font-family: 'Quintessential', serif; }
         a.back-link { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
         a.back-link:hover { text-decoration: underline; }
         #map { flex-grow: 1; background-color: var(--bg-color); cursor: crosshair; }
         
         /* Custom Popup Styling */
-        .leaflet-popup-content-wrapper { background: rgba(244, 241, 234, 0.95); color: #121614; border-radius: 6px; font-family: 'Georgia', serif;}
-        .leaflet-popup-tip { background: rgba(244, 241, 234, 0.95); }
+        .leaflet-popup-content-wrapper {
+            background: var(--card-solid);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+            padding: 0;
+            overflow: hidden;
+        }
+        .leaflet-popup-content { margin: 0; width: 220px !important; }
+        .leaflet-popup-tip { background: var(--card-solid); border: 1px solid var(--border); box-shadow: none; }
+        
+        .popup-img { width: 100%; height: 140px; object-fit: cover; display: block; }
+        .popup-text { padding: 12px 12px 0 12px; text-align: center; font-family: 'Quintessential', serif; font-size: 1.3rem; margin: 0; color: var(--text-main); }
+        .popup-loc { padding: 5px 12px; text-align: center; font-size: 0.9rem; color: var(--text-muted); font-style: italic; margin: 0; }
+        .popup-btn-container { padding: 12px; text-align: center; }
+        .popup-btn { background: var(--accent); color: white; padding: 8px 12px; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block; font-size: 0.9rem; transition: background 0.2s; }
+        .popup-btn:hover { background: #5a7561; }
     </style>
 </head>
 <body>
@@ -24,71 +50,70 @@
     <header>
         <h1>Campus Botanical Map</h1>
         <a href="index.html" class="back-link">← Return to Full Archive</a>
-        <p style="font-size: 0.85rem; color: #9BAE9E; margin: 5px 0 0 0; font-style: italic;">Click a dot to expand the area, or click empty space to get coordinates for new plants.</p>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin: 5px 0 0 0; font-style: italic;">Click a dot to expand the area, or click empty space to get coordinates for new plants.</p>
     </header>
 
     <div id="map"></div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
-        // 1. Initialize Map
         const map = L.map('map', { crs: L.CRS.Simple, minZoom: -1, maxZoom: 3, zoomControl: true });
 
-        // UPDATE THESE to match your satellite image exactly
         const imgWidth = 1200; 
         const imgHeight = 800;
         const bounds = [[imgHeight, 0], [0, imgWidth]];
 
-        // PASTE YOUR SATELLITE IMAGE URL HERE
+        // Ensure this link points to your current map image
         const imageUrl = './assets/campus satellite.png';
         L.imageOverlay(imageUrl, bounds).addTo(map);
         map.fitBounds(bounds);
 
-        // Function to generate high-saturation random color
         function getRandomSaturatedColor() {
             const hue = Math.floor(Math.random() * 360);
-            return `hsl(${hue}, 100%, 50%)`; // 100% saturation, 50% lightness
+            return `hsl(${hue}, 100%, 65%)`; 
         }
 
-        // 2. Fetch data.json and plot the dots
         fetch('data.json')
             .then(response => response.json())
             .then(plants => {
                 plants.forEach(plant => {
-                    // Only plot if coordinates exist
                     if (plant.coordinates && plant.coordinates.length === 2) {
                         
-                        // Create the colored dot
                         const dot = L.circleMarker(plant.coordinates, {
-                            radius: 8,
+                            radius: 7,
                             fillColor: getRandomSaturatedColor(),
-                            color: '#ffffff', // White border so it pops against dark backgrounds
-                            weight: 2,
+                            color: '#ffffff',
+                            weight: 1.5,
                             fillOpacity: 0.9
                         }).addTo(map);
 
-                        // Build the popup content
+                        const rawUrl = plant.image || "";
+                        const proxyUrl = rawUrl ? `https://wsrv.nl/?url=${rawUrl}&w=400&output=webp` : "";
+                        const commonName = plant.common_name || "Unknown Plant";
+                        const loc = plant.location || 'Location unverified';
+
                         const popupContent = `
-                            <div style="text-align: center; padding: 5px;">
-                                <h3 style="margin: 0 0 5px 0; font-size: 1.2rem; color: #2E4F3F;">${plant.name}</h3>
-                                <p style="margin: 0 0 15px 0; font-size: 0.9rem; color: #5A7065; font-style: italic;">${plant.location || 'Location unverified'}</p>
-                                <a href="index.html?id=${plant.id}" style="background: #6C8C74; color: white; padding: 8px 12px; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block;">View in Archive</a>
+                            <div class="custom-popup">
+                                ${proxyUrl ? `<img src="${proxyUrl}" class="popup-img" alt="${commonName}" loading="lazy">` : ''}
+                                <h3 class="popup-text">${commonName}</h3>
+                                <p class="popup-loc">${loc}</p>
+                                <div class="popup-btn-container">
+                                    <a href="index.html?id=${plant.id}" class="popup-btn">View in Archive</a>
+                                </div>
                             </div>
                         `;
+                        
                         dot.bindPopup(popupContent);
 
-                        // Click event to "Expand" (Zoom in smoothly)
                         dot.on('click', function(e) {
-                            // Fly to the coordinates at zoom level 2
                             map.flyTo(plant.coordinates, 2, { duration: 0.5 });
                             this.openPopup();
                         });
                     }
                 });
             })
-            .catch(err => console.error("Could not load data.json. Note: This feature only works when accessed via a server (like GitHub Pages or localhost), not direct file:// protocol.", err));
+            .catch(err => console.error("Data.json failed to load.", err));
 
-        // 3. Coordinate Helper (Click empty space to get Y, X)
         map.on('click', function(e) {
             let y = Math.round(e.latlng.lat);
             let x = Math.round(e.latlng.lng);
@@ -96,10 +121,10 @@
             L.popup()
                 .setLatLng(e.latlng)
                 .setContent(`
-                    <div style="text-align:center;">
-                        <b>Target Coordinates:</b><br>
-                        <code style="font-size: 1.2rem; display:block; margin: 10px 0;">[${y}, ${x}]</code>
-                        <span style="font-size: 0.8rem; color: #666;">Copy into data.json</span>
+                    <div style="text-align:center; padding: 10px;">
+                        <b style="color: var(--text-main);">Target Coordinates:</b><br>
+                        <code style="font-size: 1.2rem; display:block; margin: 10px 0; color: var(--accent);">[${y}, ${x}]</code>
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">Copy into data.json</span>
                     </div>
                 `)
                 .openOn(map);
