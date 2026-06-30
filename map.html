@@ -114,11 +114,17 @@
 
     <div id="submit-panel">
         <h3 style="margin: 0px 0px 15px 0px; font-family: 'Quintessential', serif; color: var(--text-main); font-size: 1.4rem; text-align: center;">Log Discovery</h3>
-        <form action="https://formspree.io/f/xnjkbbza" method="POST" style="display: flex; flex-direction: column; gap: 10px;">
+  <form id="discovery-form" action="https://formspree.io/f/xnjkbbza" method="POST" style="display: flex; flex-direction: column; gap: 10px;">
             <input type="text" name="Plant Name" class="sleek-input" placeholder="Plant Name" required>
             <input type="text" name="Location Description" class="sleek-input" placeholder="Location (e.g. Near big pond)" required>
             <input type="text" id="coord-input" name="Coordinates" class="sleek-input" placeholder="[ Click map to drop pin ]" readonly required style="text-align: center; color: var(--text-muted); font-family: monospace; letter-spacing: 1px; cursor: crosshair;">
-            <textarea name="Notes" class="sleek-input" placeholder="Notes / Image Link" rows="2" style="resize: vertical;"></textarea>
+            
+            <div style="display: flex; gap: 10px;">
+                <input type="text" name="Credit Name" class="sleek-input" placeholder="Your Name/Alias (for credit)" style="flex: 1;" required>
+                <input type="text" name="Contact Info" class="sleek-input" placeholder="Email/Handle (Optional)" style="flex: 1;">
+            </div>
+
+            <textarea name="Notes" class="sleek-input" placeholder="Image Link (eg. Google Drive)" rows="2" style="resize: vertical;" required></textarea>
             <button type="submit" class="sleek-btn">Submit</button>
         </form>
     </div>
@@ -226,10 +232,31 @@
                         <div style="text-align:center; padding: 10px;">
                             <b style="color: var(--text-main);">Target Coordinates:</b><br>
                             <code style="font-size: 1.2rem; display:block; margin: 10px 0; color: var(--accent);">[${y}, ${x}]</code>
-                            <span style="font-size: 0.8rem; color: var(--text-muted);">Copy into data.json</span>
                         </div>
                     `)
                     .openOn(map);
+            }
+        });
+
+        // --- Form Validation Interceptor ---
+        document.getElementById('discovery-form').addEventListener('submit', function(e) {
+            const coordInput = document.getElementById('coord-input');
+            
+            // If the coordinate field is empty, nuke the submission
+            if (!coordInput.value) {
+                e.preventDefault(); // Stops the form from sending to Formspree
+                
+                // Flash the box red to yell at them
+                coordInput.style.borderBottomColor = '#ff4444';
+                coordInput.style.color = '#ff4444';
+                coordInput.placeholder = "[ ERROR: MAP PIN REQUIRED ]";
+                
+                // Reset it back to normal after 2 seconds
+                setTimeout(() => {
+                    coordInput.style.borderBottomColor = 'rgba(255,255,255,0.2)';
+                    coordInput.style.color = 'var(--text-muted)';
+                    coordInput.placeholder = "[ Click map to drop pin ]";
+                }, 2000);
             }
         });
     </script>
