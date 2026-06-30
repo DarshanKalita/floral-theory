@@ -338,6 +338,7 @@
             <button onclick="setView('view-full')" id="btn-full">Full View</button>
             <button onclick="setView('view-accordion')" id="btn-accordion">Index View</button>
             <a href="map.html" style="text-decoration:none;"><button style="border-color: var(--accent);">Cartography</button></a>
+            <button onclick="openSubmitModal()" style="border-color: var(--accent); color: var(--accent); font-weight: bold;">+ Log Discovery</button>
         </div>
 
         <main id="gallery" class="view-grid">
@@ -1758,7 +1759,7 @@
         
         </main>
 
-        <section class="submission-section">
+        <!-- <section class="submission-section">
             <h2>Submit a Discovery</h2>
             <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
                 <input type="text" name="subject" placeholder="Plant Name">
@@ -1766,7 +1767,13 @@
                 <textarea name="message" rows="4" placeholder="Observations or Image Link" required></textarea>
                 <button type="submit" class="submit-btn">Send for Review</button>
             </form>
-        </section>
+        </section> -->
+<!-- 
+<section class="submission-section" style="text-align: center;">
+            <h2>Submit a Discovery</h2>
+            <p style="color: var(--text-muted); margin-bottom: 25px;">Found a new plant? Pinpoint its exact location on our campus map to begin.</p>
+            <a href="map.html?action=submit" class="submit-btn" style="text-decoration: none; display: inline-block;">Open Map to Drop Pin</a>
+        </section> -->
 
         <footer style="text-align: center; margin-top: 80px; padding-top: 30px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
     <p style="margin: 0 0 10px 0;"><strong>&copy; 2026 Darshan Kalita.</strong></p>
@@ -1779,7 +1786,12 @@
     </p>
 </footer>
     </div>
-
+<div id="submit-modal" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 2000; backdrop-filter: blur(5px); align-items: center; justify-content: center;">
+        <div style="width: 95%; max-width: 1400px; height: 90vh; background: var(--bg-deep); border: 1px solid var(--accent); border-radius: 8px; position: relative; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.9);">
+<button onclick="closeSubmitModal()" style="position: absolute; top: 15px; right: 15px; z-index: 2001; background: rgba(0,0,0,0.7); border: 1px solid var(--border); color: white; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-family: inherit; font-weight: bold;">✕ Close</button>
+            <iframe src="map.html?action=submit" style="width: 100%; height: 100%; border: none;"></iframe>
+        </div>
+    </div>
     <script>
 
         function setView(viewName) {
@@ -1855,6 +1867,17 @@
                 }
             }
         });
+function openSubmitModal() {
+            document.getElementById('submit-modal').style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Freezes background scrolling
+        }
+
+        function closeSubmitModal() {
+            document.getElementById('submit-modal').style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restores scrolling
+        }
+
+
     </script>
 </body>
 </html>

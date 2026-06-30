@@ -20,29 +20,88 @@
         h1 { margin: 0; font-size: 1.8rem; font-family: 'Quintessential', serif; }
         a.back-link { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
         a.back-link:hover { text-decoration: underline; }
-        #map { flex-grow: 1; background-color: var(--bg-color); cursor: crosshair; }
-        
-        /* Custom Popup Styling */
-        .leaflet-popup-content-wrapper {
-            background: var(--card-solid);
-            color: var(--text-main);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.8);
-            padding: 0;
-            overflow: hidden;
+        /* #map { flex-grow: 1; background-color: var(--bg-color); cursor: crosshair; } */
+/* 1. The Map Container and Drafting Grid */
+        #map, .leaflet-container { 
+            flex-grow: 1; 
+            cursor: crosshair;
+            /* A slightly lighter background so the black shadow actually shows up */
+            background-color: #121614 !important; 
+            /* Actual intersecting drafting lines instead of faint dots */
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px) !important;
+            background-size: 40px 40px !important;
+            background-position: center center !important;
         }
+
+        /* 2. The Heavy Drop Shadow on the Satellite Image */
+        img.leaflet-image-layer {
+            /* Using a massive box-shadow to lift it off the grid */
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 1) !important;
+        }
+        /* Custom Popup Styling */
+        .leaflet-popup-content-wrapper { background: var(--card-solid); color: var(--text-main); border: 1px solid var(--border); border-radius: 8px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 10px 25px rgba(0,0,0,0.8); padding: 0; overflow: hidden; }
         .leaflet-popup-content { margin: 0; width: 220px !important; }
         .leaflet-popup-tip { background: var(--card-solid); border: 1px solid var(--border); box-shadow: none; }
-        
         .popup-img { width: 100%; height: 140px; object-fit: cover; display: block; }
         .popup-text { padding: 12px 12px 0 12px; text-align: center; font-family: 'Quintessential', serif; font-size: 1.3rem; margin: 0; color: var(--text-main); }
         .popup-loc { padding: 5px 12px; text-align: center; font-size: 0.9rem; color: var(--text-muted); font-style: italic; margin: 0; }
         .popup-btn-container { padding: 12px; text-align: center; }
         .popup-btn { background: var(--accent); color: white; padding: 8px 12px; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block; font-size: 0.9rem; transition: background 0.2s; }
         .popup-btn:hover { background: #5a7561; }
+
+        /* Sleek Submission Form Styling */
+        #submit-panel {
+            display: none;
+            position: absolute; 
+            top: 300px; 
+            right: 20px; 
+            z-index: 1000; 
+            width: 260px;
+            background: rgba(13, 15, 14, 0.85); 
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 20px; 
+            border-radius: 6px; 
+            border: 1px solid rgba(255, 255, 255, 0.05); 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+        }
+        .sleek-input {
+            width: 100%;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            color: var(--text-main);
+            padding: 10px;
+            font-family: inherit;
+            font-size: 0.85rem;
+            box-sizing: border-box;
+            border-radius: 4px;
+            transition: border-bottom-color 0.3s, background 0.3s;
+        }
+        .sleek-input:focus {
+            outline: none;
+            border-bottom-color: var(--accent);
+            background: rgba(255,255,255,0.05);
+        }
+        .sleek-btn {
+            width: 100%;
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            padding: 10px;
+            font-family: inherit;
+            font-weight: bold;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        .sleek-btn:hover {
+            background: var(--accent);
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -53,17 +112,34 @@
         <p style="font-size: 0.85rem; color: var(--text-muted); margin: 5px 0 0 0; font-style: italic;">Click a dot to expand the area, or click empty space to get coordinates for new plants.</p>
     </header>
 
+    <div id="submit-panel">
+        <h3 style="margin: 0px 0px 15px 0px; font-family: 'Quintessential', serif; color: var(--text-main); font-size: 1.4rem; text-align: center;">Log Discovery</h3>
+        <form action="https://formspree.io/f/xnjkbbza" method="POST" style="display: flex; flex-direction: column; gap: 10px;">
+            <input type="text" name="Plant Name" class="sleek-input" placeholder="Plant Name" required>
+            <input type="text" name="Location Description" class="sleek-input" placeholder="Location (e.g. Near big pond)" required>
+            <input type="text" id="coord-input" name="Coordinates" class="sleek-input" placeholder="[ Click map to drop pin ]" readonly required style="text-align: center; color: var(--text-muted); font-family: monospace; letter-spacing: 1px; cursor: crosshair;">
+            <textarea name="Notes" class="sleek-input" placeholder="Notes / Image Link" rows="2" style="resize: vertical;"></textarea>
+            <button type="submit" class="sleek-btn">Submit</button>
+        </form>
+    </div>
+
     <div id="map"></div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
-        const map = L.map('map', { crs: L.CRS.Simple, minZoom: -1, maxZoom: 3, zoomControl: true });
-
         const imgWidth = 1200; 
         const imgHeight = 800;
-        const bounds = [[imgHeight, 0], [0, imgWidth]];
+        const bounds = [[0, 0], [imgHeight, imgWidth]];
 
-        // Ensure this link points to your current map image
+        const map = L.map('map', { 
+            crs: L.CRS.Simple, 
+            minZoom: -1, 
+            maxZoom: 3, 
+            zoomControl: true,
+            maxBounds: bounds,
+            maxBoundsViscosity: 1.0 
+        });
+
         const imageUrl = './assets/campus satellite.png';
         L.imageOverlay(imageUrl, bounds).addTo(map);
         map.fitBounds(bounds);
@@ -78,7 +154,6 @@
             .then(plants => {
                 plants.forEach(plant => {
                     if (plant.coordinates && plant.coordinates.length === 2) {
-                        
                         const dot = L.circleMarker(plant.coordinates, {
                             radius: 7,
                             fillColor: getRandomSaturatedColor(),
@@ -114,20 +189,48 @@
             })
             .catch(err => console.error("Data.json failed to load.", err));
 
+// --- Interactive Click Logic ---
+        const urlParams = new URLSearchParams(window.location.search);
+        const isSubmitMode = urlParams.get('action') === 'submit';
+        let tempMarker = null;
+
+        if (isSubmitMode) {
+            document.getElementById('submit-panel').style.display = 'block';
+            document.querySelector('header').style.display = 'none'; // ADD THIS LINE: Hides the header in the pop-up
+        }
         map.on('click', function(e) {
             let y = Math.round(e.latlng.lat);
             let x = Math.round(e.latlng.lng);
             
-            L.popup()
-                .setLatLng(e.latlng)
-                .setContent(`
-                    <div style="text-align:center; padding: 10px;">
-                        <b style="color: var(--text-main);">Target Coordinates:</b><br>
-                        <code style="font-size: 1.2rem; display:block; margin: 10px 0; color: var(--accent);">[${y}, ${x}]</code>
-                        <span style="font-size: 0.8rem; color: var(--text-muted);">Copy into data.json</span>
-                    </div>
-                `)
-                .openOn(map);
+            // STRICT BOUNDARY CHECK: Kill the click if it registers outside the image
+            if (x < 0 || x > imgWidth || y < 0 || y > imgHeight) {
+                return; 
+            }
+            
+            if (isSubmitMode) {
+                const coordInput = document.getElementById('coord-input');
+                coordInput.value = `[${y}, ${x}]`;
+                coordInput.style.color = 'var(--text-main)';
+                coordInput.style.borderBottomColor = 'var(--accent)';
+                
+                if (tempMarker) map.removeLayer(tempMarker);
+                
+                tempMarker = L.circleMarker([y, x], {
+                    radius: 6, fillColor: '#ffffff', color: '#000', weight: 2, fillOpacity: 1
+                }).addTo(map);
+
+            } else {
+                L.popup()
+                    .setLatLng([y, x])
+                    .setContent(`
+                        <div style="text-align:center; padding: 10px;">
+                            <b style="color: var(--text-main);">Target Coordinates:</b><br>
+                            <code style="font-size: 1.2rem; display:block; margin: 10px 0; color: var(--accent);">[${y}, ${x}]</code>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">Copy into data.json</span>
+                        </div>
+                    `)
+                    .openOn(map);
+            }
         });
     </script>
 </body>
