@@ -135,20 +135,24 @@
     <script>
         const imgWidth = 1200; 
         const imgHeight = 800;
-        const bounds = [[0, 0], [imgHeight, imgWidth]];
+
+        const imageBounds = [[0, 0], [imgHeight, imgWidth]];
+
+        // 2. An invisible 250px bezel to give edge-popups room to render
+        const cameraBounds = [[-250, -250], [imgHeight + 250, imgWidth + 250]];
 
         const map = L.map('map', { 
             crs: L.CRS.Simple, 
             minZoom: -1, 
             maxZoom: 3, 
             zoomControl: true,
-            maxBounds: bounds,
-            maxBoundsViscosity: 1.0 
+            maxBounds: cameraBounds,
+            maxBoundsViscosity: 0.8
         });
 
         const imageUrl = './assets/campus satellite.png';
-        L.imageOverlay(imageUrl, bounds).addTo(map);
-        map.fitBounds(bounds);
+        L.imageOverlay(imageUrl, imageBounds).addTo(map);
+        map.fitBounds(imageBounds);
 
         function getRandomSaturatedColor() {
             const hue = Math.floor(Math.random() * 360);
@@ -173,19 +177,7 @@
                         const commonName = plant.common_name || "Unknown Plant";
                         const loc = plant.location || 'Location unverified';
 
-                        // const popupContent = `
-                        //     <div class="custom-popup">
-                        //         ${proxyUrl ? `<img src="${proxyUrl}" class="popup-img" alt="${commonName}" loading="lazy">` : ''}
-                        //         <h3 class="popup-text">${commonName}</h3>
-                        //         <p class="popup-loc">${loc}</p>
-                        //         <div class="popup-btn-container">
-                        //             <a href="index.html?id=${plant.id}" class="popup-btn">View in Archive</a>
-                        //         </div>
-                        //     </div>
-                        // `;
-                        
-                        // dot.bindPopup(popupContent);
-// Build the popup content
+                        // Build the popup content
 const popupContent = `
     <div class="custom-popup">
         ${proxyUrl ? `<img src="${proxyUrl}" class="popup-img" alt="${commonName}" loading="lazy">` : ''}
@@ -202,6 +194,7 @@ dot.bindPopup(popupContent, {
     autoPan: true,           // Dynamically shifts the map if the card hits an edge
     autoPanPadding: [20, 20] // Keeps a 20px breathing room from the border
 });
+
                         dot.on('click', function(e) {
                             map.flyTo(plant.coordinates, 2, { duration: 0.5 });
                             this.openPopup();
