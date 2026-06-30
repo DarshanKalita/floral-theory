@@ -173,19 +173,35 @@
                         const commonName = plant.common_name || "Unknown Plant";
                         const loc = plant.location || 'Location unverified';
 
-                        const popupContent = `
-                            <div class="custom-popup">
-                                ${proxyUrl ? `<img src="${proxyUrl}" class="popup-img" alt="${commonName}" loading="lazy">` : ''}
-                                <h3 class="popup-text">${commonName}</h3>
-                                <p class="popup-loc">${loc}</p>
-                                <div class="popup-btn-container">
-                                    <a href="index.html?id=${plant.id}" class="popup-btn">View in Archive</a>
-                                </div>
-                            </div>
-                        `;
+                        // const popupContent = `
+                        //     <div class="custom-popup">
+                        //         ${proxyUrl ? `<img src="${proxyUrl}" class="popup-img" alt="${commonName}" loading="lazy">` : ''}
+                        //         <h3 class="popup-text">${commonName}</h3>
+                        //         <p class="popup-loc">${loc}</p>
+                        //         <div class="popup-btn-container">
+                        //             <a href="index.html?id=${plant.id}" class="popup-btn">View in Archive</a>
+                        //         </div>
+                        //     </div>
+                        // `;
                         
-                        dot.bindPopup(popupContent);
+                        // dot.bindPopup(popupContent);
+// Build the popup content
+const popupContent = `
+    <div class="custom-popup">
+        ${proxyUrl ? `<img src="${proxyUrl}" class="popup-img" alt="${commonName}" loading="lazy">` : ''}
+        <h3 class="popup-text">${commonName}</h3>
+        <p class="popup-loc">${loc}</p>
+        <div class="popup-btn-container">
+            <a href="index.html?id=${plant.id}" class="popup-btn">View in Archive</a>
+        </div>
+    </div>
+`;
 
+// Pass the autoPan configuration object
+dot.bindPopup(popupContent, {
+    autoPan: true,           // Dynamically shifts the map if the card hits an edge
+    autoPanPadding: [20, 20] // Keeps a 20px breathing room from the border
+});
                         dot.on('click', function(e) {
                             map.flyTo(plant.coordinates, 2, { duration: 0.5 });
                             this.openPopup();
