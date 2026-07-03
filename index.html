@@ -48,6 +48,34 @@
             background: rgba(13, 15, 14, 0.45); 
         }
 
+
+        /* --- Third Background (Fades in deep on scroll) --- */
+        .bg-archive-3 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            /* PASTE YOUR THIRD BACKGROUND IMAGE URL HERE */
+            background-image: url('./assets/20251105_142913.jpg'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center;
+            z-index: 0;
+            opacity: 0; 
+            pointer-events: none;
+            will-change: opacity;
+        }
+
+        /* Dark overlay so cards remain legible against the third image */
+        .bg-archive-3::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(13, 15, 14, 0.45); 
+        }
+
+
         /* --- Hero Section --- */
         .hero {
             position: relative;
@@ -320,6 +348,7 @@
 <body>
     
     <div class="bg-archive" id="bg-archive"></div>
+    <div class="bg-archive-3" id="bg-archive-3"></div>
 
     <section class="hero">
         <div class="hero-text">
@@ -1820,21 +1849,35 @@
             }
         });
 
-        window.addEventListener('scroll', () => {
+       window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
             const heroHeight = document.querySelector('.hero').offsetHeight;
             
-            const fadeStart = heroHeight * 1;
-            const fadeEnd = heroHeight * 6; 
-
+            // --- 2nd Background Fade Logic ---
+            const bg2Start = heroHeight * 1;
+            const bg2End = heroHeight * 6; 
             const bgArchive = document.getElementById('bg-archive');
             
-            if (scrollY <= fadeStart) {
+            if (scrollY <= bg2Start) {
                 bgArchive.style.opacity = 0;
-            } else if (scrollY >= fadeEnd) {
+            } else if (scrollY >= bg2End) {
                 bgArchive.style.opacity = 1;
             } else {
-                bgArchive.style.opacity = (scrollY - fadeStart) / (fadeEnd - fadeStart);
+                bgArchive.style.opacity = (scrollY - bg2Start) / (bg2End - bg2Start);
+            }
+
+            // --- 3rd Background Fade Logic ---
+            // Takes over deeper down the archive
+            const bg3Start = heroHeight * 40; 
+            const bg3End = heroHeight * 46; 
+            const bgArchive3 = document.getElementById('bg-archive-3');
+
+            if (scrollY <= bg3Start) {
+                bgArchive3.style.opacity = 0;
+            } else if (scrollY >= bg3End) {
+                bgArchive3.style.opacity = 1;
+            } else {
+                bgArchive3.style.opacity = (scrollY - bg3Start) / (bg3End - bg3Start);
             }
         });
 
